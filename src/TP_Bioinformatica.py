@@ -1,3 +1,27 @@
+import string
+import random
+from random import randint
+from Bio.Seq import Seq
+from Bio import Align 
+
+aligner = Align.PairwiseAligner()
+aligner.match_score 
+
+aligner.mismatch_score
+
+score = aligner.score("ACGT","ACAT")
+print(score)
+
+aligner.match_score = 1.0
+aligner.mismatch_score = -2.0
+aligner.gap_score = -2.5
+score = aligner.score("ACGT","ACAT")
+print(score)
+
+
+#from tkinter import *
+
+
 sec1 = 'AGEKGKKIFVQKCSQCHTVCSQCHTVEKGGKHKTGPNEKGKKIFVQKCSQCHTVLHGLFGRKTGQA'
  
 diccionario_ARN = {
@@ -64,7 +88,6 @@ def longitud(peptido):
 
 #print(longitud(sec2))
 
-
 secuencias = {
     'CitC_humano':'AGDVEKGKKIFIMKCSQCHTVEKGGKHKTGPNLHGLFGRKTGQA',
     'CitC_gorila':'AGDVEKGKKIFIMKCSQCHTVEKGGKHKTGPNLHGLFGRKTGQA',
@@ -105,13 +128,17 @@ def que_es(lista):
     secuencia = sin_duplicados(lista)
 
     if(len(secuencia)>=4 and (not es_adn(secuencia)) and (not es_arn(secuencia))):
-        print("La secuencia " + lista + ": es una proteina")  
+        print("La secuencia " + lista + ": es una proteina") 
+        return "proteina" 
     elif(es_adn(secuencia)):
         print("La secuencia " + lista + ": es un ADN")  
+        return "ADN" 
     elif(es_arn(secuencia)):
         print("La secuencia " + lista + ": es un ARN")  
+        return "ARN" 
     else:
-        print("La secuencia " + lista + ": es una proteina")          
+        print("La secuencia " + lista + ": es una proteina")  
+        return "proteina"         
 
 
 def formato_fasta(fasta):
@@ -130,7 +157,6 @@ def obtener_secuencia(fasta):
             lista.append(line.strip())
         
     sec_fasta.close()
-    
     return cadena_final.join(lista)
 
 #print(obtener_secuencia('c_homo_sapiens.fasta'))    
@@ -164,22 +190,41 @@ def mutar_manual(peptido, index, letra):
     cadena_ADN = pasar_a_lista(peptido)
     cadena_Mutada = ""
 
-    for n in (cadena_ADN):
-        if(cadena_ADN.index(n) == index):  
-            cadena_ADN[index] = letra
+    cadena_ADN.insert(index,letra)
+    del cadena_ADN[index+1]
+   #for n in (cadena_ADN):
+     #   if(n == index):  
+     #       cadena_ADN[index] = letra
 
     return (cadena_Mutada.join(cadena_ADN))
+    #return (peptido)
 
-print(mutar_manual(sec4,2,'x'))
+print(mutar_manual(sec4,30,'x'))
 
 def mutar_automatica(sec_fasta): # FALTAAAAAA HACER
-    return "Mutacion automaticaaaaaa"
+    cadena_ADN = pasar_a_lista(sec_fasta)
+    cadena_Mutada = ""
+    quees = que_es(sec_fasta)
+    randPos = randint(0,(len(sec_fasta)-1))
+
+    
+    if(quees == "ADN"): 
+        randLetra = random.choice("ACGT") 
+        cadena_ADN.insert(randPos,randLetra)
+        
+    elif(quees == "ARN"):
+        randLetra = random.choice("ACGU") 
+        cadena_ADN.insert(randPos,randLetra)
+
+    del cadena_ADN[randPos+1]
+    return (cadena_Mutada.join(cadena_ADN))
 
 def mutar_secuencia(sec, mut_letra):
+    print(sec)
     if(mut_letra == 'M'):
         letra = input("Ingrese la letra del aminoácido que quiere mutar: ").upper()
-        index = input("Ingrese la posición: ")
-        return mutar_manual(sec, index, letra)
+        index = int(input("Ingrese la posición: "))
+        return mutar_manual(sec, (index-1), letra)
         
     elif(mut_letra == 'A'):
         return mutar_automatica(sec) 
@@ -206,4 +251,5 @@ def programa():
     
     #return mutacion
     
+
 print(programa())
