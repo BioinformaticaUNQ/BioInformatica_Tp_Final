@@ -93,6 +93,19 @@ def que_es(lista):
         #print("La secuencia " + lista + ": es una proteina")  
         return "proteina"         
 
+def validar_fasta(secuencia):
+    sec = que_es(secuencia)
+    resultado = False
+
+    if(sec=="proteina"):
+        print("El archivo fasta es una proteina, ingrese una secuencia de ADN o ARN")
+        return resultado
+    elif(len(secuencia)%3 !=0):
+        print("El tamaño de la secuencia no es el correcto")
+        return resultado
+    else:
+        return True    
+
 def obtener_secuencia(fasta):
     sec_fasta = open(fasta)          
     lista = []
@@ -118,8 +131,12 @@ def mutar_manual(peptido, index, letra):
 
     cadena_ADN.insert(index,letra)
     del cadena_ADN[index+1]
+
+    cadena_final = cadena_Mutada.join(cadena_ADN)
+    print("Secuencia original: " + peptido)
+    print("Secuencia mutada:   " + cadena_final)    
    
-    return (cadena_Mutada.join(cadena_ADN))
+    return cadena_final
 
 def mutar_automatica(sec_fasta): 
     cadena_ADN = pasar_a_lista(sec_fasta)
@@ -138,14 +155,19 @@ def mutar_automatica(sec_fasta):
         print("Mutó la letra: " + randLetra + " en la posición: " + str(randPos+1))
 
     del cadena_ADN[randPos+1]
-    return (cadena_Mutada.join(cadena_ADN))
 
-def mutar_secuencia(sec, mut_letra):
+    cadena_final = cadena_Mutada.join(cadena_ADN)
+    print("Secuencia original: " + sec_fasta)
+    print("Secuencia mutada:   " + cadena_final)
+
+    return cadena_final
+
+def mutar_secuencia(sec, mut_letra): 
     if(mut_letra == 'M'):
         letra = input("Ingrese la letra del aminoácido en el que va a mutar: ").upper()
         index = int(input("Ingrese la posición: "))
         if(index > len(sec)):
-            return "Ingresó una posición fuera de rango, ingrese un número menor a: " + str(len(sec))
+            return print("Ingresó una posición fuera de rango, ingrese un número menor a: " + str(len(sec)))
         else:    
             return mutar_manual(sec, (index-1), letra)
         
@@ -153,23 +175,19 @@ def mutar_secuencia(sec, mut_letra):
         return mutar_automatica(sec) 
 
     else: 
-        return "La letra que eligió no es la correcta, debe elegir 'M' o 'A'"
-    
+        return print("La letra que eligió no es la correcta, debe elegir 'M' o 'A'")
 
 def programa():
     sec_a_analizar = input("Ingrese la secuenencia que desea analizar: ")
     sec_fasta = obtener_secuencia(sec_a_analizar + ".fasta")  
-    #validar_secuencia(sec_fasta) #validar si es una secuencia correcta, si es ADN, ARN, Proteina
-
-    mut_letra = input("Desea hacer una mutacion manual 'M' o una automatica 'A': ").upper()
-    mutacion = mutar_secuencia(sec_fasta, mut_letra) # mutar automatica o manual
-
-    print("Secuencia original: " + sec_fasta)
-    print("Secuencia mutada:   " + mutacion)
     
-    #return mutacion
+    if(validar_fasta(sec_fasta)):
+        mut_letra = input("Desea hacer una mutacion manual 'M' o una automatica 'A': ").upper()
+        mutar_secuencia(sec_fasta, mut_letra)
     
-print(programa())
+    #return mutacion 
+    
+programa()
 
 
 
