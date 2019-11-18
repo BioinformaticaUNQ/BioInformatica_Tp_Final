@@ -25,8 +25,8 @@ sec1 = 'AGEKGKKIFVQKCSQCHTVCSQCHTVEKGGKHKTGPNEKGKKIFVQKCSQCHTVLHGLFGRKTGQA'
 sec2 = 'GTTATAATATTGCTAAAATTATTCAGAGTAATATTGTGGATTAAAGCCACAATAAGATTTATAATCTTAAATGATGGGACTACCATCCTTACTCTCTCCATTTCAAGGCTGACGATAAGGAGACCTGCTTTGCCGAGGAGGTACTACAGTTCTCTTCACAAACAATTGTCTTACAAAATGAATAAAACAGCACTTTGTTTTTATCTCCTGCTTTTAATATGTCCAGTATTCATTTTTGCATGTTTGGTTAGGCTAGGGCTTAGGGATTTATATATCAAAGGAGGCTTTGTACATGTGGGACAGGGATCTTATTTTAGATTTATATATCAAAGGAGGCTTTGTACATGTGGGACAGGGATCTTATTTTACAAACAATTGTCTTACAAAATGAATAAAACAGCACTTTGTTTTTATCTCCTGCTCTATTGTGCCATACTGTTGAATGTTTATAATGCATGTTCTGTTTCCAAATTTCATGAAATCAAAACATTAATTTATTTAAACATTTACTTGAAATGTTCACAAACAATTGTCTTACAAAATGAATAAAACAGCACTTTGTTTTTATCTCCTGCTTTTAATATGTCCAGTATTCATTTTTGCATGTTTGGTTAGGCTAGGGCTTAGGGATTTATATATCAAAGGAGGCTTTGTACATGTGGGACAGGGATCTTATTTTAGATTTATATATCAAAGGAGGCT'
 sec3 = 'ACTTTGTTTTTATCTCCTGCTCTATTGTGCCATACTGTTGAATGTTTATACCCTACATGGTGCATGTTCTGTTTCCAAATTTCATGAAATCAAAACATTAATTTATTTAAACATTTACTTGAAATGTTCACAAACAATTGTCTTACAAAATGAATAAAACAGCACTTTGTTTTTATCTCCTGCTTTTAATATGTCCAGTATTCATTTTTGCATGTTTGGTTAGGCTAGGGCTTAGGGATTTATATATCAAAGGAGGCTTTGTACATGTGGGACAGGGATCTTATTTTAGATTTATATATCAAAGGAGGCT'
 sec4 = 'AAUCAUGUAGUAGGCUUUUUUUUAGAUCAUGCU'
-sec5 = 'GCUUAUCCUGCUUUGGCUCUGGCGUAUUAACUGGC'
-sec6 = 'GCUUUAUAUCCUGCUUUGGCUCUGGCGUAUUAACU'
+sec5 = 'GCUUAUCCUGCUUUGGCUCUGGCGUAUUAACUGGCU'
+sec6 = 'GCUUAGUAUCCUGCUUUGGCUCUGGCGUAUUAACUA'
 sec7 = 'AGDVEKGKKIFIMK' #Proteina
 sec8 = 'ATTGGACGTAATGC' #ADN
 sec9 = 'AGGUACCGAUCCA'  #ARN
@@ -39,15 +39,34 @@ secuencias = {
     'CitC_pollo' :'AGDIEKGKKIFVQKCSQCHTVEKGGKHKTGPNLHGLFGRKTGQA'
 }
  
-# Falta arreglar diccionario
 diccionario_ARN = {
-    "A":"GCU", "R":"AGA", "N":"AAU", "D":"GAU", "C":"UGC", "F":"UUU", "G":"GGC", 
-    "E":"GAA", "Q":"CAG", "H":"CAU", "I":"AUU", "L":"UUA", "K":"AAA", "P":"CCU", 
-    "S":"UCU", "Y":"UAU", "T":"ACU", "W":"UGG", "V":"GUA", "M":"AUG", "X":"UAA"  
+    "UUU":"F", "UUC":"F", "UUA":"L", "UUG":"L", "CUU":"L", "CUC":"L", "CUA":"L", "CUG":"L",
+    "AUU":"I", "AUC":"I", "AUA":"I", "AUG":"M", "GUU":"V", "GUC":"V", "GUA":"V", "GUG":"V",
+    "UCU":"S", "UCC":"S", "UCA":"S", "UCG":"S", "CCU":"P", "CCC":"P", "CCA":"P", "CCG":"P",
+    "ACU":"T", "ACC":"T", "ACA":"T", "ACG":"T", "GCU":"A", "GCC":"A", "GCA":"A", "GCG":"A",
+    "UAU":"Y", "UAC":"Y", "UAA":"X", "UAG":"X", "CAU":"H", "CAC":"H", "CAA":"Q", "CAG":"Q",
+    "AAU":"N", "AAC":"N", "AAA":"K", "AAG":"K", "GAU":"D", "GAC":"D", "GAA":"E", "GAG":"E",
+    "UGU":"C", "UGC":"C", "UGA":"X", "UGG":"W", "CGU":"R", "CGC":"R", "CGA":"R", "CGG":"R",
+    "AGU":"S", "AGC":"S", "AGA":"R", "AGG":"R", "GGU":"G", "GGC":"G", "GGA":"G", "GGG":"G"
 }
 
-# ADN = A, C, G, T
-# ARN = A, C, G. U
+diccionario_ADN = {
+    "TTT":"F", "TTC":"F", "TTA":"L", "TTG":"L", "CTT":"L", "CTC":"L", "CTA":"L", "CTG":"L",
+    "ATT":"I", "ATC":"I", "ATA":"I", "ATG":"M", "GTT":"V", "GTC":"V", "GTA":"V", "GTG":"V",
+    "TCT":"S", "TCC":"S", "TCA":"S", "TCG":"S", "CCT":"P", "CCC":"P", "CCA":"P", "CCG":"P",
+    "ACT":"T", "ACC":"T", "ACA":"T", "ACG":"T", "GCT":"A", "GCC":"A", "GCA":"A", "GCG":"A",
+    "TAT":"Y", "TAC":"Y", "TAA":"X", "TAG":"X", "CAT":"H", "CAC":"H", "CAA":"Q", "CAG":"Q",
+    "AAT":"N", "AAC":"N", "AAA":"K", "AAG":"K", "GAT":"D", "GAC":"D", "GAA":"E", "GAG":"E",
+    "TGT":"C", "TGC":"C", "TGA":"X", "TGG":"W", "CGT":"R", "CGC":"R", "CGA":"R", "CGG":"R",
+    "AGT":"S", "AGC":"S", "AGA":"R", "AGG":"R", "GGT":"G", "GGC":"G", "GGA":"G", "GGG":"G"
+}
+
+def pasar_a_lista(cadena): 
+    lista = []
+    for char in cadena:
+        lista.append(char)
+
+    return lista 
 
 def dividir_3(cadena):
     lista_nueva = []
@@ -56,13 +75,27 @@ def dividir_3(cadena):
 
     return lista_nueva   
 
-def stop(cadena_mutada): # Corta la lista si encuentra un stop "UAA"
+def stop(cadena_mutada): # Corta la lista si encuentra un stop
     longitud = 0
-    for i in cadena_mutada:
-        if i=='UAA':
-            longitud = cadena_mutada.index(i) + 1
+    lista = pasar_a_lista(cadena_mutada)
+    cadena_corta = ""
 
-    return cadena_mutada[0:longitud]
+    for i in lista:
+        if i=='X':
+            longitud = lista.index(i)
+            return cadena_corta.join(lista[0:longitud])
+
+    return cadena_corta.join(lista)       
+
+def stop2(cadena_mutada): 
+    longitud = 0
+
+    for i in cadena_mutada:
+        if i=='UAA' or i=='UAG' or i=='UGA' or i=='TAA' or i=='TAG' or i=='TGA':
+            longitud = cadena_mutada.index(i) + 1
+            return cadena_mutada[0:longitud]
+        else:
+            return cadena_mutada
 
 def sin_duplicados(sec):
     lista_nueva = []
@@ -107,43 +140,68 @@ def validar_fasta(secuencia):
         return True    
 
 def obtener_secuencia(fasta):
-    sec_fasta = open(fasta)          
-    lista = []
-    cadena_final = ""
+    try:
+        sec_fasta = open(fasta)          
+        lista = []
+        cadena_final = ""
 
-    for line in sec_fasta:
-        if line[0] != '>':
-            lista.append(line.strip())
+        for line in sec_fasta:
+            if line[0] != '>':
+                lista.append(line.strip())
         
-    sec_fasta.close()
-    return cadena_final.join(lista)                         
+        sec_fasta.close()
+        return cadena_final.join(lista)       
+    except:
+        return "El archivo no existe" # No sale este print cuando no existe el archivo ???????
 
-def pasar_a_lista(cadena): 
-    lista = []
-    for char in cadena:
-        lista.append(char)
+# PREC: No puede ser una secuencia de una proteina
+def pasar_a_proteina(secuencia): 
+    cadena = dividir_3(secuencia)
+    cadena_nueva = []
+    cadena_ARN = ""
+    adn_o_arn = que_es(secuencia)
+    dic_adn = diccionario_ADN.items()
+    dic_arn = diccionario_ARN.items()
 
-    return lista 
+    if adn_o_arn == "ADN":
+        for letras in cadena:
+            for k,v in dic_adn:
+                if(k.count(letras)):  
+                    cadena_nueva.append(v)
+    elif adn_o_arn == "ARN":
+        for letras in cadena:
+            for k,v in dic_arn:
+                if(k.count(letras)):  
+                    cadena_nueva.append(v)
+
+    return cadena_ARN.join(cadena_nueva)                      
 
 def mutar_manual(peptido, index, letra):
     cadena_ADN = pasar_a_lista(peptido)
-    cadena_Mutada = ""
+    cadena_mutada = ""
 
     cadena_ADN.insert(index,letra)
     del cadena_ADN[index+1]
 
-    cadena_final = cadena_Mutada.join(cadena_ADN)
+    cadena_mut = cadena_mutada.join(cadena_ADN)
+    cadena_final = cadena_mutada.join(stop(cadena_ADN))
     print("Secuencia original: " + peptido)
-    print("Secuencia mutada:   " + cadena_final)    
-   
+    print("Secuencia mutada:   " + cadena_mut)
+    print("Secuencia final:    " + cadena_final)
+    
     return cadena_final
 
 def mutar_automatica(sec_fasta): 
     cadena_ADN = pasar_a_lista(sec_fasta)
-    cadena_Mutada = ""
-    quees = que_es(sec_fasta)
+    cadena_mutada = ""
+    #quees = que_es(sec_fasta)
     randPos = randint(0,(len(sec_fasta)-1))
 
+    randLetra = random.choice("ARNDCQEGHILKMFPSTWYVX") 
+    cadena_ADN.insert(randPos,randLetra)
+    print("Mutó la letra: " + randLetra + " en la posición: " + str(randPos+1))
+        
+    '''
     if(quees == "ADN"): 
         randLetra = random.choice("ACGT") 
         cadena_ADN.insert(randPos,randLetra)
@@ -153,40 +211,52 @@ def mutar_automatica(sec_fasta):
         randLetra = random.choice("ACGU") 
         cadena_ADN.insert(randPos,randLetra)
         print("Mutó la letra: " + randLetra + " en la posición: " + str(randPos+1))
-
+    '''
     del cadena_ADN[randPos+1]
 
-    cadena_final = cadena_Mutada.join(cadena_ADN)
+    cadena_mut = cadena_mutada.join(cadena_ADN)
+    cadena_final = cadena_mutada.join(stop(cadena_ADN))
     print("Secuencia original: " + sec_fasta)
-    print("Secuencia mutada:   " + cadena_final)
+    print("Secuencia mutada:   " + cadena_mut)
+    print("Secuencia final:    " + cadena_final)
 
     return cadena_final
 
 def mutar_secuencia(sec, mut_letra): 
-    if(mut_letra == 'M'):
-        letra = input("Ingrese la letra del aminoácido en el que va a mutar: ").upper()
-        index = int(input("Ingrese la posición: "))
-        if(index > len(sec)):
-            return print("Ingresó una posición fuera de rango, ingrese un número menor a: " + str(len(sec)))
-        else:    
-            return mutar_manual(sec, (index-1), letra)
+    try:
+        if(mut_letra == 'M'):
+            letra = input("Ingrese la letra del aminoácido en el que va a mutar: ").upper()
+            index = int(input("Ingrese la posición: "))
+            if(index > len(sec)):
+                return print("Ingresó una posición fuera de rango, ingrese un número menor a: " + str(len(sec)))
+            else:    
+                return mutar_manual(sec, (index-1), letra)
         
-    elif(mut_letra == 'A'):
-        return mutar_automatica(sec) 
+        elif(mut_letra == 'A'):
+            return mutar_automatica(sec) 
 
-    else: 
-        return print("La letra que eligió no es la correcta, debe elegir 'M' o 'A'")
+        else: 
+            return print("La letra que eligió no es la correcta, debe elegir 'M' o 'A'")
+    except:
+        return print("Debe ingresar un número")
 
 def programa():
     sec_a_analizar = input("Ingrese la secuenencia que desea analizar: ")
     sec_fasta = obtener_secuencia(sec_a_analizar + ".fasta")  
     
     if(validar_fasta(sec_fasta)):
+        proteina = pasar_a_proteina(sec_fasta)
+        #conseguir BLAST
         mut_letra = input("Desea hacer una mutacion manual 'M' o una automatica 'A': ").upper()
-        mutar_secuencia(sec_fasta, mut_letra)
-    
-    #return mutacion 
-    
+        #posicion = int(input("Ingrese la posición donde quiere que comienze la secuencia")) # FALTAAAA
+        mutacion = mutar_secuencia(proteina, mut_letra)
+        #graficar
+
+    try:
+        return mutacion
+    except:
+        return "Error"
+
 programa()
 
 
@@ -203,18 +273,6 @@ def arn_codificante(peptido):
             if(letra == k):
                 cadena_nueva.append(v)
     return cadena_ARN.join(cadena_nueva)   
-
-def arn(secuencia):
-    cadena = dividir_3(secuencia)
-    cadena_nueva = []
-    cadena_ARN = ""
- 
-    for letras in cadena:
-        for k,v in diccionario_ARN.items():
-            if(v.count(letras)):  
-                cadena_nueva.append(k)
-
-    return cadena_ARN.join(cadena_nueva)
 
 def polimerasa(secuencia):
     if(secuencia.count('​TATAAA')==0):  
