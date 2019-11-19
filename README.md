@@ -21,7 +21,7 @@
 + 3.2.2. [***Modo Automático***](#modo-automático) 
 + 3.3. [**Visualización**](#visualización)
 + 3.4. [**Tecnologías**](#tecnologías)
-4. [**Forma de entrega**](forma-de-entrega)
+4. [**Forma de entrega**](#forma-de-entrega)
 ##
 
 ### Objetivo ###
