@@ -73,27 +73,17 @@ def dividir_3(cadena):
     for i in range(0, len(cadena), 3):
         lista_nueva.append(cadena[i:i+3])
 
-    return lista_nueva   
+    return lista_nueva          
 
-def stop(cadena_mutada): # Corta la lista si encuentra un stop
-    longitud = 0
-    lista = pasar_a_lista(cadena_mutada)
+def stop(cadena_mutada): # NO Funciona!!!! solo funciona si hay un stop en la posicion 0, ARREGLARRRR!!!
+    lista = dividir_3(cadena_mutada)
     cadena_corta = ""
 
     for i in lista:
-        if i=='X':
-            longitud = lista.index(i)
-            return cadena_corta.join(lista[0:longitud])
-
-    return cadena_corta.join(lista)       
-
-def stop2(cadena_mutada): 
-    longitud = 0
-
-    for i in cadena_mutada:
-        if i=='UAA' or i=='UAG' or i=='UGA' or i=='TAA' or i=='TAG' or i=='TGA':
-            longitud = cadena_mutada.index(i) + 1
-            return cadena_mutada[0:longitud]
+        if((i=='UAA') or (i=='UAG') or (i=='UGA') or (i=='TAA') or (i=='TAG') or (i=='TGA')):
+            longitud = lista.index(i)+1
+            
+            return cadena_corta.join(lista[:longitud])
         else:
             return cadena_mutada
 
@@ -194,14 +184,9 @@ def mutar_manual(peptido, index, letra):
 def mutar_automatica(sec_fasta): 
     cadena_ADN = pasar_a_lista(sec_fasta)
     cadena_mutada = ""
-    #quees = que_es(sec_fasta)
+    quees = que_es(sec_fasta)
     randPos = randint(0,(len(sec_fasta)-1))
-
-    randLetra = random.choice("ARNDCQEGHILKMFPSTWYVX") 
-    cadena_ADN.insert(randPos,randLetra)
-    print("Mutó la letra: " + randLetra + " en la posición: " + str(randPos+1))
-        
-    '''
+    
     if(quees == "ADN"): 
         randLetra = random.choice("ACGT") 
         cadena_ADN.insert(randPos,randLetra)
@@ -211,7 +196,7 @@ def mutar_automatica(sec_fasta):
         randLetra = random.choice("ACGU") 
         cadena_ADN.insert(randPos,randLetra)
         print("Mutó la letra: " + randLetra + " en la posición: " + str(randPos+1))
-    '''
+    
     del cadena_ADN[randPos+1]
 
     cadena_mut = cadena_mutada.join(cadena_ADN)
@@ -243,21 +228,26 @@ def mutar_secuencia(sec, mut_letra):
 def programa():
     sec_a_analizar = input("Ingrese el nombre del archivo FASTA que desea analizar: ")
     sec_fasta = obtener_secuencia(sec_a_analizar + ".fasta")  
-    
+    proteina = pasar_a_proteina(sec_fasta)
+
+    #conseguir BLAST FALTAAAAAAAAAAAAAA   
+
     if(validar_fasta(sec_fasta)):
-        proteina = pasar_a_proteina(sec_fasta)
-        #conseguir BLAST FALTAAAAAAAAAAAAAA
         mut_letra = input("Desea hacer una mutacion manual 'M' o una automatica 'A': ").upper()
         posicion = int(input("Ingrese la posición donde quiere que comienze el análisis de la secuencia: ")) 
 
-        if(posicion < len(proteina)):
-            prot_comienzo = proteina[posicion-1:len(proteina)]
+        if(posicion < len(sec_fasta)):
+            prot_comienzo = sec_fasta[posicion-1:len(sec_fasta)]
         else:
-            return print("Ingresó una posición fuera de rango, ingrese un número menor a: " + str(len(proteina))) 
+            return print("Ingresó una posición fuera de rango, ingrese un número menor a: " + str(len(sec_fasta))) 
 
         mutacion = mutar_secuencia(prot_comienzo, mut_letra)
-        
-        #graficar
+
+        # pasar_a_proteina(mutacion) ?????????
+        # graficar
+
+        print("La proteina original: " + proteina)
+        print("La proteina mutada:   " + pasar_a_proteina(mutacion))
 
     try:
         return mutacion
