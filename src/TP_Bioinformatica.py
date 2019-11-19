@@ -241,15 +241,22 @@ def mutar_secuencia(sec, mut_letra):
         return print("Debe ingresar un número")
 
 def programa():
-    sec_a_analizar = input("Ingrese la secuenencia que desea analizar: ")
+    sec_a_analizar = input("Ingrese el nombre del archivo FASTA que desea analizar: ")
     sec_fasta = obtener_secuencia(sec_a_analizar + ".fasta")  
     
     if(validar_fasta(sec_fasta)):
         proteina = pasar_a_proteina(sec_fasta)
-        #conseguir BLAST
+        #conseguir BLAST FALTAAAAAAAAAAAAAA
         mut_letra = input("Desea hacer una mutacion manual 'M' o una automatica 'A': ").upper()
-        #posicion = int(input("Ingrese la posición donde quiere que comienze la secuencia")) # FALTAAAA
-        mutacion = mutar_secuencia(proteina, mut_letra)
+        posicion = int(input("Ingrese la posición donde quiere que comienze el análisis de la secuencia: ")) 
+
+        if(posicion < len(proteina)):
+            prot_comienzo = proteina[posicion-1:len(proteina)]
+        else:
+            return print("Ingresó una posición fuera de rango, ingrese un número menor a: " + str(len(proteina))) 
+
+        mutacion = mutar_secuencia(prot_comienzo, mut_letra)
+        
         #graficar
 
     try:
