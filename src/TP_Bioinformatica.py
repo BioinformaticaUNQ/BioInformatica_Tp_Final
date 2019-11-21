@@ -1,6 +1,10 @@
 import string
 import random
+import xml.etree.cElementTree as ET
 from random import randint
+from Bio.Blast import NCBIWWW 
+from Bio.Blast import NCBIXML
+
 #from tkinter import *
 '''
 from Bio.Seq import Seq
@@ -226,11 +230,34 @@ def mutar_secuencia(sec, mut_letra):
         return print("Debe ingresar un número")
 
 def programa():
+
     sec_a_analizar = input("Ingrese el nombre del archivo FASTA que desea analizar: ")
     sec_fasta = obtener_secuencia(sec_a_analizar + ".fasta")  
-    proteina = pasar_a_proteina(sec_fasta)
 
-    #conseguir BLAST FALTAAAAAAAAAAAAAA   
+    proteina = pasar_a_proteina(sec_fasta)
+    print(proteina)
+
+    #proteinaC ="MGDVEKGKKIFIMKCSQCHTVEKGGKHKTGPNLHGLFGRKTGQAPGYSYTAANKNKGIIWGEDTLMEYLE"
+    #resultclk = NCBIWWW.qblast(program= "blastp", database= "pdb", sequence= proteina)
+    
+    #save_clk = open("CR457033.xml", "w")
+    #save_clk.write(resultclk.read())    
+    #save_clk.close()
+   
+    blast_records = NCBIXML.parse(open("CR457033.xml"))
+
+    myScore = 0
+    for blast_record in blast_records:
+        for description in blast_record.descriptions:
+            if(description.score > myScore):
+                myScore = description.score
+                res = description.accession
+          
+    #resultclk.close()
+    import backmap as bm    
+    print (bm.R(phi=0,psi=0)) # Should print '0.5'
+    print(res)
+       
 
     if(validar_fasta(sec_fasta)):
         mut_letra = input("Desea hacer una mutacion manual 'M' o una automatica 'A': ").upper()
