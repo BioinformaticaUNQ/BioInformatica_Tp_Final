@@ -4,6 +4,8 @@ import xml.etree.cElementTree as ET
 from random import randint
 from Bio.Blast import NCBIWWW 
 from Bio.Blast import NCBIXML
+from Bio.PDB import PDBList
+
 
 #from tkinter import *
 '''
@@ -85,11 +87,10 @@ def stop(cadena_mutada): # NO Funciona!!!! solo funciona si hay un stop en la po
 
     for i in lista:
         if((i=='UAA') or (i=='UAG') or (i=='UGA') or (i=='TAA') or (i=='TAG') or (i=='TGA')):
-            longitud = lista.index(i)+1
-            
+            longitud = lista.index(i)
             return cadena_corta.join(lista[:longitud])
-        else:
-            return cadena_mutada
+    
+    return cadena_mutada
 
 def sin_duplicados(sec):
     lista_nueva = []
@@ -235,7 +236,7 @@ def programa():
     sec_fasta = obtener_secuencia(sec_a_analizar + ".fasta")  
 
     proteina = pasar_a_proteina(sec_fasta)
-    print(proteina)
+    #print(proteina)
 
     #proteinaC ="MGDVEKGKKIFIMKCSQCHTVEKGGKHKTGPNLHGLFGRKTGQAPGYSYTAANKNKGIIWGEDTLMEYLE"
     #resultclk = NCBIWWW.qblast(program= "blastp", database= "pdb", sequence= proteina)
@@ -252,13 +253,11 @@ def programa():
             if(description.score > myScore):
                 myScore = description.score
                 res = description.accession
-          
-    #resultclk.close()
-    import backmap as bm    
-    print (bm.R(phi=0,psi=0)) # Should print '0.5'
-    print(res)
+        
+    res2 = res[:- 2]
+    pdbdownload = PDBList()
+    pdbdownload.retrieve_pdb_file(res2, file_format="pdb")
        
-
     if(validar_fasta(sec_fasta)):
         mut_letra = input("Desea hacer una mutacion manual 'M' o una automatica 'A': ").upper()
         posicion = int(input("Ingrese la posición donde quiere que comienze el análisis de la secuencia: ")) 
@@ -283,7 +282,7 @@ def programa():
 
 programa()
 
-
+print(stop("GCUUAGUAUCCUGCUUUGGCUCUGGCGUAUUAACUA"))
 
 ######### Funciones que pueden servir ##########
 
