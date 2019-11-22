@@ -228,7 +228,8 @@ def mutar_secuencia(sec, mut_letra):
             return print("La letra que eligió no es la correcta, debe elegir 'M' o 'A'")
     except:
         return print("Debe ingresar un número")
-
+    
+"""
 def programa():
 
     sec_a_analizar = input("Ingrese el nombre del archivo FASTA que desea analizar: ")
@@ -237,12 +238,6 @@ def programa():
     proteina = pasar_a_proteina(sec_fasta)
     print(proteina)
 
-    #proteinaC ="MGDVEKGKKIFIMKCSQCHTVEKGGKHKTGPNLHGLFGRKTGQAPGYSYTAANKNKGIIWGEDTLMEYLE"
-    #resultclk = NCBIWWW.qblast(program= "blastp", database= "pdb", sequence= proteina)
-    
-    #save_clk = open("CR457033.xml", "w")
-    #save_clk.write(resultclk.read())    
-    #save_clk.close()
    
     blast_records = NCBIXML.parse(open("CR457033.xml"))
 
@@ -282,8 +277,7 @@ def programa():
         return "Error"
 
 programa()
-
-
+"""
 
 ######### Funciones que pueden servir ##########
 
