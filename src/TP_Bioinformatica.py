@@ -81,7 +81,7 @@ def dividir_3(cadena):
 
     return lista_nueva          
 
-def stop(cadena_mutada): # NO Funciona!!!! solo funciona si hay un stop en la posicion 0, ARREGLARRRR!!!
+def stop(cadena_mutada): 
     lista = dividir_3(cadena_mutada)
     cadena_corta = ""
 
@@ -121,11 +121,24 @@ def que_es(lista):
         #print("La secuencia " + lista + ": es una proteina")  
         return "proteina"         
 
+def hay_stop(secuencia):
+    lista = dividir_3(secuencia)
+    res = False
+    stops = ['UAA', 'UAG', 'UGA', 'TAA' , 'TAG', 'TGA']
+
+    for i in stops:
+        if i in lista[:-1]:
+            res = True
+    return res
+
 def validar_fasta(secuencia):
     sec = que_es(secuencia)
     resultado = False
 
-    if(sec=="proteina"):
+    if(hay_stop(secuencia)):
+        print("El archivo fasta es incorrecto, hay un stop dentro de la secuencia")
+        return resultado
+    elif(sec=="proteina"):
         print("El archivo fasta es una proteina, ingrese una secuencia de ADN o ARN")
         return resultado
     elif(len(secuencia)%3 !=0):
@@ -177,9 +190,9 @@ def mutar_manual(peptido, index, letra):
 
     cadena_ADN.insert(index,letra)
     del cadena_ADN[index+1]
-
+    
     cadena_mut = cadena_mutada.join(cadena_ADN)
-    cadena_final = cadena_mutada.join(stop(cadena_ADN))
+    cadena_final = stop(cadena_mutada.join(cadena_ADN))
     print("Secuencia original: " + peptido)
     print("Secuencia mutada:   " + cadena_mut)
     print("Secuencia final:    " + cadena_final)
@@ -203,9 +216,9 @@ def mutar_automatica(sec_fasta):
         print("Mutó la letra: " + randLetra + " en la posición: " + str(randPos+1))
     
     del cadena_ADN[randPos+1]
-
+    
     cadena_mut = cadena_mutada.join(cadena_ADN)
-    cadena_final = cadena_mutada.join(stop(cadena_ADN))
+    cadena_final = stop(cadena_mutada.join(cadena_ADN))
     print("Secuencia original: " + sec_fasta)
     print("Secuencia mutada:   " + cadena_mut)
     print("Secuencia final:    " + cadena_final)
@@ -244,7 +257,7 @@ def programa():
     #save_clk = open("CR457033.xml", "w")
     #save_clk.write(resultclk.read())    
     #save_clk.close()
-   
+    
     blast_records = NCBIXML.parse(open("CR457033.xml"))
 
     myScore = 0
@@ -282,7 +295,6 @@ def programa():
 
 programa()
 
-print(stop("GCUUAGUAUCCUGCUUUGGCUCUGGCGUAUUAACUA"))
 
 ######### Funciones que pueden servir ##########
 
