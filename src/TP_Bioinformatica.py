@@ -243,20 +243,13 @@ def mutar_secuencia(sec, mut_letra):
     except:
         return print("Debe ingresar un número")
 
-def programa():
+def blast_proteina_namePdb(seq_proteina): 
 
-    sec_a_analizar = input("Ingrese el nombre del archivo FASTA que desea analizar: ")
-    sec_fasta = obtener_secuencia(sec_a_analizar + ".fasta")  
-
-    proteina = pasar_a_proteina(sec_fasta)
-    #print(proteina)
-
-    #proteinaC ="MGDVEKGKKIFIMKCSQCHTVEKGGKHKTGPNLHGLFGRKTGQAPGYSYTAANKNKGIIWGEDTLMEYLE"
-    #resultclk = NCBIWWW.qblast(program= "blastp", database= "pdb", sequence= proteina)
-    
-    #save_clk = open("CR457033.xml", "w")
-    #save_clk.write(resultclk.read())    
-    #save_clk.close()
+    resultBlast = NCBIWWW.qblast(program= "blastp", database= "pdb", sequence= seq_proteina)
+ 
+    save_clk = open("CR457033.xml", "w")
+    save_clk.write(resultBlast.read())    
+    save_clk.close()
     
     blast_records = NCBIXML.parse(open("CR457033.xml"))
 
@@ -266,11 +259,23 @@ def programa():
             if(description.score > myScore):
                 myScore = description.score
                 res = description.accession
-        
-    res2 = res[:- 2]
+    return res
+
+def buscaryGuardarPdb(nombreArc): 
+
+    nombrePdbInc = nombreArc[:- 2]
     pdbdownload = PDBList()
-    pdbdownload.retrieve_pdb_file(res2, file_format="pdb")
-       
+    pdbdownload.retrieve_pdb_file(nombrePdbInc, file_format="pdb")
+
+
+def programa():
+
+    sec_a_analizar = input("Ingrese el nombre del archivo FASTA que desea analizar: ")
+    sec_fasta = obtener_secuencia(sec_a_analizar + ".fasta")  
+
+    proteina = pasar_a_proteina(sec_fasta)
+    buscaryGuardarPdb(blast_proteina_namePdb(proteina))
+        
     if(validar_fasta(sec_fasta)):
         mut_letra = input("Desea hacer una mutacion manual 'M' o una automatica 'A': ").upper()
         posicion = int(input("Ingrese la posición donde quiere que comienze el análisis de la secuencia: ")) 
