@@ -246,15 +246,16 @@ def mutar_secuencia(sec, mut_letra):
     except:
         return print("Debe ingresar un número")
 
-def blast_proteina_namePdb(seq_proteina): 
-
+def blast_proteina_namePdb(seq_proteina, sec_a_analizar): 
+    res = "La proteina no existe en la base de datos PDB"
     resultBlast = NCBIWWW.qblast(program= "blastp", database= "pdb", sequence= seq_proteina)
- 
-    save_clk = open("CR457033.xml", "w")
+    blast = sec_a_analizar + ".xml"
+
+    save_clk = open(blast, "w")
     save_clk.write(resultBlast.read())    
     save_clk.close()
     
-    blast_records = NCBIXML.parse(open("CR457033.xml"))
+    blast_records = NCBIXML.parse(open(blast))
 
     myScore = 0
     for blast_record in blast_records:
@@ -277,7 +278,7 @@ def programa():
     sec_fasta = obtener_secuencia(sec_a_analizar + ".fasta")  
 
     proteina = pasar_a_proteina(sec_fasta)
-    nombreProteina = blast_proteina_namePdb(proteina)
+    nombreProteina = blast_proteina_namePdb(proteina, sec_a_analizar)
     nombrePdbInc = nombreProteina[:- 2]
     buscaryGuardarPdb(nombrePdbInc)
     nombrePdbProteina =  ("pdb"+nombrePdbInc+".ent").lower()
