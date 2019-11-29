@@ -1,6 +1,9 @@
 import string
 import random
 import xml.etree.cElementTree as ET
+import pymol
+import __main__
+from pymol import cmd
 from random import randint
 from Bio.Blast import NCBIWWW 
 from Bio.Blast import NCBIXML
@@ -263,9 +266,9 @@ def blast_proteina_namePdb(seq_proteina):
 
 def buscaryGuardarPdb(nombreArc): 
 
-    nombrePdbInc = nombreArc[:- 2]
     pdbdownload = PDBList()
-    pdbdownload.retrieve_pdb_file(nombrePdbInc, file_format="pdb")
+    pdbdownload.retrieve_pdb_file(nombreArc, file_format="pdb")
+    #falta seleccionar particion
 
 
 def programa():
@@ -274,8 +277,11 @@ def programa():
     sec_fasta = obtener_secuencia(sec_a_analizar + ".fasta")  
 
     proteina = pasar_a_proteina(sec_fasta)
-    buscaryGuardarPdb(blast_proteina_namePdb(proteina))
-        
+    nombreProteina = blast_proteina_namePdb(proteina)
+    nombrePdbInc = nombreProteina[:- 2]
+    buscaryGuardarPdb(nombrePdbInc)
+    nombrePdbProteina =  ("pdb"+nombrePdbInc+".ent").lower()
+
     if(validar_fasta(sec_fasta)):
         mut_letra = input("Desea hacer una mutacion manual 'M' o una automatica 'A': ").upper()
         posicion = int(input("Ingrese la posición donde quiere que comienze el análisis de la secuencia: ")) 
@@ -286,9 +292,13 @@ def programa():
             return print("Ingresó una posición fuera de rango, ingrese un número menor a: " + str(len(sec_fasta))) 
 
         mutacion = mutar_secuencia(prot_comienzo, mut_letra)
-
-        # pasar_a_proteina(mutacion) ?????????
-        # graficar
+        
+        # graficar mutada
+        #grafica proteina original
+        pymol.finish_launching()
+        __main__.pymol_argv = ['pymol','-qc'] # Pymol: quiet and no GUI
+        #pymol.cmd.load('le/pdb3lee.ent')
+        pymol.cmd.load("le/"+nombrePdbProteina)
 
         print("La proteina original: " + proteina)
         print("La proteina mutada:   " + pasar_a_proteina(mutacion))
