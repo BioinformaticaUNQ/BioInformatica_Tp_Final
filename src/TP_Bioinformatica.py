@@ -10,9 +10,9 @@ from Bio.Blast import NCBIXML
 from Bio.PDB import PDBList
 from modeller import *
 from modeller.automodel import *
-from Bio.Align.Applications import ClustalwCommandline
+from Bio.Align.Applications import ClustalOmegaCommandline
 from Bio.Align.Applications import MSAProbsCommandline
-from Bio import AlignIO
+
 #import tmalign
 #from tkinter import *
 '''
@@ -272,26 +272,29 @@ def blast_proteina_namePdb(seq_proteina, sec_a_analizar):
 def buscaryGuardarPdb(nombreArc): 
     pdbdownload = PDBList()
     pdbdownload.retrieve_pdb_file(nombreArc, file_format="pdb")
+    pdbdownload.get_all_entries()
+    
+
     #falta seleccionar particion
 
-def guardarEnFastaSeqMutada(mutacion):
-    save_clk = open("mutacion.fasta", "w")
+def guardarEnFastaSeqMutadaYOriginal(proteina,mutacionProteina):
+
+    save_clk = open("mutacionProteina.fasta", "w")
     #nombre generico
-    save_clk.write(">CR457033.1 Homo sapiens "+'\n')  
-    save_clk.write(mutacion)
+    save_clk.write(">Mutante "+'\n')
+    save_clk.write(mutacionProteina + '\n')
+    save_clk.write(">pdb3lee "+'\n')    
+    save_clk.write(proteina)
     save_clk.close()
 
-    original = open("CR457033.fasta", "r").read()
-    save_clk2 = open("mutacion.fasta", "a")
-    save_clk2.write('\n'+original)
-    save_clk2.close()
+
 
 def programa():
-
     sec_a_analizar = input("Ingrese el nombre del archivo FASTA que desea analizar: ")
     sec_fasta = obtener_secuencia(sec_a_analizar + ".fasta")  
 
     proteina = pasar_a_proteina(sec_fasta)
+    #UTILIZACION DE BLAST
     #nombreProteina = blast_proteina_namePdb(proteina, sec_a_analizar)
     #nombrePdbInc = nombreProteina[:- 2]
     #buscaryGuardarPdb(nombrePdbInc)
@@ -307,42 +310,43 @@ def programa():
             return print("Ingresó una posición fuera de rango, ingrese un número menor a: " + str(len(sec_fasta))) 
 
         mutacion = mutar_secuencia(prot_comienzo, mut_letra)
-        #guardarEnFastaSeqMutada(mutacion)
+        mutacionProteina = pasar_a_proteina(mutacion)
+        guardarEnFastaSeqMutadaYOriginal(proteina,mutacionProteina)
         
-        # graficar mutada
+        #graficar mutada
         #grafica proteina original
         pymol.finish_launching()
         __main__.pymol_argv = ['pymol','-qc'] # Pymol: quiet and no GUI
-        #pymol.cmd.load('le/pdb3lee.ent')
+        pymol.cmd.load('le/pdb3lee.ent')
         #pymol.cmd.load("le/"+nombrePdbProteina)
-
-
-        # CR457033
-
-        in_file = "mut.fasta"
-        clustalw_cline = ClustalwCommandline("clustalw2", infile=in_file) # output='PIR'
-        align = AlignIO.read("mut.aln", "clustal")
-        clustalw_cline()
-        print(align, "aCAAAAAAAAAAAAAAAA")
-        print(clustalw_cline()," holaaaaa")
         
-        '''                
-        target='aln_pig_3v03'
-        template='3V03_A'
+        # CR457033
+        in_file = "mutacionProteina.fasta"
+        out_file = "mutacion.fasta" 
+        
+        clustalomega_cline = ClustalOmegaCommandline(infile=in_file, outfile=out_file, outfmt="fasta", verbose=False, auto=True, force=True)
+        clustalomega_cline()
+        e = environ()
+        target='mutacion'
+        a = alignment(e, file='%s.fasta'%target, alignment_format='FASTA')
+        a.write(file='%s.pir'%target, alignment_format='PIR')
+          
+        '''              
+        target='mutacion'
+        template='pdb3lee'
 
         env = environ()
         aln = alignment(env)
-        mdl = model(env, file="%s.pdb" % template, model_segment=('FIRST:A','LAST:A'))
+        mdl = model(env, file="%s.ent" % template, model_segment=('FIRST:A','LAST:A'))
         aln.append_model(mdl, align_codes=template, atom_files="%s.pdb" % template)
-        aln.append(file='%s.ali'%target, align_codes=target)
+        aln.append(file='%s.aln'%target, align_codes=target, alignment_format='PIR')
         aln.align2d()
-        aln.write(file='%s-%s.ali' % (target,template), alignment_format='PIR')
+        aln.write(file='%s-%s.aln' % (target,template), alignment_format='PIR')
         aln.write(file='%s-%s.pap' % (target,template), alignment_format='PAP', alignment_features ="INDICES HELIX BETA")
         '''
 
         
 
-        
         log.verbose()    # request verbose output
         env = environ()  # create a new MODELLER environment to build this model in
  
@@ -352,29 +356,18 @@ def programa():
  
  
         a = automodel(env,
-             alnfile  = 'aln_rat_3v03.pir', # alignment filename
-             knowns   = ('3V03'),  #.pdp         # codes of the templates
-             sequence = 'NM_134326') #mutacion              # code of the target
+             alnfile  = 'mut.pir', # alignment filename
+             knowns   = ('pdb3lee'),  #.pdp         # codes of the templates
+             sequence = 'Mutante') #mutacion              # code of the target
         a.starting_model= 1                 # index of the first model
         a.ending_model  = 1                 # index of the last model
                                    # (determines how many models to calculate)
-        #a.make()         
-        pymol.cmd.load('./le/3V03.pdb')  
-        pymol.cmd.load('NM_134326.B99990001.pdb')
-        print(a, "acaaaaaaaaa!!!!!!")
+        a.make()         
+       # pymol.cmd.load('./le/3V03.pdb')  
+       # pymol.cmd.load('NM_134326.B99990001.pdb')
+       #print(a, "acaaaaaaaaa!!!!!!")
         
         #pymol.cmd.extra_fitname CA, 3V03, align, object=all_to_3V03_alignCA
-
-
-        '''  
-        e = environ()
-
-        target= open('mut.aln')
-
-        a = alignment(e, file= target, alignment_format='FASTA')
-        a.write(file='%s.ali'%target, alignment_format='PIR')
-        '''
-
 
         print("La proteina original: " + proteina)
         print("La proteina mutada:   " + pasar_a_proteina(mutacion))
