@@ -1,0 +1,1441 @@
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastp</BlastOutput_program>
+  <BlastOutput_version>BLASTP 2.10.0+</BlastOutput_version>
+  <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>pdb</BlastOutput_db>
+  <BlastOutput_query-ID>Query_11875</BlastOutput_query-ID>
+  <BlastOutput_query-def>unnamed protein product</BlastOutput_query-def>
+  <BlastOutput_query-len>76</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>10</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>F</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+<BlastOutput_iterations>
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>Query_11875</Iteration_query-ID>
+  <Iteration_query-def>unnamed protein product</Iteration_query-def>
+  <Iteration_query-len>76</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|66361226|pdb|1YX5|B</Hit_id>
+  <Hit_def>Chain B, Solution Structure of S5a UIM-1/Ubiquitin Complex &gt;gi|66361228|pdb|1YX6|B Chain B, Solution Structure of S5a UIM-2/Ubiquitin Complex</Hit_def>
+  <Hit_accession>1YX5_B</Hit_accession>
+  <Hit_len>98</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>155.992</Hsp_bit-score>
+      <Hsp_score>393</Hsp_score>
+      <Hsp_evalue>3.48308e-51</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>2</Hit_num>
+  <Hit_id>gi|1031954607|pdb|5CVM|B</Hit_id>
+  <Hit_def>Chain B, Usp46~ubiquitin Bea Covalent Complex &gt;gi|1031954610|pdb|5CVN|D Chain D, Wdr48 (2-580):usp46~ubiquitin Ternary Complex &gt;gi|1031954613|pdb|5CVO|C Chain C, Wdr48:usp46~ubiquitin Ternary Complex &gt;gi|1031954616|pdb|5CVO|F Chain F, Wdr48:usp46~ubiquitin Ternary Complex</Hit_def>
+  <Hit_accession>5CVM_B</Hit_accession>
+  <Hit_len>96</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>155.606</Hsp_bit-score>
+      <Hsp_score>392</Hsp_score>
+      <Hsp_evalue>4.97275e-51</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>21</Hsp_hit-from>
+      <Hsp_hit-to>96</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>3</Hit_num>
+  <Hit_id>gi|1208077240|pdb|5UDH|E</Hit_id>
+  <Hit_def>Chain E, Hhari/arih1-ubch7~ubiquitin</Hit_def>
+  <Hit_accession>5UDH_E</Hit_accession>
+  <Hit_len>82</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>154.836</Hsp_bit-score>
+      <Hsp_score>390</Hsp_score>
+      <Hsp_evalue>5.65059e-51</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>7</Hsp_hit-from>
+      <Hsp_hit-to>82</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>4</Hit_num>
+  <Hit_id>gi|1490338605|pdb|6DC6|B</Hit_id>
+  <Hit_def>Chain B, Ubiquitin &gt;gi|1490338607|pdb|6DC6|D Chain D, Ubiquitin</Hit_def>
+  <Hit_accession>6DC6_B</Hit_accession>
+  <Hit_len>80</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>154.451</Hsp_bit-score>
+      <Hsp_score>389</Hsp_score>
+      <Hsp_evalue>6.85782e-51</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>80</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>5</Hit_num>
+  <Hit_id>gi|665764296|pdb|4CXD|MM</Hit_id>
+  <Hit_def>Chain m, Regulation Of The Mammalian Elongation Cycle By 40s Subunit Rolling: A Eukaryotic-specific Ribosome Rearrangement &gt;gi|672884413|pdb|4UPX|MM Chain m, Mammalian 80s Hcv-ires Initiation Complex With Eif5b Pre-like State &gt;gi|672884465|pdb|4UQ1|MM Chain m, Mammalian 80s Hcv-ires Initiation Complex With Eif5b Post-like State &gt;gi|675970165|pdb|4W20|MM Chain m, Structure Of The Mammalian 60s Ribosomal Subunit (this Entry Contains The Large Ribosomal Proteins) &gt;gi|675970216|pdb|4W22|MM Chain m, Structure Of The 80s Mammalian Ribosome Bound To Eef2 (this Entry Contains The Large Ribosomal Subunit Proteins) &gt;gi|675970307|pdb|4W25|MM Chain m, Structure Of The Idle Mammalian Ribosome-sec61 Complex (this Entry Contains The Large Ribosomal Subunit Proteins) &gt;gi|675970360|pdb|4W27|MM Chain m, Structure Of The Translating Mammalian Ribosome-sec61 Complex (this Entry Contains The Large Ribosomal Subunit Proteins)</Hit_def>
+  <Hit_accession>4CXD_MM</Hit_accession>
+  <Hit_len>128</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>155.992</Hsp_bit-score>
+      <Hsp_score>393</Hsp_score>
+      <Hsp_evalue>7.16744e-51</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>6</Hit_num>
+  <Hit_id>gi|1085618392|pdb|5LN1|U</Hit_id>
+  <Hit_def>Chain U, Polyubiquitin-B</Hit_def>
+  <Hit_accession>5LN1_U</Hit_accession>
+  <Hit_len>81</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>154.451</Hsp_bit-score>
+      <Hsp_score>389</Hsp_score>
+      <Hsp_evalue>7.46135e-51</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>6</Hsp_hit-from>
+      <Hsp_hit-to>81</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>7</Hit_num>
+  <Hit_id>gi|302566232|pdb|3NOB|A</Hit_id>
+  <Hit_def>Chain A, Structure Of K11-linked Di-ubiquitin &gt;gi|302566233|pdb|3NOB|B Chain B, Structure Of K11-linked Di-ubiquitin &gt;gi|302566234|pdb|3NOB|C Chain C, Structure Of K11-linked Di-ubiquitin &gt;gi|302566235|pdb|3NOB|D Chain D, Structure Of K11-linked Di-ubiquitin &gt;gi|302566236|pdb|3NOB|E Chain E, Structure Of K11-linked Di-ubiquitin &gt;gi|302566237|pdb|3NOB|F Chain F, Structure Of K11-linked Di-ubiquitin &gt;gi|302566238|pdb|3NOB|G Chain G, Structure Of K11-linked Di-ubiquitin &gt;gi|302566239|pdb|3NOB|H Chain H, Structure Of K11-linked Di-ubiquitin &gt;gi|645985384|pdb|2MBB|B Chain B, Polyubiquitin-B &gt;gi|728055214|pdb|2MUR|B Chain B, Solution Structure of the Human FAAP20 UBZ-Ubiquitin Complex &gt;gi|1393955716|pdb|5YIJ|C Chain C, Structure of a Legionella effector with substrates &gt;gi|1393955717|pdb|5YIJ|D Chain D, Structure of a Legionella effector with substrates &gt;gi|1393955718|pdb|5YIJ|G Chain G, Structure of a Legionella effector with substrates &gt;gi|1393955720|pdb|5YIK|C Chain C, Structure of a Legionella effector with its substrate &gt;gi|1393955721|pdb|5YIK|D Chain D, Structure of a Legionella effector with its substrate &gt;gi|1393955722|pdb|5YIK|F Chain F, Structure of a Legionella effector with its substrate</Hit_def>
+  <Hit_accession>3NOB_A</Hit_accession>
+  <Hit_len>78</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>154.451</Hsp_bit-score>
+      <Hsp_score>389</Hsp_score>
+      <Hsp_evalue>7.96841e-51</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>78</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>8</Hit_num>
+  <Hit_id>gi|1258500983|pdb|5OHM|A</Hit_id>
+  <Hit_def>Chain A, Polyubiquitin-C &gt;gi|1258500984|pdb|5OHM|C Chain C, Polyubiquitin-C &gt;gi|1258500985|pdb|5OHM|E Chain E, Polyubiquitin-C &gt;gi|1258500986|pdb|5OHM|G Chain G, Polyubiquitin-C &gt;gi|1258500987|pdb|5OHM|I Chain I, Polyubiquitin-C &gt;gi|1258500988|pdb|5OHM|K Chain K, Polyubiquitin-C</Hit_def>
+  <Hit_accession>5OHM_A</Hit_accession>
+  <Hit_len>77</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>154.451</Hsp_bit-score>
+      <Hsp_score>389</Hsp_score>
+      <Hsp_evalue>8.0872e-51</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>9</Hit_num>
+  <Hit_id>gi|1612357327|pdb|6QF8|A</Hit_id>
+  <Hit_def>Chain A, Polyubiquitin-B</Hit_def>
+  <Hit_accession>6QF8_A</Hit_accession>
+  <Hit_len>79</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>154.451</Hsp_bit-score>
+      <Hsp_score>389</Hsp_score>
+      <Hsp_evalue>8.57331e-51</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>79</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>10</Hit_num>
+  <Hit_id>gi|1391852025|pdb|5ZQ3|C</Hit_id>
+  <Hit_def>Chain C, PDE-Ubiquitin &gt;gi|1391852026|pdb|5ZQ3|D Chain D, PDE-Ubiquitin &gt;gi|1391852028|pdb|5ZQ4|C Chain C, PDE-Ubi-ADPr &gt;gi|1391852030|pdb|5ZQ4|D Chain D, PDE-Ubi-ADPr &gt;gi|1423516837|pdb|5YT6|E Chain E, Crystal structure of TAX1BP1 UBZ2 in complex with mono-ubiquitin &gt;gi|1423516839|pdb|5YT6|A Chain A, Crystal structure of TAX1BP1 UBZ2 in complex with mono-ubiquitin &gt;gi|1423516841|pdb|5YT6|C Chain C, Crystal structure of TAX1BP1 UBZ2 in complex with mono-ubiquitin &gt;gi|1423516843|pdb|5YT6|G Chain G, Crystal structure of TAX1BP1 UBZ2 in complex with mono-ubiquitin &gt;gi|1446210988|pdb|6CP2|C Chain C, Polyubiquitin-B</Hit_def>
+  <Hit_accession>5ZQ3_C</Hit_accession>
+  <Hit_len>78</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>154.066</Hsp_bit-score>
+      <Hsp_score>388</Hsp_score>
+      <Hsp_evalue>8.79631e-51</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>78</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>11</Hit_num>
+  <Hit_id>gi|924443152|pdb|4R62|B</Hit_id>
+  <Hit_def>Chain B, Structure Of Rad6~ub</Hit_def>
+  <Hit_accession>4R62_B</Hit_accession>
+  <Hit_len>78</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>154.066</Hsp_bit-score>
+      <Hsp_score>388</Hsp_score>
+      <Hsp_evalue>9.19137e-51</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>78</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>12</Hit_num>
+  <Hit_id>gi|442599|pdb|1AAR|A</Hit_id>
+  <Hit_def>Chain A, Structure Of A Diubiquitin Conjugate And A Model For Interaction With Ubiquitin Conjugating Enzyme (E2) &gt;gi|442600|pdb|1AAR|B Chain B, Structure Of A Diubiquitin Conjugate And A Model For Interaction With Ubiquitin Conjugating Enzyme (E2) &gt;gi|494630|pdb|1TBE|A Chain A, TETRAUBIQUITIN &gt;gi|494631|pdb|1TBE|B Chain B, TETRAUBIQUITIN &gt;gi|13096129|pdb|1F9J|A Chain A, Structure Of A New Crystal Form Of Tetraubiquitin &gt;gi|13096130|pdb|1F9J|B Chain B, Structure Of A New Crystal Form Of Tetraubiquitin &gt;gi|33357851|pdb|1P3Q|U Chain U, Mechanism Of Ubiquitin Recognition By The Cue Domain Of Vps9 &gt;gi|33357852|pdb|1P3Q|V Chain V, Mechanism Of Ubiquitin Recognition By The Cue Domain Of Vps9 &gt;gi|47169417|pdb|1UZX|B Chain B, A Complex Of The Vps23 Uev With Ubiquitin &gt;gi|61680603|pdb|1YD8|U Chain U, Complex Of Human Gga3 Gat Domain And Ubiquitin &gt;gi|61680605|pdb|1YD8|V Chain V, Complex Of Human Gga3 Gat Domain And Ubiquitin &gt;gi|71041888|pdb|1WR6|E Chain E, Crystal Structure Of Gga3 Gat Domain In Complex With Ubiquitin &gt;gi|71041889|pdb|1WR6|F Chain F, Crystal Structure Of Gga3 Gat Domain In Complex With Ubiquitin &gt;gi|71041890|pdb|1WR6|G Chain G, Crystal Structure Of Gga3 Gat Domain In Complex With Ubiquitin &gt;gi|71041891|pdb|1WR6|H Chain H, Crystal Structure Of Gga3 Gat Domain In Complex With Ubiquitin &gt;gi|82407398|pdb|1WRD|B Chain B, Crystal Structure Of Tom1 Gat Domain In Complex With Ubiquitin &gt;gi|85544518|pdb|2D3G|A Chain A, Double Sided Ubiquitin Binding Of Hrs-Uim &gt;gi|85544519|pdb|2D3G|B Chain B, Double Sided Ubiquitin Binding Of Hrs-Uim &gt;gi|90109001|pdb|2C7M|B Chain B, UBIQUITIN &gt;gi|90109003|pdb|2C7N|B Chain B, UBIQUITIN &gt;gi|90109005|pdb|2C7N|D Chain D, UBIQUITIN &gt;gi|90109007|pdb|2C7N|F Chain F, UBIQUITIN &gt;gi|90109009|pdb|2C7N|H Chain H, UBIQUITIN &gt;gi|90109011|pdb|2C7N|J Chain J, UBIQUITIN &gt;gi|90109013|pdb|2C7N|L Chain L, UBIQUITIN &gt;gi|90109430|pdb|2FID|A Chain A, Crystal Structure Of A Bovine Rabex-5 Fragment Complexed With Ubiquitin &gt;gi|90109436|pdb|2FIF|A Chain A, Crystal Structure Of A Bovine Rabex-5 Fragment Complexed With Ubiquitin &gt;gi|90109438|pdb|2FIF|C Chain C, Crystal Structure Of A Bovine Rabex-5 Fragment Complexed With Ubiquitin &gt;gi|90109440|pdb|2FIF|E Chain E, Crystal Structure Of A Bovine Rabex-5 Fragment Complexed With Ubiquitin &gt;gi|93279866|pdb|2G45|B Chain B, Co-Crystal Structure Of Znf Ubp Domain From The Deubiquitinating Enzyme Isopeptidase T (Isot) In Complex With Ubiquitin &gt;gi|93279868|pdb|2G45|E Chain E, Co-Crystal Structure Of Znf Ubp Domain From The Deubiquitinating Enzyme Isopeptidase T (Isot) In Complex With Ubiquitin &gt;gi|114794333|pdb|2HD5|B Chain B, Usp2 In Complex With Ubiquitin &gt;gi|116667303|pdb|2GMI|C Chain C, Mms2UBC13~UBIQUITIN &gt;gi|118137630|pdb|2DX5|B Chain B, The Complex Structure Between The Mouse Eap45-Glue Domain And Ubiquitin &gt;gi|118137970|pdb|2HTH|A Chain A, Structural Basis For Ubiquitin Recognition By The Human Eap45/escrt-ii Glue Domain &gt;gi|126031708|pdb|2OOB|B Chain B, Crystal Structure Of The Uba Domain From Cbl-B Ubiquitin Ligase In Complex With Ubiquitin &gt;gi|134105062|pdb|2O6V|A Chain A, Crystal Structure And Solution Nmr Studies Of Lys48-Linked Tetraubiquitin At Neutral Ph &gt;gi|134105064|pdb|2O6V|C Chain C, Crystal Structure And Solution Nmr Studies Of Lys48-Linked Tetraubiquitin At Neutral Ph &gt;gi|134105066|pdb|2O6V|E Chain E, Crystal Structure And Solution Nmr Studies Of Lys48-Linked Tetraubiquitin At Neutral Ph &gt;gi|134105068|pdb|2O6V|G Chain G, Crystal Structure And Solution Nmr Studies Of Lys48-Linked Tetraubiquitin At Neutral Ph &gt;gi|152149262|pdb|2PE9|A Chain A, NMR Based Structure of the Open Conformation of LYS48-Linked Di-UBiquitin Using Experimental Global Rotational Diffusion Tensor from NMR Relaxation Measurements &gt;gi|152149263|pdb|2PE9|B Chain B, NMR Based Structure of the Open Conformation of LYS48-Linked Di-UBiquitin Using Experimental Global Rotational Diffusion Tensor from NMR Relaxation Measurements &gt;gi|152149264|pdb|2PEA|A Chain A, NMR Based Structure of the Closed Conformation of LYS48-Linked Di-Ubiquitin Using Experimental Global Rotational Diffusion Tensor from NMR Relaxation Measurements &gt;gi|152149265|pdb|2PEA|B Chain B, NMR Based Structure of the Closed Conformation of LYS48-Linked Di-Ubiquitin Using Experimental Global Rotational Diffusion Tensor from NMR Relaxation Measurements &gt;gi|157834056|pdb|1UBI|A Chain A, SYNTHETIC STRUCTURAL AND BIOLOGICAL STUDIES OF THE UBIQUITIN SYSTEM. PART 1 &gt;gi|157834057|pdb|1UBQ|A Chain A, Structure Of Ubiquitin Refined At 1.8 Angstroms Resolution &gt;gi|158430212|pdb|2QHO|A Chain A, Crystal Structure Of The Uba Domain From Edd Ubiquitin Ligase In Complex With Ubiquitin &gt;gi|158430214|pdb|2QHO|C Chain C, Crystal Structure Of The Uba Domain From Edd Ubiquitin Ligase In Complex With Ubiquitin &gt;gi|158430216|pdb|2QHO|E Chain E, Crystal Structure Of The Uba Domain From Edd Ubiquitin Ligase In Complex With Ubiquitin &gt;gi|158430218|pdb|2QHO|G Chain G, Crystal Structure Of The Uba Domain From Edd Ubiquitin Ligase In Complex With Ubiquitin &gt;gi|159162189|pdb|1D3Z|A Chain A, Ubiquitin Nmr Structure &gt;gi|159162335|pdb|1FXT|B Chain B, Structure Of A Conjugating Enzyme-Ubiquitin Thiolester Complex &gt;gi|159162877|pdb|1Q5W|B Chain B, Ubiquitin Recognition by Npl4 Zinc-Fingers &gt;gi|159163207|pdb|1V80|A Chain A, Solution structures of ubiquitin at 30 bar and 3 kbar &gt;gi|159163208|pdb|1V81|A Chain A, Solution structures of ubiquitin at 30 bar and 3 kbar &gt;gi|159163622|pdb|1XQQ|A Chain A, Simultaneous determination of protein structure and dynamics &gt;gi|159163779|pdb|2BGF|A Chain A, NMR structure of Lys48-linked di-ubiquitin using chemical shift perturbation data together with RDCs and 15N-relaxation data &gt;gi|159163780|pdb|2BGF|B Chain B, NMR structure of Lys48-linked di-ubiquitin using chemical shift perturbation data together with RDCs and 15N-relaxation data &gt;gi|159164087|pdb|2DEN|B Chain B, Solution Structure of the Ubiquitin-Associated Domain of Human BMSC-UbP and its Complex with Ubiquitin &gt;gi|159164557|pdb|2FUH|B Chain B, Solution Structure of the UbcH5c/Ub Non-covalent Complex &gt;gi|159164745|pdb|2NR2|A Chain A, The MUMO (minimal under-restraining minimal over-restraining) method for the determination of native states ensembles of proteins &gt;gi|160877887|pdb|2ZCC|A Chain A, Ubiquitin Crystallized Under High Pressure &gt;gi|160877888|pdb|2ZCC|B Chain B, Ubiquitin Crystallized Under High Pressure &gt;gi|160877889|pdb|2ZCC|C Chain C, Ubiquitin Crystallized Under High Pressure &gt;gi|167013220|pdb|2JF5|A Chain A, Crystal Structure Of Lys63-Linked Di-Ubiquitin &gt;gi|167013221|pdb|2JF5|B Chain B, Crystal Structure Of Lys63-Linked Di-Ubiquitin &gt;gi|170292211|pdb|2JY6|A Chain A, Solution structure of the complex of ubiquitin and ubiquilin 1 UBA domain &gt;gi|170784968|pdb|2JZZ|A Chain A, Solid-State NMR Structure of Microcrystalline Ubiquitin &gt;gi|188595918|pdb|2Z59|B Chain B, Complex Structures of Mouse Rpn13 (22-130aa) and ubiquitin &gt;gi|192987140|pdb|2K39|A Chain A, Ubiquitin &gt;gi|193506479|pdb|2JRI|B Chain B, Solution structure of the Josephin domain of Ataxin-3 in complex with ubiquitin molecule. &gt;gi|193506480|pdb|2JRI|C Chain C, Solution structure of the Josephin domain of Ataxin-3 in complex with ubiquitin molecule. &gt;gi|217035436|pdb|3EFU|A Chain A, X-Ray Structure Of Human Ubiquitin-Hg(Ii) Adduct &gt;gi|224983544|pdb|3EEC|A Chain A, X-Ray Structure Of Human Ubiquitin Cd(Ii) Adduct &gt;gi|224983545|pdb|3EEC|B Chain B, X-Ray Structure Of Human Ubiquitin Cd(Ii) Adduct &gt;gi|225698036|pdb|3EHV|A Chain A, Ubiquitin &gt;gi|225698037|pdb|3EHV|B Chain B, Ubiquitin &gt;gi|225698038|pdb|3EHV|C Chain C, Ubiquitin &gt;gi|229597558|pdb|2K8B|A Chain A, Solution structure of PLAA family ubiquitin binding domain (PFUC) cis isomer in complex with ubiquitin &gt;gi|229597560|pdb|2K8C|A Chain A, Solution structure of PLAA family ubiquitin binding domain (PFUC) trans isomer in complex with ubiquitin &gt;gi|229597964|pdb|3H1U|A Chain A, Structure Of Ubiquitin In Complex With Cd Ions &gt;gi|229597965|pdb|3H1U|B Chain B, Structure Of Ubiquitin In Complex With Cd Ions &gt;gi|256599792|pdb|3HM3|A Chain A, The Structure and conformation of Lys-63 linked tetra-ubiquitin &gt;gi|256599793|pdb|3HM3|B Chain B, The Structure and conformation of Lys-63 linked tetra-ubiquitin &gt;gi|256599794|pdb|3HM3|C Chain C, The Structure and conformation of Lys-63 linked tetra-ubiquitin &gt;gi|256599795|pdb|3HM3|D Chain D, The Structure and conformation of Lys-63 linked tetra-ubiquitin &gt;gi|257097061|pdb|2KDE|B Chain B, NMR structure of major S5a (196-306):K48 linked diubiquitin species &gt;gi|257097062|pdb|2KDE|C Chain C, NMR structure of major S5a (196-306):K48 linked diubiquitin species &gt;gi|257097064|pdb|2KDF|B Chain B, NMR structure of minor S5a (196-306):K48 linked diubiquitin species &gt;gi|257097065|pdb|2KDF|C Chain C, NMR structure of minor S5a (196-306):K48 linked diubiquitin species &gt;gi|259090228|pdb|3H7P|B Chain B, Crystal structure of K63-linked di-ubiquitin &gt;gi|260656105|pdb|2KLG|A Chain A, PERE NMR structure of ubiquitin &gt;gi|268612048|pdb|2KN5|A Chain A, A Correspondence Between Solution-State Dynamics of an Individual Protein and the Sequence and Conformational Diversity of its Family &gt;gi|269914355|pdb|2WWZ|A Chain A, UBIQUITIN &gt;gi|269914356|pdb|2WWZ|B Chain B, UBIQUITIN &gt;gi|269914358|pdb|2WX0|A Chain A, Tab2 Nzf Domain In Complex With Lys63-Linked Di-Ubiquitin, P21 &gt;gi|269914359|pdb|2WX0|B Chain B, Tab2 Nzf Domain In Complex With Lys63-Linked Di-Ubiquitin, P21 &gt;gi|269914360|pdb|2WX0|E Chain E, Tab2 Nzf Domain In Complex With Lys63-Linked Di-Ubiquitin, P21 &gt;gi|269914361|pdb|2WX0|F Chain F, Tab2 Nzf Domain In Complex With Lys63-Linked Di-Ubiquitin, P21 &gt;gi|269914364|pdb|2WX1|A Chain A, Tab2 Nzf Domain In Complex With Lys63-Linked Tri-Ubiquitin, P212121 &gt;gi|269914365|pdb|2WX1|B Chain B, Tab2 Nzf Domain In Complex With Lys63-Linked Tri-Ubiquitin, P212121 &gt;gi|269914375|pdb|3A33|B Chain B, Ubch5b~ubiquitin Conjugate &gt;gi|291463747|pdb|3M3J|A Chain A, A New Crystal Form Of Lys48-Linked Diubiquitin &gt;gi|291463748|pdb|3M3J|B Chain B, A New Crystal Form Of Lys48-Linked Diubiquitin &gt;gi|291463749|pdb|3M3J|C Chain C, A New Crystal Form Of Lys48-Linked Diubiquitin &gt;gi|291463750|pdb|3M3J|D Chain D, A New Crystal Form Of Lys48-Linked Diubiquitin &gt;gi|291463751|pdb|3M3J|E Chain E, A New Crystal Form Of Lys48-Linked Diubiquitin &gt;gi|291463752|pdb|3M3J|F Chain F, A New Crystal Form Of Lys48-Linked Diubiquitin &gt;gi|299856910|pdb|3NHE|B Chain B, High Resolution Structure (1.26a) Of Usp2a In Complex With Ubiquitin &gt;gi|300508359|pdb|2XEW|A Chain A, UBIQUITIN &gt;gi|300508360|pdb|2XEW|B Chain B, UBIQUITIN &gt;gi|300508361|pdb|2XEW|C Chain C, UBIQUITIN &gt;gi|300508362|pdb|2XEW|D Chain D, UBIQUITIN &gt;gi|300508363|pdb|2XEW|E Chain E, UBIQUITIN &gt;gi|300508364|pdb|2XEW|F Chain F, UBIQUITIN &gt;gi|300508365|pdb|2XEW|G Chain G, UBIQUITIN &gt;gi|300508366|pdb|2XEW|H Chain H, UBIQUITIN &gt;gi|300508367|pdb|2XEW|I Chain I, UBIQUITIN &gt;gi|300508368|pdb|2XEW|J Chain J, UBIQUITIN &gt;gi|300508369|pdb|2XEW|K Chain K, UBIQUITIN &gt;gi|300508370|pdb|2XEW|L Chain L, UBIQUITIN &gt;gi|304445693|pdb|2XK5|A Chain A, Crystal Structure Of K6-Linked Diubiquitin &gt;gi|304445752|pdb|3ALB|A Chain A, Cyclic Lys48-Linked Tetraubiquitin &gt;gi|304445753|pdb|3ALB|B Chain B, Cyclic Lys48-Linked Tetraubiquitin &gt;gi|304445754|pdb|3ALB|C Chain C, Cyclic Lys48-Linked Tetraubiquitin &gt;gi|304445755|pdb|3ALB|D Chain D, Cyclic Lys48-Linked Tetraubiquitin &gt;gi|306440714|pdb|3OFI|C Chain C, Crystal structure of human insulin-degrading enzyme in complex with ubiquitin &gt;gi|306440715|pdb|3OFI|D Chain D, Crystal structure of human insulin-degrading enzyme in complex with ubiquitin &gt;gi|308198391|pdb|2KWU|B Chain B, Solution Structure of UBM2 of murine Polymerase iota in Complex with Ubiquitin &gt;gi|308198393|pdb|2KWV|B Chain B, Solution Structure of UBM1 of murine Polymerase iota in Complex with Ubiquitin &gt;gi|310942516|pdb|2KTF|A Chain A, Solution NMR structure of human polymerase iota UBM2 in complex with ubiquitin &gt;gi|310942521|pdb|2L0F|A Chain A, Solution NMR structure of human polymerase iota UBM2 (P692A mutant) in complex with ubiquitin &gt;gi|315113181|pdb|2L0T|A Chain A, Solution structure of the complex of ubiquitin and the VHS domain of Stam2 &gt;gi|317455223|pdb|3N30|A Chain A, Crystal Structure Of Cubic Zn3-Hub (Human Ubiquitin) Adduct &gt;gi|317455224|pdb|3N30|B Chain B, Crystal Structure Of Cubic Zn3-Hub (Human Ubiquitin) Adduct &gt;gi|317455225|pdb|3N32|A Chain A, The Crystal Structure Of Human Ubiquitin Adduct With Zeise&apos;s Salt &gt;gi|323462754|pdb|2L3Z|A Chain A, Proton-Detected 4D DREAM Solid-State NMR Structure of Ubiquitin &gt;gi|323714528|pdb|3PHD|E Chain E, Crystal Structure Of Human Hdac6 In Complex With Ubiquitin &gt;gi|323714529|pdb|3PHD|F Chain F, Crystal Structure Of Human Hdac6 In Complex With Ubiquitin &gt;gi|323714530|pdb|3PHD|G Chain G, Crystal Structure Of Human Hdac6 In Complex With Ubiquitin &gt;gi|323714531|pdb|3PHD|H Chain H, Crystal Structure Of Human Hdac6 In Complex With Ubiquitin &gt;gi|326634049|pdb|2XBB|C Chain C, Nedd4 Hect:ub Complex &gt;gi|326634050|pdb|2XBB|D Chain D, Nedd4 Hect:ub Complex &gt;gi|335892047|pdb|2KOX|A Chain A, NMR residual dipolar couplings identify long range correlated motions in the backbone of the protein ubiquitin &gt;gi|339717352|pdb|2RR9|A Chain A, The solution structure of the K63-Ub2:tUIMs complex &gt;gi|339717353|pdb|2RR9|B Chain B, The solution structure of the K63-Ub2:tUIMs complex &gt;gi|340780375|pdb|3NS8|A Chain A, Crystal Structure Of An Open Conformation Of Lys48-Linked Diubiquitin At Ph 7.5 &gt;gi|340780376|pdb|3NS8|B Chain B, Crystal Structure Of An Open Conformation Of Lys48-Linked Diubiquitin At Ph 7.5 &gt;gi|345531668|pdb|3AUL|A Chain A, Crystal Structure Of Wild-Type Lys48-Linked Diubiquitin In An Open Conformation &gt;gi|345531669|pdb|3AUL|B Chain B, Crystal Structure Of Wild-Type Lys48-Linked Diubiquitin In An Open Conformation &gt;gi|377656602|pdb|4DDG|I Chain I, Crystal structure of human OTUB1/UbcH5b~Ub/Ub &gt;gi|377656606|pdb|4DDG|E Chain E, Crystal structure of human OTUB1/UbcH5b~Ub/Ub &gt;gi|377656607|pdb|4DDG|F Chain F, Crystal structure of human OTUB1/UbcH5b~Ub/Ub &gt;gi|377656614|pdb|4DDG|O Chain O, Crystal structure of human OTUB1/UbcH5b~Ub/Ub &gt;gi|377656615|pdb|4DDG|P Chain P, Crystal structure of human OTUB1/UbcH5b~Ub/Ub &gt;gi|377656630|pdb|4DDI|G Chain G, Crystal structure of human OTUB1/UbcH5b~Ub/Ub &gt;gi|377656631|pdb|4DDI|H Chain H, Crystal structure of human OTUB1/UbcH5b~Ub/Ub &gt;gi|377656632|pdb|4DDI|I Chain I, Crystal structure of human OTUB1/UbcH5b~Ub/Ub &gt;gi|387766178|pdb|3UGB|B Chain B, Ubch5c~ubiquitin Conjugate &gt;gi|388325684|pdb|3TBL|D Chain D, Structure Of Mono-ubiquitinated Pcna: Implications For Dna Polymerase Switching And Okazaki Fragment Maturation &gt;gi|388325685|pdb|3TBL|E Chain E, Structure Of Mono-ubiquitinated Pcna: Implications For Dna Polymerase Switching And Okazaki Fragment Maturation &gt;gi|388328110|pdb|4DDG|D Chain D, Crystal structure of human OTUB1/UbcH5b~Ub/Ub &gt;gi|388328111|pdb|4DDG|G Chain G, Crystal structure of human OTUB1/UbcH5b~Ub/Ub &gt;gi|388328112|pdb|4DDG|H Chain H, Crystal structure of human OTUB1/UbcH5b~Ub/Ub &gt;gi|388328116|pdb|4DDG|M Chain M, Crystal structure of human OTUB1/UbcH5b~Ub/Ub &gt;gi|388328117|pdb|4DDG|N Chain N, Crystal structure of human OTUB1/UbcH5b~Ub/Ub &gt;gi|388328118|pdb|4DDG|Q Chain Q, Crystal structure of human OTUB1/UbcH5b~Ub/Ub &gt;gi|388328119|pdb|4DDG|R Chain R, Crystal structure of human OTUB1/UbcH5b~Ub/Ub &gt;gi|388328123|pdb|4DDI|D Chain D, Crystal structure of human OTUB1/UbcH5b~Ub/Ub &gt;gi|388328124|pdb|4DDI|E Chain E, Crystal structure of human OTUB1/UbcH5b~Ub/Ub &gt;gi|388328125|pdb|4DDI|F Chain F, Crystal structure of human OTUB1/UbcH5b~Ub/Ub &gt;gi|395759236|pdb|2LJ5|A Chain A, Description of the Structural fluctuations of proteins from structure-based calculations of Residual dipolar couplings &gt;gi|408535776|pdb|3VHT|C Chain C, Ubiquitin &gt;gi|422919050|pdb|2LVO|A Chain A, Structure of the gp78CUE domain bound to monubiquitin &gt;gi|422919052|pdb|2LVP|A Chain A, gp78CUE domain bound to the distal ubiquitin of K48-linked diubiquitin &gt;gi|422919053|pdb|2LVP|B Chain B, gp78CUE domain bound to the distal ubiquitin of K48-linked diubiquitin &gt;gi|422919055|pdb|2LVQ|A Chain A, gp78CUE domain bound to the proximal ubiquitin of K48-linked diubiquitin &gt;gi|422919056|pdb|2LVQ|B Chain B, gp78CUE domain bound to the proximal ubiquitin of K48-linked diubiquitin &gt;gi|449802145|pdb|3VUW|A Chain A, Crystal Structure Of A20 Zf7 In Complex With Linear Ubiquitin, Form I &gt;gi|449802146|pdb|3VUW|B Chain B, Crystal Structure Of A20 Zf7 In Complex With Linear Ubiquitin, Form I &gt;gi|449802147|pdb|3VUW|C Chain C, Crystal Structure Of A20 Zf7 In Complex With Linear Ubiquitin, Form I &gt;gi|449802151|pdb|3VUX|A Chain A, Crystal Structure Of A20 Zf7 In Complex With Linear Ubiquitin, Form Ii &gt;gi|449802152|pdb|3VUX|B Chain B, Crystal Structure Of A20 Zf7 In Complex With Linear Ubiquitin, Form Ii &gt;gi|449802153|pdb|3VUX|C Chain C, Crystal Structure Of A20 Zf7 In Complex With Linear Ubiquitin, Form Ii &gt;gi|449802157|pdb|3VUY|A Chain A, Crystal Structure Of A20 Zf7 In Complex With Linear Tetraubiquitin &gt;gi|449802159|pdb|3VUY|C Chain C, Crystal Structure Of A20 Zf7 In Complex With Linear Tetraubiquitin &gt;gi|449802161|pdb|3VUY|B Chain B, Crystal Structure Of A20 Zf7 In Complex With Linear Tetraubiquitin &gt;gi|485601572|pdb|4BBN|C Chain C, Nedd4 Hect-ub:ub Complex &gt;gi|491668777|pdb|4K7S|A Chain A, ubiquitin &gt;gi|491668778|pdb|4K7S|B Chain B, ubiquitin &gt;gi|491668779|pdb|4K7S|C Chain C, ubiquitin &gt;gi|491668780|pdb|4K7U|A Chain A, ubiquitin &gt;gi|491668781|pdb|4K7U|B Chain B, ubiquitin &gt;gi|491668782|pdb|4K7U|C Chain C, ubiquitin &gt;gi|491668783|pdb|4K7W|A Chain A, ubiquitin &gt;gi|491668784|pdb|4K7W|B Chain B, ubiquitin &gt;gi|491668785|pdb|4K7W|C Chain C, ubiquitin &gt;gi|524933230|pdb|4BOZ|B Chain B, Structure Of Otud2 Otu Domain In Complex With K11-linked Di Ubiquitin &gt;gi|524933231|pdb|4BOZ|C Chain C, Structure Of Otud2 Otu Domain In Complex With K11-linked Di Ubiquitin &gt;gi|524933233|pdb|4BOZ|E Chain E, Structure Of Otud2 Otu Domain In Complex With K11-linked Di Ubiquitin &gt;gi|529481771|pdb|4BOS|C Chain C, POLYUBIQUITIN-C &gt;gi|529481772|pdb|4BOS|E Chain E, POLYUBIQUITIN-C &gt;gi|530537694|pdb|4LDT|D Chain D, Ubiquitin &gt;gi|538260932|pdb|2MBO|A Chain A, K11-linked Diubiquitin average solution structure at pH 6.8, 0 mM NaCl &gt;gi|538260933|pdb|2MBO|B Chain B, K11-linked Diubiquitin average solution structure at pH 6.8, 0 mM NaCl &gt;gi|538260934|pdb|2MBQ|A Chain A, K11-linked Diubiquitin average solution structure at pH 6.8, 150 mM NaCl &gt;gi|538260935|pdb|2MBQ|B Chain B, K11-linked Diubiquitin average solution structure at pH 6.8, 150 mM NaCl &gt;gi|550544604|pdb|4LJO|B Chain B, Polyubiquitin-C &gt;gi|550544606|pdb|4LJP|B Chain B, Polyubiquitin-C &gt;gi|550545408|pdb|2LZ6|A Chain A, Distinct ubiquitin binding modes exhibited by sh3 domains: molecular determinants and functional implications &gt;gi|550545863|pdb|2MBH|A Chain A, NMR structure of EKLF(22-40)/Ubiquitin Complex &gt;gi|576864906|pdb|4BVU|C Chain C, UBIQUITIN &gt;gi|582044852|pdb|2MCN|B Chain B, Distinct ubiquitin binding modes exhibited by SH3 domains: molecular determinants and functional implications &gt;gi|584579861|pdb|4M0W|B Chain B, Ubiquitin &gt;gi|597959810|pdb|2MJB|A Chain A, Solution nmr structure of ubiquitin refined against dipolar couplings in 4 media &gt;gi|597960074|pdb|4JQW|C Chain C, Crystal Structure Of A Complex Of Nod1 Card And Ubiquitin &gt;gi|609411870|pdb|2MJ5|A Chain A, Structure of the UBA Domain of Human NBR1 in Complex with Ubiquitin &gt;gi|659835159|pdb|2MOR|A Chain A, A tensor-free method for the structural and dynamical refinement of proteins using residual dipolar couplings &gt;gi|675082813|pdb|4UN2|A Chain A, Crystal Structure Of The Uba Domain Of Dsk2 In Complex With Ubiquitin &gt;gi|726969144|pdb|4WUR|B Chain B, The Crystal Structure Of The Mers-cov Papain-like Protease (c111s) With Human Ubiquitin &gt;gi|753536211|pdb|2MRO|A Chain A, Polyubiquitin-B &gt;gi|764091206|pdb|4WLR|C Chain C, Crystal Structure Of Much37-hrpn13 Ctd-hub Complex &gt;gi|770386550|pdb|4XYZ|A Chain A, Crystal Structure Of K33 Linked Di-ubiquitin &gt;gi|770386551|pdb|4XYZ|B Chain B, Crystal Structure Of K33 Linked Di-ubiquitin &gt;gi|770386552|pdb|4Y1H|A Chain A, Ubiquitin-40S ribosomal protein S27a &gt;gi|806394192|pdb|4S1Z|A Chain A, Crystal Structure Of Trabid Nzf1 In Complex With K29 Linked Di- Ubiquitin &gt;gi|806394193|pdb|4S1Z|B Chain B, Crystal Structure Of Trabid Nzf1 In Complex With K29 Linked Di- Ubiquitin &gt;gi|806394194|pdb|4S1Z|C Chain C, Crystal Structure Of Trabid Nzf1 In Complex With K29 Linked Di- Ubiquitin &gt;gi|806394195|pdb|4S1Z|D Chain D, Crystal Structure Of Trabid Nzf1 In Complex With K29 Linked Di- Ubiquitin &gt;gi|806394196|pdb|4S1Z|E Chain E, Crystal Structure Of Trabid Nzf1 In Complex With K29 Linked Di- Ubiquitin &gt;gi|806394202|pdb|4S22|A Chain A, Crystal Structure Of K29 Linked Di-ubiquitin &gt;gi|806394203|pdb|4S22|B Chain B, Crystal Structure Of K29 Linked Di-ubiquitin &gt;gi|806394204|pdb|4S22|C Chain C, Crystal Structure Of K29 Linked Di-ubiquitin &gt;gi|806394205|pdb|4S22|D Chain D, Crystal Structure Of K29 Linked Di-ubiquitin &gt;gi|873090849|pdb|5AIT|C Chain C, POLYUBIQUITIN-C &gt;gi|873090850|pdb|5AIT|F Chain F, POLYUBIQUITIN-C &gt;gi|873090857|pdb|5AIU|C Chain C, POLYUBIQUITIN-C &gt;gi|873090859|pdb|5AIU|F Chain F, POLYUBIQUITIN-C &gt;gi|906849068|pdb|4Z9S|A Chain A, Non-covalent assembly of monoubiquitin that mimics K11 poly-ubiquitin &gt;gi|906849069|pdb|4Z9S|B Chain B, Non-covalent assembly of monoubiquitin that mimics K11 poly-ubiquitin &gt;gi|906849070|pdb|4Z9S|C Chain C, Non-covalent assembly of monoubiquitin that mimics K11 poly-ubiquitin &gt;gi|906849071|pdb|4Z9S|D Chain D, Non-covalent assembly of monoubiquitin that mimics K11 poly-ubiquitin &gt;gi|939186315|pdb|4XOF|A Chain A, Observing the overall rocking motion of a protein in a crystal - Orthorhombic Ubiquitin crystals without Zinc. &gt;gi|939186316|pdb|4XOK|A Chain A, Observing The Overall Rocking Motion Of A Protein In A Crystal. &gt;gi|939186317|pdb|4XOK|B Chain B, Observing The Overall Rocking Motion Of A Protein In A Crystal. &gt;gi|939186318|pdb|4XOK|C Chain C, Observing The Overall Rocking Motion Of A Protein In A Crystal. &gt;gi|939186319|pdb|4XOL|A Chain A, Observing The Overall Rocking Motion Of A Protein In A Crystal - Cubic Ubiquitin Crystals. &gt;gi|939186320|pdb|4XOL|B Chain B, Observing The Overall Rocking Motion Of A Protein In A Crystal - Cubic Ubiquitin Crystals. &gt;gi|958159710|pdb|5DFL|B Chain B, Crystal Structure Of Ube2k~ubiquitin Conjugate &gt;gi|960515557|pdb|5D0K|B Chain B, Structure Of Ube2d2:rnf165:ub Complex &gt;gi|960515558|pdb|5D0K|E Chain E, Structure Of Ube2d2:rnf165:ub Complex &gt;gi|960515559|pdb|5D0K|H Chain H, Structure Of Ube2d2:rnf165:ub Complex &gt;gi|960515560|pdb|5D0K|K Chain K, Structure Of Ube2d2:rnf165:ub Complex &gt;gi|960515563|pdb|5D0M|B Chain B, Structure Of Ube2d2:rnf165:ub Complex &gt;gi|974994734|pdb|5EDV|E Chain E, Structure Of The Hoip-rbr/ubch5b~ubiquitin Transfer Complex &gt;gi|974994735|pdb|5EDV|F Chain F, Structure Of The Hoip-rbr/ubch5b~ubiquitin Transfer Complex &gt;gi|974994736|pdb|5EDV|G Chain G, Structure Of The Hoip-rbr/ubch5b~ubiquitin Transfer Complex &gt;gi|974994737|pdb|5EDV|H Chain H, Structure Of The Hoip-rbr/ubch5b~ubiquitin Transfer Complex &gt;gi|995970291|pdb|4XKH|A Chain A, Crystal Structure Of The Airapl Tandem Uims In Complex With A Lys48- Linked Tri-ubiquitin &gt;gi|995970293|pdb|4XKH|F Chain F, Crystal Structure Of The Airapl Tandem Uims In Complex With A Lys48- Linked Tri-ubiquitin &gt;gi|995970294|pdb|4XKH|B Chain B, Crystal Structure Of The Airapl Tandem Uims In Complex With A Lys48- Linked Tri-ubiquitin &gt;gi|995970296|pdb|4XKH|D Chain D, Crystal Structure Of The Airapl Tandem Uims In Complex With A Lys48- Linked Tri-ubiquitin &gt;gi|995970297|pdb|4XKH|G Chain G, Crystal Structure Of The Airapl Tandem Uims In Complex With A Lys48- Linked Tri-ubiquitin &gt;gi|995970299|pdb|4XKH|I Chain I, Crystal Structure Of The Airapl Tandem Uims In Complex With A Lys48- Linked Tri-ubiquitin &gt;gi|1000232117|pdb|2N3U|B Chain B, Solution structure of the Rpn1 T1 site engaging two monoubiquitin molecules &gt;gi|1000232118|pdb|2N3U|C Chain C, Solution structure of the Rpn1 T1 site engaging two monoubiquitin molecules &gt;gi|1000232120|pdb|2N3V|B Chain B, Solution structure of the Rpn1 T1 site with K48-linked diubiquitin in the extended binding mode &gt;gi|1000232121|pdb|2N3V|C Chain C, Solution structure of the Rpn1 T1 site with K48-linked diubiquitin in the extended binding mode &gt;gi|1000232123|pdb|2N3W|B Chain B, Solution structure of the Rpn1 T1 site with K48-linked diubiquitin in the contracted binding mode &gt;gi|1000232124|pdb|2N3W|C Chain C, Solution structure of the Rpn1 T1 site with K48-linked diubiquitin in the contracted binding mode &gt;gi|1000232261|pdb|4ZUX|X Chain X, Saga Dub Module Ubp8/sgf11/sus1/sgf73 Bound To Ubiqitinated Nucleosome &gt;gi|1000232266|pdb|4ZUX|CC Chain c, Saga Dub Module Ubp8/sgf11/sus1/sgf73 Bound To Ubiqitinated Nucleosome &gt;gi|1000232271|pdb|4ZUX|HH Chain h, Saga Dub Module Ubp8/sgf11/sus1/sgf73 Bound To Ubiqitinated Nucleosome &gt;gi|1000232276|pdb|4ZUX|MM Chain m, Saga Dub Module Ubp8/sgf11/sus1/sgf73 Bound To Ubiqitinated Nucleosome &gt;gi|1028909520|pdb|5FER|C Chain C, Ubiquitin-40S ribosomal protein S27a &gt;gi|1028909523|pdb|5FER|F Chain F, Ubiquitin-40S ribosomal protein S27a &gt;gi|1028910038|pdb|5J8P|A Chain A, Lys27-linked Diubiquitin &gt;gi|1028910049|pdb|5JBV|A Chain A, Lys27-linked Triubiquitin &gt;gi|1036305055|pdb|5BZ0|B Chain B, Crystal Structure Of Ibv Papain-like Protease Plpro C101s Mutant In Complex With Ubiquitin &gt;gi|1040205996|pdb|5JQS|D Chain D, Crystal Structure Of Deubiquitinase Mindy-1 In Complex With Ubiquitin &gt;gi|1047463340|pdb|5JBY|A Chain A, Lys27-linked Triubiquitin &gt;gi|1047463341|pdb|5JBY|C Chain C, Lys27-linked Triubiquitin &gt;gi|1047463342|pdb|5JBY|E Chain E, Lys27-linked Triubiquitin &gt;gi|1048349424|pdb|5KGF|O Chain O, Structural model of 53BP1 bound to a ubiquitylated and methylated nucleosome, at 4.5 A resolution &gt;gi|1048349425|pdb|5KGF|M Chain M, Structural model of 53BP1 bound to a ubiquitylated and methylated nucleosome, at 4.5 A resolution &gt;gi|1052245107|pdb|5JTJ|B Chain B, Usp7cd-ctp In Complex With Ubiquitin &gt;gi|1059271317|pdb|5EYA|C Chain C, Trim25 Ring Domain In Complex With Ubc13-ub Conjugate &gt;gi|1059271318|pdb|5EYA|D Chain D, Trim25 Ring Domain In Complex With Ubc13-ub Conjugate &gt;gi|1080155124|pdb|5JTV|B Chain B, Usp7cd-ubl45 In Complex With Ubiquitin &gt;gi|1080155126|pdb|5JTV|D Chain D, Usp7cd-ubl45 In Complex With Ubiquitin &gt;gi|1080155128|pdb|5JTV|F Chain F, Usp7cd-ubl45 In Complex With Ubiquitin &gt;gi|1080155130|pdb|5JTV|H Chain H, Usp7cd-ubl45 In Complex With Ubiquitin &gt;gi|1096116090|pdb|5GO7|A Chain A, Linear Tri-ubiquitin &gt;gi|1096116091|pdb|5GO8|A Chain A, Linear Tetra-ubiquitin &gt;gi|1096116092|pdb|5GOB|A Chain A, Lys6-linked Di-ubiquitin &gt;gi|1096116093|pdb|5GOC|A Chain A, Lys11-linked Diubiquitin &gt;gi|1096116094|pdb|5GOD|A Chain A, Lys27-linked Di-ubiquitin &gt;gi|1096116095|pdb|5GOD|B Chain B, Lys27-linked Di-ubiquitin &gt;gi|1096116096|pdb|5GOG|A Chain A, Lys29-linked Di-ubiquitin &gt;gi|1096116097|pdb|5GOH|A Chain A, Lys33-linked Di-ubiquitin &gt;gi|1096116098|pdb|5GOI|A Chain A, Lys48-linked Di-ubiquitin &gt;gi|1096116099|pdb|5GOI|B Chain B, Lys48-linked Di-ubiquitin &gt;gi|1096116100|pdb|5GOJ|A Chain A, Lys63-linked Di-ubiquitin &gt;gi|1096116101|pdb|5GOK|A Chain A, K11/k63-branched Tri-ubiquitin &gt;gi|1134776330|pdb|5MN9|A Chain A, Crystal Structure Of Mindy-1 Tmiu In Complex With K48-diub &gt;gi|1134776331|pdb|5MN9|B Chain B, Crystal Structure Of Mindy-1 Tmiu In Complex With K48-diub &gt;gi|1177806742|pdb|5X3N|A Chain A, Crystal Structure Of Diub-k6 &gt;gi|1182607662|pdb|5XDP|A Chain A, K11/48-branched Teraubiquitin &gt;gi|1189450394|pdb|5NMC|A Chain A, Crystal structure of Zn3-hUb(human ubiquitin) adduct from a solution 70 mM zinc acetate/20% v/v TFE/1.3 mM hUb &gt;gi|1189450395|pdb|5NMC|B Chain B, Crystal structure of Zn3-hUb(human ubiquitin) adduct from a solution 70 mM zinc acetate/20% v/v TFE/1.3 mM hUb &gt;gi|1189450396|pdb|5NMC|C Chain C, Crystal structure of Zn3-hUb(human ubiquitin) adduct from a solution 70 mM zinc acetate/20% v/v TFE/1.3 mM hUb &gt;gi|1189450602|pdb|5V1Y|C Chain C, Crystal structure of the ternary RPN13 PRU-RPN2 (940-953)-ubiquitin complex &gt;gi|1189450603|pdb|5V1Y|D Chain D, Crystal structure of the ternary RPN13 PRU-RPN2 (940-953)-ubiquitin complex &gt;gi|1189450608|pdb|5V1Z|C Chain C, Crystal structure of the RPN13 PRU-RPN2 (932-953)-ubiquitin complex &gt;gi|1189450609|pdb|5V1Z|D Chain D, Crystal structure of the RPN13 PRU-RPN2 (932-953)-ubiquitin complex &gt;gi|1193829563|pdb|5VEY|B Chain B, Solution NMR structure of histone H2A-H2B mono-ubiquitylated at H2A Lys15 in complex with RNF169 (653-708) &gt;gi|1193829565|pdb|5VF0|A Chain A, Solution NMR structure of human RAD18 (198-240) in complex with ubiquitin &gt;gi|1200169900|pdb|5XBO|A Chain A, Lanthanoid tagging via an unnatural amino acid for protein structure characterization &gt;gi|1201295574|pdb|5ULF|B Chain B, Crystal Structure Of A Ubch5b~ub Conjugate &gt;gi|1201295576|pdb|5ULF|D Chain D, Crystal Structure Of A Ubch5b~ub Conjugate &gt;gi|1201295578|pdb|5ULH|B Chain B, Structure Of Rnf165 In Complex With A Ubch5b~ub Conjugate &gt;gi|1201295581|pdb|5ULK|B Chain B, Crystal Structure Of Rnf165 In Complex With A Ubch5b~ub Conjugate &gt;gi|1229749489|pdb|5KYC|C Chain C, Polyubiquitin-B &gt;gi|1229749490|pdb|5KYD|D Chain D, Polyubiquitin-B &gt;gi|1229749493|pdb|5KYE|D Chain D, Polyubiquitin-B &gt;gi|1229749495|pdb|5KYE|C Chain C, Polyubiquitin-B &gt;gi|1229749497|pdb|5KYF|C Chain C, Polyubiquitin-B &gt;gi|1248693605|pdb|5OHP|B Chain B, Polyubiquitin-B &gt;gi|1248693606|pdb|5OHP|C Chain C, Polyubiquitin-B &gt;gi|1258500975|pdb|5OHL|I Chain I, K6-specific Affimer Bound To K6 Diub &gt;gi|1258500976|pdb|5OHL|J Chain J, K6-specific Affimer Bound To K6 Diub &gt;gi|1258500977|pdb|5OHL|K Chain K, K6-specific Affimer Bound To K6 Diub &gt;gi|1258500978|pdb|5OHL|L Chain L, K6-specific Affimer Bound To K6 Diub &gt;gi|1258500979|pdb|5OHL|M Chain M, K6-specific Affimer Bound To K6 Diub &gt;gi|1258500980|pdb|5OHL|N Chain N, K6-specific Affimer Bound To K6 Diub &gt;gi|1258500981|pdb|5OHL|O Chain O, K6-specific Affimer Bound To K6 Diub &gt;gi|1258500982|pdb|5OHL|P Chain P, K6-specific Affimer Bound To K6 Diub &gt;gi|1258500995|pdb|5OHV|A Chain A, K33-specific Affimer Bound To K33 Diub &gt;gi|1258500996|pdb|5OHV|C Chain C, K33-specific Affimer Bound To K33 Diub &gt;gi|1272615591|pdb|5UJL|A Chain A, Representative 1-conformer ensembles of K27-linked Ub2 from RDC data &gt;gi|1272615592|pdb|5UJL|B Chain B, Representative 1-conformer ensembles of K27-linked Ub2 from RDC data &gt;gi|1279527170|pdb|5TUT|B Chain B, UbcH5a-Ub isopeptide conjugate &gt;gi|1285033548|pdb|5H7S|E Chain E, Structural basis of the flanking zinc-finger motifs crucial for the E3 ligase activity of the LNX1 RING domain &gt;gi|1285033551|pdb|5H7S|F Chain F, Structural basis of the flanking zinc-finger motifs crucial for the E3 ligase activity of the LNX1 RING domain &gt;gi|1304111434|pdb|5VNZ|C Chain C, Structure of a TRAF6-Ubc13~Ub complex &gt;gi|1304111437|pdb|5VNZ|F Chain F, Structure of a TRAF6-Ubc13~Ub complex &gt;gi|1304111440|pdb|5VO0|C Chain C, Structure of a TRAF6-Ubc13~Ub complex &gt;gi|1304111443|pdb|5VO0|F Chain F, Structure of a TRAF6-Ubc13~Ub complex &gt;gi|1351638749|pdb|5XU8|B Chain B, Ubiquitin-40S ribosomal protein S27a &gt;gi|1351638753|pdb|5XVE|B Chain B, Ubiquitin-40S ribosomal protein S27a &gt;gi|1357894277|pdb|5XIU|B Chain B, Crystal structure of RNF168 UDM2 in complex with Lys63-linked diubiquitin &gt;gi|1379069769|pdb|6B7M|B Chain B, Polyubiquitin-C &gt;gi|1379069770|pdb|6B7M|C Chain C, Polyubiquitin-C &gt;gi|1379069772|pdb|6B7O|B Chain B, Polyubiquitin-C &gt;gi|1379069773|pdb|6B7O|C Chain C, Polyubiquitin-C &gt;gi|1388257880|pdb|5TXK|B Chain B, Polyubiquitin-B &gt;gi|1391851883|pdb|5VZM|A Chain A, Solution NMR structure of human Rev1 (932-1039) in complex with ubiquitin &gt;gi|1407938200|pdb|6ASR|A Chain A, REV1 UBM2 domain complex with ubiquitin &gt;gi|1407938202|pdb|6ASR|C Chain C, REV1 UBM2 domain complex with ubiquitin &gt;gi|1418639934|pdb|6AQR|D Chain D, SAGA DUB module Ubp8(C146A)/Sgf11/Sus1/Sgf73 bound to monoubiquitin &gt;gi|1446210695|pdb|5WFI|C Chain C, Ubiquitin &gt;gi|1446210696|pdb|5WFI|D Chain D, Ubiquitin &gt;gi|1446211739|pdb|5UJN|A Chain A, Representative 2-conformer ensembles of K27-linked Ub2 from RDC data &gt;gi|1446211740|pdb|5UJN|B Chain B, Representative 2-conformer ensembles of K27-linked Ub2 from RDC data &gt;gi|1446212267|pdb|6FTX|N Chain N, Structure of the chromatin remodelling enzyme Chd1 bound to a ubiquitinylated nucleosome &gt;gi|1446212268|pdb|6FTX|O Chain O, Structure of the chromatin remodelling enzyme Chd1 bound to a ubiquitinylated nucleosome &gt;gi|1516608300|pdb|6E2B|A Chain A, Ubiquitin &gt;gi|1516608301|pdb|6E2B|C Chain C, Ubiquitin &gt;gi|1516608302|pdb|6E2B|E Chain E, Ubiquitin &gt;gi|1516608303|pdb|6E2B|G Chain G, Ubiquitin &gt;gi|1516608304|pdb|6E2B|I Chain I, Ubiquitin &gt;gi|1516608305|pdb|6E2B|P Chain P, Ubiquitin &gt;gi|1519485829|pdb|6IF1|C Chain C, Ubiquitin &gt;gi|1519485830|pdb|6IF1|D Chain D, Ubiquitin &gt;gi|1524266317|pdb|6N13|D Chain D, ubiquitin &gt;gi|1569048203|pdb|6ISU|B Chain B, Ubiquitin &gt;gi|1585137630|pdb|5ZBU|E Chain E, Ubiquitin &gt;gi|1595430077|pdb|5YMY|A Chain A, Ubiquitin &gt;gi|1597624360|pdb|6JB6|B Chain B, Ubiquitin &gt;gi|1597624362|pdb|6JB7|B Chain B, Ubiquitin &gt;gi|1653017190|pdb|6JMA|Y Chain Y, Ubiquitin &gt;gi|1653017366|pdb|6OI4|C Chain C, ubiquitin &gt;gi|1653017369|pdb|6OI4|D Chain D, ubiquitin &gt;gi|1743125719|pdb|6S53|F Chain F, Polyubiquitin-C &gt;gi|1743125721|pdb|6S53|D Chain D, Polyubiquitin-C &gt;gi|1743125725|pdb|6S53|L Chain L, Polyubiquitin-C &gt;gi|1743125727|pdb|6S53|J Chain J, Polyubiquitin-C &gt;gi|1775480886|pdb|6RYA|B Chain B, Polyubiquitin-C &gt;gi|1775480888|pdb|6RYA|D Chain D, Polyubiquitin-C &gt;gi|1775480890|pdb|6RYA|F Chain F, Polyubiquitin-C</Hit_def>
+  <Hit_accession>1AAR_A</Hit_accession>
+  <Hit_len>76</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>154.066</Hsp_bit-score>
+      <Hsp_score>388</Hsp_score>
+      <Hsp_evalue>9.67883e-51</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>13</Hit_num>
+  <Hit_id>gi|289526477|pdb|2KHW|B</Hit_id>
+  <Hit_def>Chain B, Ubiquitin &gt;gi|306440517|pdb|3K9P|B Chain B, The Crystal Structure Of E2-25k And Ubiquitin Complex &gt;gi|313754429|pdb|3OJ3|A Chain A, Ubiquitin &gt;gi|313754430|pdb|3OJ3|B Chain B, Ubiquitin &gt;gi|313754431|pdb|3OJ3|C Chain C, Ubiquitin &gt;gi|313754432|pdb|3OJ3|D Chain D, Ubiquitin &gt;gi|313754433|pdb|3OJ3|E Chain E, Ubiquitin &gt;gi|313754434|pdb|3OJ3|F Chain F, Ubiquitin &gt;gi|313754435|pdb|3OJ3|G Chain G, Ubiquitin &gt;gi|313754436|pdb|3OJ3|H Chain H, Ubiquitin &gt;gi|313754446|pdb|3OJ4|B Chain B, Crystal structure of the A20 ZnF4, ubiquitin and UbcH5A complex &gt;gi|313754449|pdb|3OJ4|E Chain E, Crystal structure of the A20 ZnF4, ubiquitin and UbcH5A complex &gt;gi|332639783|pdb|3PTF|C Chain C, X-Ray Structure Of The Non-Covalent Complex Between Ubch5a And Ubiquitin &gt;gi|332639784|pdb|3PTF|D Chain D, X-Ray Structure Of The Non-Covalent Complex Between Ubch5a And Ubiquitin &gt;gi|699027345|pdb|2MRE|A Chain A, NMR structure of the Rad18-UBZ/ubiquitin complex &gt;gi|1229749866|pdb|5VZW|C Chain C, TRIM23 RING domain in complex with UbcH5-Ub &gt;gi|1229749870|pdb|5VZW|D Chain D, TRIM23 RING domain in complex with UbcH5-Ub</Hit_def>
+  <Hit_accession>2KHW_B</Hit_accession>
+  <Hit_len>79</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>154.066</Hsp_bit-score>
+      <Hsp_score>388</Hsp_score>
+      <Hsp_evalue>9.88908e-51</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>79</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>14</Hit_num>
+  <Hit_id>gi|400261189|pdb|4AP4|C</Hit_id>
+  <Hit_def>Chain C, UBIQUITIN C &gt;gi|400261191|pdb|4AP4|F Chain F, UBIQUITIN C &gt;gi|510102316|pdb|4KSK|C Chain C, Gumby/fam105b In Complex With Ubiquitin &gt;gi|510102317|pdb|4KSK|D Chain D, Gumby/fam105b In Complex With Ubiquitin &gt;gi|564731192|pdb|4MDK|E Chain E, Cdc34-ubiquitin-cc0651 Complex &gt;gi|564731193|pdb|4MDK|F Chain F, Cdc34-ubiquitin-cc0651 Complex &gt;gi|564731194|pdb|4MDK|G Chain G, Cdc34-ubiquitin-cc0651 Complex &gt;gi|564731195|pdb|4MDK|H Chain H, Cdc34-ubiquitin-cc0651 Complex</Hit_def>
+  <Hit_accession>4AP4_C</Hit_accession>
+  <Hit_len>80</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>154.066</Hsp_bit-score>
+      <Hsp_score>388</Hsp_score>
+      <Hsp_evalue>1.01835e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>80</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>15</Hit_num>
+  <Hit_id>gi|197725013|pdb|2ZNV|C</Hit_id>
+  <Hit_def>Chain C, Crystal Structure Of Human Amsh-Lp Dub Domain In Complex With Lys63-Linked Ubiquitin Dimer &gt;gi|197725016|pdb|2ZNV|F Chain F, Crystal Structure Of Human Amsh-Lp Dub Domain In Complex With Lys63-Linked Ubiquitin Dimer &gt;gi|254574781|pdb|3A1Q|A Chain A, Crystal Structure Of The Mouse Rap80 Uims In Complex With Lys63-Linked Di-Ubiquitin &gt;gi|254574784|pdb|3A1Q|D Chain D, Crystal Structure Of The Mouse Rap80 Uims In Complex With Lys63-Linked Di-Ubiquitin &gt;gi|262118712|pdb|3JSV|B Chain B, Crystal Structure Of Mouse Nemo Cozi In Complex With Lys63- Linked Di-Ubiquitin &gt;gi|270346452|pdb|3A9J|B Chain B, Crystal Structure Of The Mouse Tab2-Nzf In Complex With Lys63-Linked Di-Ubiquitin &gt;gi|270346455|pdb|3A9K|B Chain B, Crystal Structure Of The Mouse Tab3-Nzf In Complex With Lys63-Linked Di-Ubiquitin &gt;gi|695721766|pdb|4NQL|C Chain C, The Crystal Structure Of The Dub Domain Of Amsh Orthologue, Sst2 From S. Pombe, In Complex With Lysine 63-linked Diubiquitin &gt;gi|820957270|pdb|3WWQ|B Chain B, Crystal Structure Of Faap20 Ubz Domain In Complex With Lys63-linked Diubiquitin &gt;gi|820957273|pdb|3WWQ|E Chain E, Crystal Structure Of Faap20 Ubz Domain In Complex With Lys63-linked Diubiquitin &gt;gi|820957276|pdb|3WWQ|H Chain H, Crystal Structure Of Faap20 Ubz Domain In Complex With Lys63-linked Diubiquitin &gt;gi|820957279|pdb|3WWQ|K Chain K, Crystal Structure Of Faap20 Ubz Domain In Complex With Lys63-linked Diubiquitin &gt;gi|1357894265|pdb|5XIS|B Chain B, Crystal structure of RNF168 UDM1 in complex with Lys63-linked diubiquitin, form I &gt;gi|1357894268|pdb|5XIS|E Chain E, Crystal structure of RNF168 UDM1 in complex with Lys63-linked diubiquitin, form I &gt;gi|1357894272|pdb|5XIT|H Chain H, Crystal structure of RNF168 UDM1 in complex with Lys63-linked diubiquitin, form II &gt;gi|1357894274|pdb|5XIT|B Chain B, Crystal structure of RNF168 UDM1 in complex with Lys63-linked diubiquitin, form II &gt;gi|1357894309|pdb|5YDK|D Chain D, Crystal structure of RNF168 UDM1 in complex with Lys63-linked diubiquitin, tetrameric form &gt;gi|1357894312|pdb|5YDK|J Chain J, Crystal structure of RNF168 UDM1 in complex with Lys63-linked diubiquitin, tetrameric form &gt;gi|1357894315|pdb|5YDK|C Chain C, Crystal structure of RNF168 UDM1 in complex with Lys63-linked diubiquitin, tetrameric form &gt;gi|1357894318|pdb|5YDK|I Chain I, Crystal structure of RNF168 UDM1 in complex with Lys63-linked diubiquitin, tetrameric form &gt;gi|1573679311|pdb|6A6I|F Chain F, Polyubiquitin-B &gt;gi|1573679313|pdb|6A6I|H Chain H, Polyubiquitin-B &gt;gi|1770301754|pdb|6OQ1|E Chain E, Ubiquitin &gt;gi|1770301755|pdb|6OQ1|F Chain F, Ubiquitin &gt;gi|1770301758|pdb|6OQ2|E Chain E, Ubiquitin</Hit_def>
+  <Hit_accession>2ZNV_C</Hit_accession>
+  <Hit_len>77</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>154.066</Hsp_bit-score>
+      <Hsp_score>388</Hsp_score>
+      <Hsp_evalue>1.09991e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>16</Hit_num>
+  <Hit_id>gi|1397983872|pdb|6G5H|FF</Hit_id>
+  <Hit_def>Chain f, Cryo-EM structure of a late human pre-40S ribosomal subunit - Mature &gt;gi|1397983905|pdb|6G5I|FF Chain f, Cryo-EM structure of a late human pre-40S ribosomal subunit - State R</Hit_def>
+  <Hit_accession>6G5H_FF</Hit_accession>
+  <Hit_len>156</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>156.762</Hsp_bit-score>
+      <Hsp_score>395</Hsp_score>
+      <Hsp_evalue>1.1165e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>17</Hit_num>
+  <Hit_id>gi|283807117|pdb|3JVZ|X</Hit_id>
+  <Hit_def>Chain X, E2~ubiquitin-Hect &gt;gi|283807118|pdb|3JVZ|Y Chain Y, E2~ubiquitin-Hect &gt;gi|283807123|pdb|3JW0|X Chain X, E2~ubiquitin-Hect &gt;gi|283807124|pdb|3JW0|Y Chain Y, E2~ubiquitin-Hect &gt;gi|400977356|pdb|4AUQ|C Chain C, POLYUBIQUITIN-C &gt;gi|400977359|pdb|4AUQ|F Chain F, POLYUBIQUITIN-C &gt;gi|523309511|pdb|3ZNI|D Chain D, POLYUBIQUITIN-C &gt;gi|523309512|pdb|3ZNI|H Chain H, POLYUBIQUITIN-C &gt;gi|523309513|pdb|3ZNI|L Chain L, POLYUBIQUITIN-C &gt;gi|523309514|pdb|3ZNI|P Chain P, POLYUBIQUITIN-C &gt;gi|806394277|pdb|4V3K|B Chain B, POLYUBIQUITIN-C &gt;gi|806394278|pdb|4V3K|E Chain E, POLYUBIQUITIN-C &gt;gi|806394282|pdb|4V3L|B Chain B, POLYUBIQUITIN-C &gt;gi|806394283|pdb|4V3L|D Chain D, POLYUBIQUITIN-C &gt;gi|1200169419|pdb|5MNJ|B Chain B, Polyubiquitin-B &gt;gi|1200169423|pdb|5MNJ|F Chain F, Polyubiquitin-B &gt;gi|1534918473|pdb|6HPR|B Chain B, Polyubiquitin-B &gt;gi|1534918475|pdb|6HPR|D Chain D, Polyubiquitin-B</Hit_def>
+  <Hit_accession>3JVZ_X</Hit_accession>
+  <Hit_len>81</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>154.066</Hsp_bit-score>
+      <Hsp_score>388</Hsp_score>
+      <Hsp_evalue>1.14507e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>6</Hsp_hit-from>
+      <Hsp_hit-to>81</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>18</Hit_num>
+  <Hit_id>gi|335892055|pdb|2LD9|A</Hit_id>
+  <Hit_def>Chain A, Backbone Structure of Ubiquitin determined using Backbone amide NOEs and Backbone N-H and N-C RDCs</Hit_def>
+  <Hit_accession>2LD9_A</Hit_accession>
+  <Hit_len>77</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>154.066</Hsp_bit-score>
+      <Hsp_score>388</Hsp_score>
+      <Hsp_evalue>1.17484e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>2</Hsp_hit-from>
+      <Hsp_hit-to>77</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>19</Hit_num>
+  <Hit_id>gi|208435644|pdb|3DVG|X</Hit_id>
+  <Hit_def>Chain X, Crystal Structure Of K63-Specific Fab Apu.3a8 Bound To K63-Linked Di- Ubiquitin &gt;gi|208435648|pdb|3DVN|X Chain X, Crystal Structure Of K63-specific Fab Apu2.16 Bound To K63-linked Di- Ubiquitin &gt;gi|208435652|pdb|3DVN|U Chain U, Crystal Structure Of K63-specific Fab Apu2.16 Bound To K63-linked Di- Ubiquitin</Hit_def>
+  <Hit_accession>3DVG_X</Hit_accession>
+  <Hit_len>80</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>154.066</Hsp_bit-score>
+      <Hsp_score>388</Hsp_score>
+      <Hsp_evalue>1.22738e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>79</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>20</Hit_num>
+  <Hit_id>gi|529281381|pdb|4KZX|FF</Hit_id>
+  <Hit_def>Chain f, Rabbit 40s Ribosomal Subunit In Complex With Eif1. &gt;gi|529281416|pdb|4KZY|FF Chain f, Rabbit 40s Ribosomal Subunit In Complex With Eif1 And Eif1a. &gt;gi|529281452|pdb|4KZZ|FF Chain f, Rabbit 40s Ribosomal Subunit In Complex With Mrna, Initiator Trna And Eif1a &gt;gi|665764257|pdb|4CXC|FF Chain f, Regulation Of The Mammalian Elongation Cycle By 40s Subunit Rolling: A Eukaryotic-specific Ribosome Rearrangement &gt;gi|672884503|pdb|4UQ4|FF Chain f, Mammalian 80s Hcv-ires Initiation Complex With Eif5b Post-like State &gt;gi|672884537|pdb|4UQ5|FF Chain f, Mammalian 80s Hcv-ires Initiation Complex With Eif5b Pre-like State &gt;gi|675970259|pdb|4W23|FF Chain f, Structure Of The 80s Mammalian Ribosome Bound To Eef2 (this Entry Contains The Small Ribosomal Subunit) &gt;gi|675970405|pdb|4W28|FF Chain f, Structure Of The Translating Mammalian Ribosome-sec61 Complex (this Entry Contains The Small Ribosomal Subunit) &gt;gi|753536071|pdb|4D5L|FF Chain f, Cryo-em Structures Of Ribosomal 80s Complexes With Termination Factors And Cricket Paralysis Virus Ires Reveal The Ires In The Translocated State &gt;gi|764090890|pdb|4D61|FF Chain f, Cryo-em Structures Of Ribosomal 80s Complexes With Termination Factors And Cricket Paralysis Virus Ires Reveal The Ires In The Translocated State &gt;gi|969813079|pdb|5FLX|FF Chain f, Mammalian 40s Hcv-ires Complex &gt;gi|1397983629|pdb|6G18|FF Chain f, Ubiquitin-40S ribosomal protein S27a &gt;gi|1397983800|pdb|6G51|FF Chain f, Cryo-EM structure of a late human pre-40S ribosomal subunit - State D &gt;gi|1397983837|pdb|6G53|FF Chain f, Ubiquitin-40S ribosomal protein S27a &gt;gi|1746316492|pdb|6P4G|GG Chain g, eS31 &gt;gi|1746316529|pdb|6P4H|GG Chain g, eS31</Hit_def>
+  <Hit_accession>4KZX_FF</Hit_accession>
+  <Hit_len>156</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>156.377</Hsp_bit-score>
+      <Hsp_score>394</Hsp_score>
+      <Hsp_evalue>1.25945e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>21</Hit_num>
+  <Hit_id>gi|512125471|pdb|4FJV|B</Hit_id>
+  <Hit_def>Chain B, Crystal Structure Of Human Otubain2 And Ubiquitin Complex &gt;gi|512125473|pdb|4FJV|D Chain D, Crystal Structure Of Human Otubain2 And Ubiquitin Complex</Hit_def>
+  <Hit_accession>4FJV_B</Hit_accession>
+  <Hit_len>86</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>154.066</Hsp_bit-score>
+      <Hsp_score>388</Hsp_score>
+      <Hsp_evalue>1.48245e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>11</Hsp_hit-from>
+      <Hsp_hit-to>86</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>22</Hit_num>
+  <Hit_id>gi|951272650|pdb|4XKL|A</Hit_id>
+  <Hit_def>Chain A, Crystal Structure Of Ndp52 Zf2 In Complex With Mono-ubiquitin &gt;gi|951272652|pdb|4XKL|C Chain C, Crystal Structure Of Ndp52 Zf2 In Complex With Mono-ubiquitin</Hit_def>
+  <Hit_accession>4XKL_A</Hit_accession>
+  <Hit_len>80</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>153.68</Hsp_bit-score>
+      <Hsp_score>387</Hsp_score>
+      <Hsp_evalue>1.52888e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>80</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>23</Hit_num>
+  <Hit_id>gi|635576697|pdb|4K1R|B</Hit_id>
+  <Hit_def>Chain B, Crystal Structure Of Schizosaccharomyces Pombe Sst2 Catalytic Domain And Ubiquitin &gt;gi|635576699|pdb|4K1R|D Chain D, Crystal Structure Of Schizosaccharomyces Pombe Sst2 Catalytic Domain And Ubiquitin &gt;gi|657232064|pdb|4MSM|B Chain B, Ubiquitin &gt;gi|657232066|pdb|4MSM|D Chain D, Ubiquitin &gt;gi|657232069|pdb|4MSQ|B Chain B, Crystal Structure Of Schizosaccharomyces Pombe Amsh-like Protease Sst2 Catalytic Domain Bound To Ubiquitin &gt;gi|657232071|pdb|4MSQ|D Chain D, Crystal Structure Of Schizosaccharomyces Pombe Amsh-like Protease Sst2 Catalytic Domain Bound To Ubiquitin &gt;gi|657232228|pdb|4PQT|B Chain B, Insights Into The Mechanism Of Deubiquitination By Jamm Deubiquitinases From Co-crystal Structures Of Enzyme With Substrate And Product &gt;gi|939186420|pdb|4ZFR|B Chain B, Catalytic Domain Of Sst2 F403a Mutant Bound To Ubiquitin &gt;gi|939186422|pdb|4ZFT|B Chain B, Catalytic Domain Of Sst2 F403w Mutant Bound To Ubiquitin &gt;gi|939186424|pdb|4ZFT|D Chain D, Catalytic Domain Of Sst2 F403w Mutant Bound To Ubiquitin</Hit_def>
+  <Hit_accession>4K1R_B</Hit_accession>
+  <Hit_len>81</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>153.68</Hsp_bit-score>
+      <Hsp_score>387</Hsp_score>
+      <Hsp_evalue>1.71912e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>6</Hsp_hit-from>
+      <Hsp_hit-to>81</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>24</Hit_num>
+  <Hit_id>gi|589911172|pdb|4NQK|E</Hit_id>
+  <Hit_def>Chain E, Structure of an Ubiquitin complex &gt;gi|589911173|pdb|4NQK|F Chain F, Structure of an Ubiquitin complex &gt;gi|589911174|pdb|4NQK|G Chain G, Structure of an Ubiquitin complex &gt;gi|589911175|pdb|4NQK|H Chain H, Structure of an Ubiquitin complex &gt;gi|589911176|pdb|4NQK|I Chain I, Structure of an Ubiquitin complex &gt;gi|589911177|pdb|4NQK|J Chain J, Structure of an Ubiquitin complex &gt;gi|672883449|pdb|4P4H|S Chain S, Caught-in-action signaling complex of RIG-I 2CARD domain and MAVS CARD domain &gt;gi|672883450|pdb|4P4H|T Chain T, Caught-in-action signaling complex of RIG-I 2CARD domain and MAVS CARD domain &gt;gi|672883451|pdb|4P4H|U Chain U, Caught-in-action signaling complex of RIG-I 2CARD domain and MAVS CARD domain &gt;gi|672883452|pdb|4P4H|W Chain W, Caught-in-action signaling complex of RIG-I 2CARD domain and MAVS CARD domain &gt;gi|672883453|pdb|4P4H|X Chain X, Caught-in-action signaling complex of RIG-I 2CARD domain and MAVS CARD domain</Hit_def>
+  <Hit_accession>4NQK_E</Hit_accession>
+  <Hit_len>79</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>153.68</Hsp_bit-score>
+      <Hsp_score>387</Hsp_score>
+      <Hsp_evalue>1.78947e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>79</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>25</Hit_num>
+  <Hit_id>gi|665764108|pdb|1VX7|FF</Hit_id>
+  <Hit_def>Chain f, Cryo-em Structure Of The Plasmodium Falciparum 80s Ribosome Bound To The Anti-protozoan Drug Emetine, Large Subunit (protein Only)</Hit_def>
+  <Hit_accession>1VX7_FF</Hit_accession>
+  <Hit_len>128</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>154.836</Hsp_bit-score>
+      <Hsp_score>390</Hsp_score>
+      <Hsp_evalue>2.19362e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLDVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITL+VEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>26</Hit_num>
+  <Hit_id>gi|428698046|pdb|3VDZ|A</Hit_id>
+  <Hit_def>Chain A, Ubiquitin-40S ribosomal protein S27a &gt;gi|428698047|pdb|3VDZ|B Chain B, Ubiquitin-40S ribosomal protein S27a</Hit_def>
+  <Hit_accession>3VDZ_A</Hit_accession>
+  <Hit_len>111</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>154.451</Hsp_bit-score>
+      <Hsp_score>389</Hsp_score>
+      <Hsp_evalue>2.28792e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>36</Hsp_hit-from>
+      <Hsp_hit-to>111</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>27</Hit_num>
+  <Hit_id>gi|159163685|pdb|1ZGU|B</Hit_id>
+  <Hit_def>Chain B, Solution structure of the human Mms2-Ubiquitin complex &gt;gi|478247209|pdb|3ZLZ|A Chain A, Lys6-linked Tri-ubiquitin &gt;gi|478247210|pdb|3ZLZ|B Chain B, Lys6-linked Tri-ubiquitin &gt;gi|1103700643|pdb|5EMZ|A Chain A, Crystal Structure Of K48-linked Diubiquitin With F45w Mutation In The Proximal Unit &gt;gi|1103700645|pdb|5EMZ|C Chain C, Crystal Structure Of K48-linked Diubiquitin With F45w Mutation In The Proximal Unit &gt;gi|1103700647|pdb|5EMZ|E Chain E, Crystal Structure Of K48-linked Diubiquitin With F45w Mutation In The Proximal Unit &gt;gi|1279527055|pdb|5O44|D Chain D, Polyubiquitin-B &gt;gi|1279527058|pdb|5O44|F Chain F, Polyubiquitin-B &gt;gi|1573679307|pdb|6A6I|B Chain B, Polyubiquitin-B &gt;gi|1573679309|pdb|6A6I|D Chain D, Polyubiquitin-B &gt;gi|1595430078|pdb|5YMY|B Chain B, Ubiquitin &gt;gi|1770301752|pdb|6OQ1|C Chain C, Ubiquitin &gt;gi|1770301753|pdb|6OQ1|D Chain D, Ubiquitin &gt;gi|1770301757|pdb|6OQ2|D Chain D, Ubiquitin</Hit_def>
+  <Hit_accession>1ZGU_B</Hit_accession>
+  <Hit_len>76</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>153.295</Hsp_bit-score>
+      <Hsp_score>386</Hsp_score>
+      <Hsp_evalue>2.33037e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGRQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAG+QLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>28</Hit_num>
+  <Hit_id>gi|197725012|pdb|2ZNV|B</Hit_id>
+  <Hit_def>Chain B, Crystal Structure Of Human Amsh-Lp Dub Domain In Complex With Lys63-Linked Ubiquitin Dimer &gt;gi|197725015|pdb|2ZNV|E Chain E, Crystal Structure Of Human Amsh-Lp Dub Domain In Complex With Lys63-Linked Ubiquitin Dimer &gt;gi|254574782|pdb|3A1Q|B Chain B, Crystal Structure Of The Mouse Rap80 Uims In Complex With Lys63-Linked Di-Ubiquitin &gt;gi|254574785|pdb|3A1Q|E Chain E, Crystal Structure Of The Mouse Rap80 Uims In Complex With Lys63-Linked Di-Ubiquitin &gt;gi|259090227|pdb|3H7P|A Chain A, Crystal structure of K63-linked di-ubiquitin &gt;gi|262118711|pdb|3JSV|A Chain A, Crystal Structure Of Mouse Nemo Cozi In Complex With Lys63- Linked Di-Ubiquitin &gt;gi|270346451|pdb|3A9J|A Chain A, Crystal Structure Of The Mouse Tab2-Nzf In Complex With Lys63-Linked Di-Ubiquitin &gt;gi|270346454|pdb|3A9K|A Chain A, Crystal Structure Of The Mouse Tab3-Nzf In Complex With Lys63-Linked Di-Ubiquitin &gt;gi|695721765|pdb|4NQL|B Chain B, The Crystal Structure Of The Dub Domain Of Amsh Orthologue, Sst2 From S. Pombe, In Complex With Lysine 63-linked Diubiquitin &gt;gi|756142410|pdb|3WXG|B Chain B, Crystal Structure Of Cyld Usp Domain (c596a) In Complex With Lys63- Linked Diubiquitin &gt;gi|756142413|pdb|3WXG|E Chain E, Crystal Structure Of Cyld Usp Domain (c596a) In Complex With Lys63- Linked Diubiquitin &gt;gi|820957269|pdb|3WWQ|A Chain A, Crystal Structure Of Faap20 Ubz Domain In Complex With Lys63-linked Diubiquitin &gt;gi|820957272|pdb|3WWQ|D Chain D, Crystal Structure Of Faap20 Ubz Domain In Complex With Lys63-linked Diubiquitin &gt;gi|820957275|pdb|3WWQ|G Chain G, Crystal Structure Of Faap20 Ubz Domain In Complex With Lys63-linked Diubiquitin &gt;gi|820957278|pdb|3WWQ|J Chain J, Crystal Structure Of Faap20 Ubz Domain In Complex With Lys63-linked Diubiquitin &gt;gi|1004171235|pdb|2N13|B Chain B, Complex structure of MyUb (1080-1122) of human Myosin VI with K63-diUb &gt;gi|1357894266|pdb|5XIS|C Chain C, Crystal structure of RNF168 UDM1 in complex with Lys63-linked diubiquitin, form I &gt;gi|1357894269|pdb|5XIS|F Chain F, Crystal structure of RNF168 UDM1 in complex with Lys63-linked diubiquitin, form I &gt;gi|1357894270|pdb|5XIT|D Chain D, Crystal structure of RNF168 UDM1 in complex with Lys63-linked diubiquitin, form II &gt;gi|1357894275|pdb|5XIT|F Chain F, Crystal structure of RNF168 UDM1 in complex with Lys63-linked diubiquitin, form II &gt;gi|1357894308|pdb|5YDK|B Chain B, Crystal structure of RNF168 UDM1 in complex with Lys63-linked diubiquitin, tetrameric form &gt;gi|1357894311|pdb|5YDK|H Chain H, Crystal structure of RNF168 UDM1 in complex with Lys63-linked diubiquitin, tetrameric form &gt;gi|1357894314|pdb|5YDK|E Chain E, Crystal structure of RNF168 UDM1 in complex with Lys63-linked diubiquitin, tetrameric form &gt;gi|1357894317|pdb|5YDK|K Chain K, Crystal structure of RNF168 UDM1 in complex with Lys63-linked diubiquitin, tetrameric form</Hit_def>
+  <Hit_accession>2ZNV_B</Hit_accession>
+  <Hit_len>76</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>153.295</Hsp_bit-score>
+      <Hsp_score>386</Hsp_score>
+      <Hsp_evalue>2.33037e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQRESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQ+ESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>29</Hit_num>
+  <Hit_id>gi|783283428|pdb|5AF4|A</Hit_id>
+  <Hit_def>Chain A, UBIQUITIN &gt;gi|783283429|pdb|5AF4|B Chain B, UBIQUITIN &gt;gi|783283430|pdb|5AF4|C Chain C, UBIQUITIN &gt;gi|783283431|pdb|5AF4|D Chain D, UBIQUITIN &gt;gi|783283432|pdb|5AF4|E Chain E, UBIQUITIN &gt;gi|783283433|pdb|5AF4|F Chain F, UBIQUITIN &gt;gi|783283434|pdb|5AF4|G Chain G, UBIQUITIN &gt;gi|783283435|pdb|5AF4|H Chain H, UBIQUITIN &gt;gi|783283439|pdb|5AF6|A Chain A, UBIQUITIN &gt;gi|783283440|pdb|5AF6|B Chain B, UBIQUITIN &gt;gi|783283441|pdb|5AF6|C Chain C, UBIQUITIN &gt;gi|783283442|pdb|5AF6|D Chain D, UBIQUITIN &gt;gi|783283443|pdb|5AF6|E Chain E, UBIQUITIN</Hit_def>
+  <Hit_accession>5AF4_A</Hit_accession>
+  <Hit_len>76</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>153.295</Hsp_bit-score>
+      <Hsp_score>386</Hsp_score>
+      <Hsp_evalue>2.33037e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGRTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTG+TITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>30</Hit_num>
+  <Hit_id>gi|1243913620|pdb|5GVI|B</Hit_id>
+  <Hit_def>Chain B, Zebrafish USP30 in complex with Lys6-linked diubiquitin</Hit_def>
+  <Hit_accession>5GVI_B</Hit_accession>
+  <Hit_len>76</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>153.295</Hsp_bit-score>
+      <Hsp_score>386</Hsp_score>
+      <Hsp_evalue>2.33037e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVRTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFV+TLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>31</Hit_num>
+  <Hit_id>gi|931139757|pdb|4WHV|A</Hit_id>
+  <Hit_def>Chain A, E3 ubiquitin-protein ligase RNF8 in complex with Ubiquitin-conjugating enzyme E2 N and Polyubiquitin-B &gt;gi|931139758|pdb|4WHV|F Chain F, E3 ubiquitin-protein ligase RNF8 in complex with Ubiquitin-conjugating enzyme E2 N and Polyubiquitin-B &gt;gi|931139759|pdb|4WHV|G Chain G, E3 ubiquitin-protein ligase RNF8 in complex with Ubiquitin-conjugating enzyme E2 N and Polyubiquitin-B &gt;gi|931139760|pdb|4WHV|L Chain L, E3 ubiquitin-protein ligase RNF8 in complex with Ubiquitin-conjugating enzyme E2 N and Polyubiquitin-B</Hit_def>
+  <Hit_accession>4WHV_A</Hit_accession>
+  <Hit_len>83</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>153.295</Hsp_bit-score>
+      <Hsp_score>386</Hsp_score>
+      <Hsp_evalue>2.42648e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>8</Hsp_hit-from>
+      <Hsp_hit-to>83</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>32</Hit_num>
+  <Hit_id>gi|208435645|pdb|3DVG|Y</Hit_id>
+  <Hit_def>Chain Y, Crystal Structure Of K63-Specific Fab Apu.3a8 Bound To K63-Linked Di- Ubiquitin &gt;gi|208435649|pdb|3DVN|Y Chain Y, Crystal Structure Of K63-specific Fab Apu2.16 Bound To K63-linked Di- Ubiquitin &gt;gi|208435653|pdb|3DVN|V Chain V, Crystal Structure Of K63-specific Fab Apu2.16 Bound To K63-linked Di- Ubiquitin</Hit_def>
+  <Hit_accession>3DVG_Y</Hit_accession>
+  <Hit_len>79</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>152.91</Hsp_bit-score>
+      <Hsp_score>385</Hsp_score>
+      <Hsp_evalue>2.74627e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>79</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQRESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQ+ESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>33</Hit_num>
+  <Hit_id>gi|1028909309|pdb|2NBD|A</Hit_id>
+  <Hit_def>Chain A, Solution structure of V26A mutant of Ubiquitin at pH 6.0 &gt;gi|1028909310|pdb|2NBE|A Chain A, Solution structure of V26A mutant of Ubiquitin at pH 2.0</Hit_def>
+  <Hit_accession>2NBD_A</Hit_accession>
+  <Hit_len>76</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>152.91</Hsp_bit-score>
+      <Hsp_score>385</Hsp_score>
+      <Hsp_evalue>3.06673e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENAKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIEN KAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>34</Hit_num>
+  <Hit_id>gi|1103700644|pdb|5EMZ|B</Hit_id>
+  <Hit_def>Chain B, Crystal Structure Of K48-linked Diubiquitin With F45w Mutation In The Proximal Unit &gt;gi|1103700646|pdb|5EMZ|D Chain D, Crystal Structure Of K48-linked Diubiquitin With F45w Mutation In The Proximal Unit &gt;gi|1103700648|pdb|5EMZ|F Chain F, Crystal Structure Of K48-linked Diubiquitin With F45w Mutation In The Proximal Unit</Hit_def>
+  <Hit_accession>5EMZ_B</Hit_accession>
+  <Hit_len>76</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>152.91</Hsp_bit-score>
+      <Hsp_score>385</Hsp_score>
+      <Hsp_evalue>3.16946e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIWAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLI+AGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>35</Hit_num>
+  <Hit_id>gi|149242629|pdb|2OJR|A</Hit_id>
+  <Hit_def>Chain A, Structure Of Ubiquitin Solved By Sad Using The Lanthanide-binding Tag</Hit_def>
+  <Hit_accession>2OJR_A</Hit_accession>
+  <Hit_len>111</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>153.68</Hsp_bit-score>
+      <Hsp_score>387</Hsp_score>
+      <Hsp_evalue>3.58783e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>36</Hsp_hit-from>
+      <Hsp_hit-to>111</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>76</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>36</Hit_num>
+  <Hit_id>gi|1026943800|pdb|5IFR|B</Hit_id>
+  <Hit_def>Chain B, Polyubiquitin-B</Hit_def>
+  <Hit_accession>5IFR_B</Hit_accession>
+  <Hit_len>76</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>152.525</Hsp_bit-score>
+      <Hsp_score>384</Hsp_score>
+      <Hsp_evalue>3.94808e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGA</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRG </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>37</Hit_num>
+  <Hit_id>gi|700588228|pdb|4PIG|A</Hit_id>
+  <Hit_def>Chain A, Crystal Structure Of The Ubiquitin K11s Mutant &gt;gi|700588229|pdb|4PIG|B Chain B, Crystal Structure Of The Ubiquitin K11s Mutant &gt;gi|700588230|pdb|4PIG|C Chain C, Crystal Structure Of The Ubiquitin K11s Mutant &gt;gi|700588231|pdb|4PIG|D Chain D, Crystal Structure Of The Ubiquitin K11s Mutant</Hit_def>
+  <Hit_accession>4PIG_A</Hit_accession>
+  <Hit_len>76</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>152.525</Hsp_bit-score>
+      <Hsp_score>384</Hsp_score>
+      <Hsp_evalue>4.21702e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGSTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTG TITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>38</Hit_num>
+  <Hit_id>gi|700588232|pdb|4PIH|A</Hit_id>
+  <Hit_def>Chain A, X-ray Crystal Structure Of The K33s Mutant Of Ubiquitin &gt;gi|700588233|pdb|4PIH|B Chain B, X-ray Crystal Structure Of The K33s Mutant Of Ubiquitin</Hit_def>
+  <Hit_accession>4PIH_A</Hit_accession>
+  <Hit_len>76</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>152.525</Hsp_bit-score>
+      <Hsp_score>384</Hsp_score>
+      <Hsp_evalue>4.21702e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDSEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQD EGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>39</Hit_num>
+  <Hit_id>gi|71042034|pdb|1YIW|A</Hit_id>
+  <Hit_def>Chain A, X-ray Crystal Structure of a Chemically Synthesized Ubiquitin &gt;gi|71042035|pdb|1YIW|B Chain B, X-ray Crystal Structure of a Chemically Synthesized Ubiquitin &gt;gi|71042036|pdb|1YIW|C Chain C, X-ray Crystal Structure of a Chemically Synthesized Ubiquitin &gt;gi|88192952|pdb|2FCQ|A Chain A, X-Ray Crystal Structure Of A Chemically Synthesized Ubiquitin With A Cubic Space Group &gt;gi|88192953|pdb|2FCQ|B Chain B, X-Ray Crystal Structure Of A Chemically Synthesized Ubiquitin With A Cubic Space Group</Hit_def>
+  <Hit_accession>1YIW_A</Hit_accession>
+  <Hit_len>76</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>152.525</Hsp_bit-score>
+      <Hsp_score>384</Hsp_score>
+      <Hsp_evalue>4.26359e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>LQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>+QIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>40</Hit_num>
+  <Hit_id>gi|471270295|pdb|2RSU|A</Hit_id>
+  <Hit_def>Chain A, Alternative structure of Ubiquitin &gt;gi|584579549|pdb|2RU6|A Chain A, The pure alternative state of ubiquitin &gt;gi|1597624387|pdb|6JLT|A Chain A, ubiquitin &gt;gi|1771331754|pdb|6K4I|A Chain A, ubiquitin</Hit_def>
+  <Hit_accession>2RSU_A</Hit_accession>
+  <Hit_len>76</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>152.14</Hsp_bit-score>
+      <Hsp_score>383</Hsp_score>
+      <Hsp_evalue>5.31098e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQNRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQ RLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>41</Hit_num>
+  <Hit_id>gi|134105065|pdb|2O6V|D</Hit_id>
+  <Hit_def>Chain D, Crystal Structure And Solution Nmr Studies Of Lys48-Linked Tetraubiquitin At Neutral Ph &gt;gi|134105069|pdb|2O6V|H Chain H, Crystal Structure And Solution Nmr Studies Of Lys48-Linked Tetraubiquitin At Neutral Ph</Hit_def>
+  <Hit_accession>2O6V_D</Hit_accession>
+  <Hit_len>76</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>152.14</Hsp_bit-score>
+      <Hsp_score>383</Hsp_score>
+      <Hsp_evalue>5.36964e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>74</Hsp_identity>
+      <Hsp_positive>76</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGRQLEDGRTLSDYNIQRESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAG+QLEDGRTLSDYNIQ+ESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>42</Hit_num>
+  <Hit_id>gi|390136137|pdb|3RUL|A</Hit_id>
+  <Hit_def>Chain A, New Strategy To Analyze Structures Of Glycopeptide-Target Complexes &gt;gi|390136138|pdb|3RUL|B Chain B, New Strategy To Analyze Structures Of Glycopeptide-Target Complexes &gt;gi|390136139|pdb|3RUL|C Chain C, New Strategy To Analyze Structures Of Glycopeptide-Target Complexes &gt;gi|390136140|pdb|3RUL|D Chain D, New Strategy To Analyze Structures Of Glycopeptide-Target Complexes &gt;gi|440690581|pdb|3VFK|A Chain A, The Structure Of Monodechloro-teicoplanin In Complex With Its Ligand, Using Ubiquitin As A Ligand Carrier</Hit_def>
+  <Hit_accession>3RUL_A</Hit_accession>
+  <Hit_len>79</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>152.14</Hsp_bit-score>
+      <Hsp_score>383</Hsp_score>
+      <Hsp_evalue>5.98953e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>75</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>75</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>75</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>43</Hit_num>
+  <Hit_id>gi|197107121|pdb|2K6D|B</Hit_id>
+  <Hit_def>Chain B, CIN85 Sh3-C domain in complex with ubiquitin &gt;gi|270346285|pdb|2KJH|B Chain B, NMR based structural model of the UBCH8-UBIQUITIN complex &gt;gi|377656643|pdb|4DHJ|D Chain D, The structure of a ceOTUB1 ubiquitin aldehyde UBC13~Ub complex &gt;gi|377656651|pdb|4DHJ|H Chain H, The structure of a ceOTUB1 ubiquitin aldehyde UBC13~Ub complex &gt;gi|377656655|pdb|4DHZ|E Chain E, The structure of h/ceOTUB1-ubiquitin aldehyde-UBC13~Ub &gt;gi|485601573|pdb|4BBN|F Chain F, Nedd4 Hect-ub:ub Complex &gt;gi|995970418|pdb|5BNB|E Chain E, Crystal Structure Of A Ube2s-ubiquitin Conjugate &gt;gi|995970419|pdb|5BNB|F Chain F, Crystal Structure Of A Ube2s-ubiquitin Conjugate &gt;gi|995970420|pdb|5BNB|G Chain G, Crystal Structure Of A Ube2s-ubiquitin Conjugate &gt;gi|995970421|pdb|5BNB|I Chain I, Crystal Structure Of A Ube2s-ubiquitin Conjugate &gt;gi|1004171236|pdb|2N13|C Chain C, Complex structure of MyUb (1080-1122) of human Myosin VI with K63-diUb &gt;gi|1279526737|pdb|5WVO|A Chain A, Crystal structure of DNMT1 RFTS domain in complex with K18/K23 mono-ubiquitylated histone H3 &gt;gi|1279526738|pdb|5WVO|B Chain B, Crystal structure of DNMT1 RFTS domain in complex with K18/K23 mono-ubiquitylated histone H3 &gt;gi|1423517158|pdb|6FYH|B Chain B, Polyubiquitin-B &gt;gi|1446212503|pdb|6FX4|B Chain B, Polyubiquitin-B &gt;gi|1446212505|pdb|6FX4|D Chain D, Polyubiquitin-B &gt;gi|1585141299|pdb|6J99|L Chain L, Ubiquitin &gt;gi|1624687855|pdb|6O96|L Chain L, Polyubiquitin-B &gt;gi|1743125225|pdb|6KIU|O Chain O, Ubiquitin &gt;gi|1743125238|pdb|6KIV|O Chain O, Ubiquitin &gt;gi|1743125253|pdb|6KIW|O Chain O, Ubiquitin &gt;gi|1777436102|pdb|6UH5|Q Chain Q, Ubiquitin</Hit_def>
+  <Hit_accession>2K6D_B</Hit_accession>
+  <Hit_len>76</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>152.14</Hsp_bit-score>
+      <Hsp_score>383</Hsp_score>
+      <Hsp_evalue>5.993e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>75</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>75</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>75</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>44</Hit_num>
+  <Hit_id>gi|1581447764|pdb|6NJ9|L</Hit_id>
+  <Hit_def>Chain L, Ubiquitin &gt;gi|1581447807|pdb|6NOG|L Chain L, Ubiquitin &gt;gi|1581447826|pdb|6NQA|L Chain L, Ubiquitin</Hit_def>
+  <Hit_accession>6NJ9_L</Hit_accession>
+  <Hit_len>80</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>152.14</Hsp_bit-score>
+      <Hsp_score>383</Hsp_score>
+      <Hsp_evalue>6.1676e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>75</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>79</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>75</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>45</Hit_num>
+  <Hit_id>gi|1573679739|pdb|6NN6|L</Hit_id>
+  <Hit_def>Chain L, Ubiquitin</Hit_def>
+  <Hit_accession>6NN6_L</Hit_accession>
+  <Hit_len>80</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>152.14</Hsp_bit-score>
+      <Hsp_score>383</Hsp_score>
+      <Hsp_evalue>6.2357e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>75</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>79</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>75</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>46</Hit_num>
+  <Hit_id>gi|56967061|pdb|1XD3|B</Hit_id>
+  <Hit_def>Chain B, Crystal Structure Of Uchl3-Ubvme Complex &gt;gi|56967063|pdb|1XD3|D Chain D, Crystal Structure Of Uchl3-Ubvme Complex &gt;gi|118138326|pdb|2IBI|B Chain B, Covalent Ubiquitin-Usp2 Complex &gt;gi|145579739|pdb|2J7Q|B Chain B, Crystal Structure Of The Ubiquitin-Specific Protease Encoded By Murine Cytomegalovirus Tegument Protein M48 In Complex With A Ubquitin-Based Suicide Substrate &gt;gi|145579741|pdb|2J7Q|D Chain D, Crystal Structure Of The Ubiquitin-Specific Protease Encoded By Murine Cytomegalovirus Tegument Protein M48 In Complex With A Ubquitin-Based Suicide Substrate &gt;gi|168177298|pdb|3C0R|B Chain B, Structure Of Ovarian Tumor (otu) Domain In Complex With Ubiquitin &gt;gi|168177300|pdb|3C0R|D Chain D, Structure Of Ovarian Tumor (otu) Domain In Complex With Ubiquitin &gt;gi|169404784|pdb|3BY4|B Chain B, Structure Of Ovarian Tumor (otu) Domain In Complex With Ubiquitin &gt;gi|254575051|pdb|3I3T|B Chain B, Crystal Structure Of Covalent Ubiquitin-usp21 Complex &gt;gi|254575052|pdb|3I3T|D Chain D, Crystal Structure Of Covalent Ubiquitin-usp21 Complex &gt;gi|254575053|pdb|3I3T|F Chain F, Crystal Structure Of Covalent Ubiquitin-usp21 Complex &gt;gi|254575054|pdb|3I3T|H Chain H, Crystal Structure Of Covalent Ubiquitin-usp21 Complex &gt;gi|282403707|pdb|3IHP|C Chain C, Covalent Ubiquitin-Usp5 Complex &gt;gi|282403708|pdb|3IHP|D Chain D, Covalent Ubiquitin-Usp5 Complex &gt;gi|298508352|pdb|3IFW|B Chain B, Crystal Structure Of The S18y Variant Of Ubiquitin Carboxy T Hydrolase L1 Bound To Ubiquitin Vinylmethylester. &gt;gi|298508416|pdb|3KVF|B Chain B, Crystal Structure Of The I93m Mutant Of Ubiquitin Carboxy Te Hydrolase L1 Bound To Ubiquitin Vinylmethylester &gt;gi|298508418|pdb|3KW5|B Chain B, Crystal Structure Of Ubiquitin Carboxy Terminal Hydrolase L1 Ubiquitin Vinylmethylester &gt;gi|319443769|pdb|3PT2|B Chain B, Structure of a viral OTU domain protease bound to Ubiquitin &gt;gi|320089917|pdb|3PRM|B Chain B, Structural analysis of a viral OTU domain protease from the Crimean-Congo Hemorrhagic Fever virus in complex with human ubiquitin &gt;gi|320089919|pdb|3PRM|D Chain D, Structural analysis of a viral OTU domain protease from the Crimean-Congo Hemorrhagic Fever virus in complex with human ubiquitin &gt;gi|320089921|pdb|3PRP|B Chain B, Structural analysis of a viral OTU domain protease from the Crimean-Congo Hemorrhagic Fever virus in complex with human ubiquitin &gt;gi|320089923|pdb|3PRP|D Chain D, Structural analysis of a viral OTU domain protease from the Crimean-Congo Hemorrhagic Fever virus in complex with human ubiquitin &gt;gi|321159972|pdb|3PHW|B Chain B, Otu Domain Of Crimean Congo Hemorrhagic Fever Virus In Complex With Ubiquitin &gt;gi|321159974|pdb|3PHW|D Chain D, Otu Domain Of Crimean Congo Hemorrhagic Fever Virus In Complex With Ubiquitin &gt;gi|321159976|pdb|3PHW|F Chain F, Otu Domain Of Crimean Congo Hemorrhagic Fever Virus In Complex With Ubiquitin &gt;gi|321159978|pdb|3PHW|H Chain H, Otu Domain Of Crimean Congo Hemorrhagic Fever Virus In Complex With Ubiquitin &gt;gi|449802658|pdb|4HXD|A Chain A, Diversity of ubiquitin and ISG15 specificity amongst nairoviruses viral ovarian tumor domain proteases &gt;gi|449802660|pdb|4HXD|C Chain C, Diversity of ubiquitin and ISG15 specificity amongst nairoviruses viral ovarian tumor domain proteases &gt;gi|508123790|pdb|4IG7|B Chain B, Crystal Structure Of Trichinella Spiralis Uch37 Bound To Ubiquitin Vinyl Methyl Ester &gt;gi|699027750|pdb|4RF0|B Chain B, Crystal Structure Of The Middle-east Respiratory Syndrome Coronavirus Papain-like Protease In Complex With Ubiquitin (space Group P6522) &gt;gi|699027752|pdb|4RF1|B Chain B, Crystal Structure Of The Middle-east Respiratory Syndrome Coronavirus Papain-like Protease In Complex With Ubiquitin (space Group P63) &gt;gi|955264916|pdb|5CRA|D Chain D, Structure Of The Sdea Dub Domain &gt;gi|955264918|pdb|5CRA|C Chain C, Structure Of The Sdea Dub Domain &gt;gi|1028909437|pdb|5E6J|C Chain C, Polyubiquitin-B &gt;gi|1028909440|pdb|5E6J|F Chain F, Polyubiquitin-B &gt;gi|1064245609|pdb|5KHY|B Chain B, Polyubiquitin-B &gt;gi|1070701126|pdb|5L8W|C Chain C, Structure Of Usp12-ub-prg/uaf1 &gt;gi|1357894459|pdb|6EI1|B Chain B, Polyubiquitin-B &gt;gi|1516608443|pdb|6GZS|B Chain B, Polyubiquitin-B &gt;gi|1604180778|pdb|6H4H|C Chain C, Polyubiquitin-B &gt;gi|1604180779|pdb|6H4H|D Chain D, Polyubiquitin-B &gt;gi|1770301817|pdb|6PGV|B Chain B, Polyubiquitin-B</Hit_def>
+  <Hit_accession>1XD3_B</Hit_accession>
+  <Hit_len>75</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>152.14</Hsp_bit-score>
+      <Hsp_score>383</Hsp_score>
+      <Hsp_evalue>6.42737e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>75</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>75</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>75</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>47</Hit_num>
+  <Hit_id>gi|5822011|pdb|1CMX|B</Hit_id>
+  <Hit_def>Chain B, Structural Basis For The Specificity Of Ubiquitin C- Terminal Hydrolases &gt;gi|5822013|pdb|1CMX|D Chain D, Structural Basis For The Specificity Of Ubiquitin C- Terminal Hydrolases &gt;gi|28373984|pdb|1NBF|C Chain C, Crystal structure of a UBP-family deubiquitinating enzyme in isolation and in complex with ubiquitin aldehyde &gt;gi|28373985|pdb|1NBF|D Chain D, Crystal structure of a UBP-family deubiquitinating enzyme in isolation and in complex with ubiquitin aldehyde &gt;gi|82407937|pdb|2AYO|B Chain B, Structure Of Usp14 Bound To Ubquitin Aldehyde &gt;gi|282403539|pdb|2WDT|B Chain B, Crystal Structure Of Plasmodium Falciparum Uchl3 In Complex With The Suicide Inhibitor Ubvme &gt;gi|282403540|pdb|2WDT|D Chain D, Crystal Structure Of Plasmodium Falciparum Uchl3 In Complex With The Suicide Inhibitor Ubvme &gt;gi|294979880|pdb|3MHS|D Chain D, Structure Of The Saga Ubp8SGF11SUS1SGF73 DUB MODULE BOUND Ubiquitin Aldehyde &gt;gi|312597454|pdb|3O65|B Chain B, Crystal structure of a Josephin-ubiquitin complex: Evolutionary restraints on ataxin-3 deubiquitinating activity &gt;gi|312597456|pdb|3O65|D Chain D, Crystal structure of a Josephin-ubiquitin complex: Evolutionary restraints on ataxin-3 deubiquitinating activity &gt;gi|312597458|pdb|3O65|F Chain F, Crystal structure of a Josephin-ubiquitin complex: Evolutionary restraints on ataxin-3 deubiquitinating activity &gt;gi|312597460|pdb|3O65|H Chain H, Crystal structure of a Josephin-ubiquitin complex: Evolutionary restraints on ataxin-3 deubiquitinating activity &gt;gi|371927588|pdb|3TMP|B Chain B, The Catalytic Domain Of Human Deubiquitinase Duba In Complex With Ubiquitin Aldehyde &gt;gi|371927590|pdb|3TMP|D Chain D, The Catalytic Domain Of Human Deubiquitinase Duba In Complex With Ubiquitin Aldehyde &gt;gi|371927592|pdb|3TMP|F Chain F, The Catalytic Domain Of Human Deubiquitinase Duba In Complex With Ubiquitin Aldehyde &gt;gi|371927594|pdb|3TMP|H Chain H, The Catalytic Domain Of Human Deubiquitinase Duba In Complex With Ubiquitin Aldehyde &gt;gi|377656640|pdb|4DHJ|B Chain B, The structure of a ceOTUB1 ubiquitin aldehyde UBC13~Ub complex &gt;gi|377656642|pdb|4DHJ|F Chain F, The structure of a ceOTUB1 ubiquitin aldehyde UBC13~Ub complex &gt;gi|377656646|pdb|4DHJ|J Chain J, The structure of a ceOTUB1 ubiquitin aldehyde UBC13~Ub complex &gt;gi|377656650|pdb|4DHJ|M Chain M, The structure of a ceOTUB1 ubiquitin aldehyde UBC13~Ub complex &gt;gi|377656654|pdb|4DHZ|B Chain B, The structure of h/ceOTUB1-ubiquitin aldehyde-UBC13~Ub &gt;gi|449802757|pdb|4IUM|B Chain B, Equine Arteritis Virus Papain-like Protease 2 (plp2) Covalently Bound To Ubiquitin &gt;gi|453055626|pdb|3ZNH|B Chain B, Crimean Congo Hemorrhagic Fever Virus Otu Domain In Complex With Ubiquitin-propargyl. &gt;gi|530537692|pdb|4LDT|B Chain B, Ubiquitin aldehyde &gt;gi|661918372|pdb|4MM3|A Chain A, Ubiquitin &gt;gi|764091142|pdb|4UEL|B Chain B, POLYUBIQUITIN-B &gt;gi|764091152|pdb|4UF6|B Chain B, POLYUBIQUITIN-B &gt;gi|764091153|pdb|4UF6|E Chain E, POLYUBIQUITIN-B &gt;gi|764091154|pdb|4UF6|H Chain H, POLYUBIQUITIN-B &gt;gi|764091155|pdb|4UF6|K Chain K, POLYUBIQUITIN-B &gt;gi|901695930|pdb|5A5B|9 Chain 9, Structure Of The 26s Proteasome-ubp6 Complex &gt;gi|1048349304|pdb|5JP3|B Chain B, Structure Of Xanthomonas Campestris Effector Protein Xopd Bound To Ubiquitin &gt;gi|1048349305|pdb|5JP3|D Chain D, Structure Of Xanthomonas Campestris Effector Protein Xopd Bound To Ubiquitin &gt;gi|1048349306|pdb|5JP3|H Chain H, Structure Of Xanthomonas Campestris Effector Protein Xopd Bound To Ubiquitin &gt;gi|1048349308|pdb|5JP3|F Chain F, Structure Of Xanthomonas Campestris Effector Protein Xopd Bound To Ubiquitin &gt;gi|1059271393|pdb|5GJQ|YY Chain y, Polyubiquitin-B &gt;gi|1070701123|pdb|5L8H|B Chain B, Structure Of Usp46-ubvme &gt;gi|1085618396|pdb|5LRV|C Chain C, Structure Of Cezanne/otud7b Otu Domain Bound To Lys11-linked Diubiquitin &gt;gi|1085618398|pdb|5LRW|B Chain B, Structure Of Cezanne/otud7b Otu Domain Bound To Ubiquitin &gt;gi|1085618400|pdb|5LRW|D Chain D, Structure Of Cezanne/otud7b Otu Domain Bound To Ubiquitin &gt;gi|1085618402|pdb|5LRX|B Chain B, Structure Of A20 Otu Domain Bound To Ubiquitin &gt;gi|1085618404|pdb|5LRX|D Chain D, Structure Of A20 Otu Domain Bound To Ubiquitin &gt;gi|1248693599|pdb|5OHK|B Chain B, Crystal structure of USP30 in covalent complex with ubiquitin propargylamide (high resolution) &gt;gi|1248693601|pdb|5OHN|B Chain B, Crystal structure of USP30 in covalent complex with ubiquitin propargylamide (low resolution) &gt;gi|1248693603|pdb|5OHN|D Chain D, Crystal structure of USP30 in covalent complex with ubiquitin propargylamide (low resolution) &gt;gi|1374503169|pdb|6FGE|C Chain C, Crystal structure of human ZUFSP/ZUP1 in complex with ubiquitin &gt;gi|1474889991|pdb|6FDK|B Chain B, Structure of Chlamydia trachomatis effector protein Cdu1 bound to ubiquitin</Hit_def>
+  <Hit_accession>1CMX_B</Hit_accession>
+  <Hit_len>76</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>152.14</Hsp_bit-score>
+      <Hsp_score>383</Hsp_score>
+      <Hsp_evalue>6.61568e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>75</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>75</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>75</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>48</Hit_num>
+  <Hit_id>gi|783282741|pdb|2MWS|A</Hit_id>
+  <Hit_def>Chain A, Structure of the complex of ubiquitin and the ubiquitin-like (UBL) domain of Ddi1 &gt;gi|1200169558|pdb|5NVG|A Chain A, Thr12 Phosphorylated Ubiquitin</Hit_def>
+  <Hit_accession>2MWS_A</Hit_accession>
+  <Hit_len>76</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>152.14</Hsp_bit-score>
+      <Hsp_score>383</Hsp_score>
+      <Hsp_evalue>6.61568e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKXITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGK ITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>49</Hit_num>
+  <Hit_id>gi|1085618395|pdb|5LRV|B</Hit_id>
+  <Hit_def>Chain B, Structure Of Cezanne/otud7b Otu Domain Bound To Lys11-linked Diubiquitin</Hit_def>
+  <Hit_accession>5LRV_B</Hit_accession>
+  <Hit_len>76</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>152.14</Hsp_bit-score>
+      <Hsp_score>383</Hsp_score>
+      <Hsp_evalue>6.68874e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGXTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTG TITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>50</Hit_num>
+  <Hit_id>gi|1214654253|pdb|5W46|A</Hit_id>
+  <Hit_def>Chain A, Polyubiquitin-B &gt;gi|1214654254|pdb|5W46|B Chain B, Polyubiquitin-B</Hit_def>
+  <Hit_accession>5W46_A</Hit_accession>
+  <Hit_len>76</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>152.14</Hsp_bit-score>
+      <Hsp_score>383</Hsp_score>
+      <Hsp_evalue>6.68874e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>76</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>76</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>75</Hsp_identity>
+      <Hsp_positive>75</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>76</Hsp_align-len>
+      <Hsp_qseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG</Hsp_qseq>
+      <Hsp_hseq>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKEDTLHLVLRLRGG</Hsp_hseq>
+      <Hsp_midline>MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKE TLHLVLRLRGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>111315</Statistics_db-num>
+      <Statistics_db-len>28788812</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+</BlastOutput_iterations>
+</BlastOutput>

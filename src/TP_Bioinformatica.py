@@ -252,21 +252,30 @@ def mutar_secuencia(sec, mut_letra):
 
 def blast_proteina_namePdb(seq_proteina, sec_a_analizar): 
     res = "La proteina no existe en la base de datos PDB"
-    resultBlast = NCBIWWW.qblast(program= "blastp", database= "pdb", sequence= seq_proteina)
+    #resultBlast = NCBIWWW.qblast(program= "blastp", database= "pdb", sequence= seq_proteina)
     blast = sec_a_analizar + ".xml"
 
-    save_clk = open(blast, "w")
-    save_clk.write(resultBlast.read())    
-    save_clk.close()
+    #save_clk = open(blast, "w")
+    #save_clk.write(resultBlast.read())    
+    #save_clk.close()
     
     blast_records = NCBIXML.parse(open(blast))
-
     myScore = 0
+    myPorcentaje = 0
+
     for blast_record in blast_records:
-        for description in blast_record.descriptions:
-            if(description.score > myScore):
-                myScore = description.score
-                res = description.accession
+        for alignment in blast_record.alignments:
+            porcentaje = alignment.hsps[0].identities / alignment.hsps[0].align_length
+            if((porcentaje > myPorcentaje) and (alignment.hsps[0].expect <= 0.0)): # and (alignment.hsps[0].score > myScore)):
+                myPorcentaje = porcentaje
+                myScore = alignment.hsps[0].score
+                res = alignment.accession
+            elif(alignment.hsps[0].expect != 0.0):
+                if((porcentaje > myPorcentaje) and (alignment.hsps[0].score > myScore)):
+                    myPorcentaje = porcentaje
+                    myScore = alignment.hsps[0].score
+                    res = alignment.accession
+
     return res
 
 def buscaryGuardarPdb(nombreArc): 
@@ -293,14 +302,15 @@ def programa():
     sec_a_analizar = input("Ingrese el nombre del archivo FASTA que desea analizar: ")
     sec_fasta = obtener_secuencia(sec_a_analizar + ".fasta")  
 
-    proteina = pasar_a_proteina(sec_fasta)
-    #UTILIZACION DE BLAST
-    #nombreProteina = blast_proteina_namePdb(proteina, sec_a_analizar)
-    #nombrePdbInc = nombreProteina[:- 2]
-    #buscaryGuardarPdb(nombrePdbInc)
-    #nombrePdbProteina =  ("pdb"+nombrePdbInc+".ent").lower()
-
     if(validar_fasta(sec_fasta)):
+        proteina = pasar_a_proteina(sec_fasta)
+
+    #UTILIZACION DE BLAST
+        nombreProteina = blast_proteina_namePdb(proteina, sec_a_analizar)
+        nombrePdbInc = nombreProteina[:-2]
+        buscaryGuardarPdb(nombrePdbInc)
+        nombrePdbProteina = ("pdb"+nombrePdbInc+".ent").lower()
+
         mut_letra = input("Desea hacer una mutacion manual 'M' o una automatica 'A': ").upper()
         posicion = int(input("Ingrese la posición donde quiere que comienze el análisis de la secuencia: ")) 
 
