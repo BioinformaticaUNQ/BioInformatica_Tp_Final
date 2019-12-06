@@ -12,6 +12,8 @@ from modeller import *
 from modeller.automodel import *
 from Bio.Align.Applications import ClustalOmegaCommandline
 from Bio.Align.Applications import MSAProbsCommandline
+from Bio.PDB.Entity import Entity 
+from Bio.PDB import *
 
 #import tmalign
 #from tkinter import *
@@ -277,17 +279,24 @@ def blast_proteina_namePdb(seq_proteina, sec_a_analizar):
                     res = alignment.accession
 
     return res
+class NotDisordered(Select):
+    def accept_atom(self, atom):
+        return not atom.is_disordered() or atom.get_altloc() == 'A'
 
 def buscaryGuardarPdb(nombreArc): 
     pdbdownload = PDBList()
     pdbdownload.retrieve_pdb_file(nombreArc, file_format="pdb")
-    pdbdownload.get_all_entries()
     
+    #Hacerlo generico
+    parser = PDBParser()
+    s = parser.get_structure('pdb3lee','le/pdb3lee.ent')
+    io = PDBIO()
 
-    #falta seleccionar particion
-
+    io.set_structure(s)
+    io.save("3LEE.pdb", select=NotDisordered())
+    #nombre generico
+    
 def guardarEnFastaSeqMutadaYOriginal(proteina,mutacionProteina):
-
     save_clk = open("mutacionProteina.fasta", "w")
     #nombre generico
     save_clk.write(">Mutante "+'\n')
@@ -296,8 +305,6 @@ def guardarEnFastaSeqMutadaYOriginal(proteina,mutacionProteina):
     save_clk.write(proteina)
     save_clk.close()
 
-
-
 def programa():
     sec_a_analizar = input("Ingrese el nombre del archivo FASTA que desea analizar: ")
     sec_fasta = obtener_secuencia(sec_a_analizar + ".fasta")  
@@ -305,11 +312,11 @@ def programa():
     if(validar_fasta(sec_fasta)):
         proteina = pasar_a_proteina(sec_fasta)
 
-    #UTILIZACION DE BLAST
-        nombreProteina = blast_proteina_namePdb(proteina, sec_a_analizar)
-        nombrePdbInc = nombreProteina[:-2]
-        buscaryGuardarPdb(nombrePdbInc)
-        nombrePdbProteina = ("pdb"+nombrePdbInc+".ent").lower()
+        #UTILIZACION DE BLAST
+        #nombreProteina = blast_proteina_namePdb(proteina, sec_a_analizar)
+        #nombrePdbInc = nombreProteina[:-2]
+        buscaryGuardarPdb("3LEE")#harcodeado para no correr blast
+        #nombrePdbProteina = ("pdb"+nombrePdbInc+".ent").lower()
 
         mut_letra = input("Desea hacer una mutacion manual 'M' o una automatica 'A': ").upper()
         posicion = int(input("Ingrese la posición donde quiere que comienze el análisis de la secuencia: ")) 
@@ -339,24 +346,8 @@ def programa():
         e = environ()
         target='mutacion'
         a = alignment(e, file='%s.fasta'%target, alignment_format='FASTA')
-        a.write(file='%s.pir'%target, alignment_format='PIR')
-          
-        '''              
-        target='mutacion'
-        template='pdb3lee'
-
-        env = environ()
-        aln = alignment(env)
-        mdl = model(env, file="%s.ent" % template, model_segment=('FIRST:A','LAST:A'))
-        aln.append_model(mdl, align_codes=template, atom_files="%s.pdb" % template)
-        aln.append(file='%s.aln'%target, align_codes=target, alignment_format='PIR')
-        aln.align2d()
-        aln.write(file='%s-%s.aln' % (target,template), alignment_format='PIR')
-        aln.write(file='%s-%s.pap' % (target,template), alignment_format='PAP', alignment_features ="INDICES HELIX BETA")
-        '''
-
-        
-
+        a.write(file='%s.aln'%target, alignment_format='PIR')
+    
         log.verbose()    # request verbose output
         env = environ()  # create a new MODELLER environment to build this model in
  
@@ -366,16 +357,16 @@ def programa():
  
  
         a = automodel(env,
-             alnfile  = 'mut.pir', # alignment filename
-             knowns   = ('pdb3lee'),  #.pdp         # codes of the templates
+             alnfile  = 'mutacion.pir', # alignment filename
+             knowns   = ('3LEE'),  #.pdp         # codes of the templates
              sequence = 'Mutante') #mutacion              # code of the target
         a.starting_model= 1                 # index of the first model
         a.ending_model  = 1                 # index of the last model
                                    # (determines how many models to calculate)
-        a.make()         
+       # a.make()         
        # pymol.cmd.load('./le/3V03.pdb')  
        # pymol.cmd.load('NM_134326.B99990001.pdb')
-       #print(a, "acaaaaaaaaa!!!!!!")
+       # print(a, "acaaaaaaaaa!!!!!!")
         
         #pymol.cmd.extra_fitname CA, 3V03, align, object=all_to_3V03_alignCA
 
