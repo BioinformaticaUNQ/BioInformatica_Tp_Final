@@ -14,46 +14,8 @@ from Bio.Align.Applications import ClustalOmegaCommandline
 from Bio.Align.Applications import MSAProbsCommandline
 from Bio.PDB.Entity import Entity 
 from Bio.PDB import *
-
-#import tmalign
 #from tkinter import *
-'''
-from Bio.Seq import Seq
-from Bio import Align 
 
-aligner = Align.PairwiseAligner()
-aligner.match_score 
-
-aligner.mismatch_score
-
-score = aligner.score("ACGT","ACAT")
-print(score)
-
-aligner.match_score = 1.0
-aligner.mismatch_score = -2.0
-aligner.gap_score = -2.5
-score = aligner.score("ACGT","ACAT")
-print(score)
-'''
-
-sec1 = 'AGEKGKKIFVQKCSQCHTVCSQCHTVEKGGKHKTGPNEKGKKIFVQKCSQCHTVLHGLFGRKTGQA'
-sec2 = 'GTTATAATATTGCTAAAATTATTCAGAGTAATATTGTGGATTAAAGCCACAATAAGATTTATAATCTTAAATGATGGGACTACCATCCTTACTCTCTCCATTTCAAGGCTGACGATAAGGAGACCTGCTTTGCCGAGGAGGTACTACAGTTCTCTTCACAAACAATTGTCTTACAAAATGAATAAAACAGCACTTTGTTTTTATCTCCTGCTTTTAATATGTCCAGTATTCATTTTTGCATGTTTGGTTAGGCTAGGGCTTAGGGATTTATATATCAAAGGAGGCTTTGTACATGTGGGACAGGGATCTTATTTTAGATTTATATATCAAAGGAGGCTTTGTACATGTGGGACAGGGATCTTATTTTACAAACAATTGTCTTACAAAATGAATAAAACAGCACTTTGTTTTTATCTCCTGCTCTATTGTGCCATACTGTTGAATGTTTATAATGCATGTTCTGTTTCCAAATTTCATGAAATCAAAACATTAATTTATTTAAACATTTACTTGAAATGTTCACAAACAATTGTCTTACAAAATGAATAAAACAGCACTTTGTTTTTATCTCCTGCTTTTAATATGTCCAGTATTCATTTTTGCATGTTTGGTTAGGCTAGGGCTTAGGGATTTATATATCAAAGGAGGCTTTGTACATGTGGGACAGGGATCTTATTTTAGATTTATATATCAAAGGAGGCT'
-sec3 = 'ACTTTGTTTTTATCTCCTGCTCTATTGTGCCATACTGTTGAATGTTTATACCCTACATGGTGCATGTTCTGTTTCCAAATTTCATGAAATCAAAACATTAATTTATTTAAACATTTACTTGAAATGTTCACAAACAATTGTCTTACAAAATGAATAAAACAGCACTTTGTTTTTATCTCCTGCTTTTAATATGTCCAGTATTCATTTTTGCATGTTTGGTTAGGCTAGGGCTTAGGGATTTATATATCAAAGGAGGCTTTGTACATGTGGGACAGGGATCTTATTTTAGATTTATATATCAAAGGAGGCT'
-sec4 = 'AAUCAUGUAGUAGGCUUUUUUUUAGAUCAUGCU'
-sec5 = 'GCUUAUCCUGCUUUGGCUCUGGCGUAUUAACUGGCU'
-sec6 = 'GCUUAGUAUCCUGCUUUGGCUCUGGCGUAUUAACUA'
-sec7 = 'AGDVEKGKKIFIMK' #Proteina
-sec8 = 'ATTGGACGTAATGC' #ADN
-sec9 = 'AGGUACCGAUCCA'  #ARN
-sec10 = 'ACUT'  #proteina
-sec11 = 'ACT'
-
-secuencias = {
-    'CitC_humano':'AGDVEKGKKIFIMKCSQCHTVEKGGKHKTGPNLHGLFGRKTGQA',
-    'CitC_gorila':'AGDVEKGKKIFIMKCSQCHTVEKGGKHKTGPNLHGLFGRKTGQA',
-    'CitC_pollo' :'AGDIEKGKKIFVQKCSQCHTVEKGGKHKTGPNLHGLFGRKTGQA'
-}
- 
 diccionario_ARN = {
     "UUU":"F", "UUC":"F", "UUA":"L", "UUG":"L", "CUU":"L", "CUC":"L", "CUA":"L", "CUG":"L",
     "AUU":"I", "AUC":"I", "AUA":"I", "AUG":"M", "GUU":"V", "GUC":"V", "GUA":"V", "GUG":"V",
@@ -75,6 +37,8 @@ diccionario_ADN = {
     "TGT":"C", "TGC":"C", "TGA":"X", "TGG":"W", "CGT":"R", "CGC":"R", "CGA":"R", "CGG":"R",
     "AGT":"S", "AGC":"S", "AGA":"R", "AGG":"R", "GGT":"G", "GGC":"G", "GGA":"G", "GGG":"G"
 }
+
+partChain = None
 
 def pasar_a_lista(cadena): 
     lista = []
@@ -254,12 +218,12 @@ def mutar_secuencia(sec, mut_letra):
 
 def blast_proteina_namePdb(seq_proteina, sec_a_analizar): 
     res = "La proteina no existe en la base de datos PDB"
-    #resultBlast = NCBIWWW.qblast(program= "blastp", database= "pdb", sequence= seq_proteina)
+    resultBlast = NCBIWWW.qblast(program= "blastp", database= "pdb", sequence= seq_proteina)
     blast = sec_a_analizar + ".xml"
 
-    #save_clk = open(blast, "w")
-    #save_clk.write(resultBlast.read())    
-    #save_clk.close()
+    save_clk = open(blast, "w")
+    save_clk.write(resultBlast.read())    
+    save_clk.close()
     
     blast_records = NCBIXML.parse(open(blast))
     myScore = 0
@@ -277,33 +241,108 @@ def blast_proteina_namePdb(seq_proteina, sec_a_analizar):
                     myPorcentaje = porcentaje
                     myScore = alignment.hsps[0].score
                     res = alignment.accession
-
     return res
+
 class NotDisordered(Select):
     def accept_atom(self, atom):
         return not atom.is_disordered() or atom.get_altloc() == 'A'
+    def accept_chain(self, chain):
+        return chain.id == partChain
 
-def buscaryGuardarPdb(nombreArc): 
+def buscaryGuardarPdb(nombrePdbInc): 
     pdbdownload = PDBList()
-    pdbdownload.retrieve_pdb_file(nombreArc, file_format="pdb")
+    pdbdownload.retrieve_pdb_file(nombrePdbInc, file_format="pdb")
     
-    #Hacerlo generico
+    nombrePdbProteina = ('pdb'+nombrePdbInc).lower()
+    carpeta = nombrePdbInc[1:-1]
+    directorio = (carpeta+'/pdb'+nombrePdbInc+'.ent').lower()
+
     parser = PDBParser()
-    s = parser.get_structure('pdb3lee','le/pdb3lee.ent')
+    s = parser.get_structure(nombrePdbProteina, directorio)
     io = PDBIO()
 
     io.set_structure(s)
-    io.save("3LEE.pdb", select=NotDisordered())
-    #nombre generico
+    io.save(nombrePdbInc+'.pdb', select=NotDisordered())
     
-def guardarEnFastaSeqMutadaYOriginal(proteina,mutacionProteina):
-    save_clk = open("mutacionProteina.fasta", "w")
-    #nombre generico
-    save_clk.write(">Mutante "+'\n')
+def guardarEnFastaSeqMutadaYOriginal(proteina, mutacionProteina, nombrePdbInc):
+    save_clk = open('prot_mut.fasta', 'w')
+    save_clk.write('>mutacion'+'\n')
     save_clk.write(mutacionProteina + '\n')
-    save_clk.write(">pdb3lee "+'\n')    
+    save_clk.write('>'+nombrePdbInc +'\n')    
     save_clk.write(proteina)
     save_clk.close()
+
+def buscar_clustal():
+    in_file = 'prot_mut.fasta'
+        
+    clustalomega_cline = ClustalOmegaCommandline(infile=in_file, outfmt="fasta", verbose=False, auto=True, force=True)
+    clustalomega_cline()
+        
+    env = environ()
+    target='prot_mut'
+    a = alignment(env, file='%s.fasta'%target, alignment_format='FASTA')
+    a.write(file='%s.ali'%target, alignment_format='PIR')
+
+def generar_pir(nombrePdbInc):
+    target='prot_mut'
+    template= nombrePdbInc
+
+    env = environ()
+    aln = alignment(env)
+    mdl = model(env, file="%s.pdb" % template, model_segment=('FIRST:A','LAST:A'))
+    aln.append_model(mdl, align_codes=template, atom_files="%s.pdb" % template)
+    aln.append(file='%s.ali'%target, align_codes='all')
+    aln.align2d()
+    aln.write(file='%s_%s.ali' % (target,template), alignment_format='PIR')
+    #aln.write(file='%s_%s.pap' % (target,template), alignment_format='PAP', alignment_features ="INDICES HELIX BETA")
+
+def generar_modelado(nombrePdbInc, cant_modelos):
+    log.verbose()    # request verbose output
+    env = environ()  # create a new MODELLER environment to build this model in
+ 
+    # directories for input atom files
+    env.io.atom_files_directory = './:../atom_files'
+    env.io.hetatm = True
+ 
+    a = automodel(env,
+            alnfile  = 'prot_mut_'+ nombrePdbInc +'.ali', # alignment filename
+            knowns   = (nombrePdbInc),  #.pdp  # codes of the templates
+            sequence = 'mutacion', #mutacion   # code of the target
+            assess_methods=(assess.DOPE,
+                            #soap_protein_od.Scorer(),
+                            assess.GA341))
+    a.starting_model= 1                 # index of the first model
+    a.ending_model  = cant_modelos      # index of the last model
+                                   # (determines how many models to calculate)
+    a.md_level = refine.slow
+
+    a.make() # Si se comenta rompe por el DOPE!!!!  
+
+    # Get a list of all successfully built models from a.outputs
+    ok_models = [x for x in a.outputs if x['failure'] is None]
+
+    # Rank the models by DOPE score
+    key = 'DOPE score'
+    ok_models.sort(key=lambda a: a[key])
+
+    # Get top model
+    m = ok_models[0]
+        
+    print("Top model: %s (DOPE score %.3f)" % (m['name'], m[key]))
+    pdb_mutacion = str(m['name'])
+
+    return pdb_mutacion
+
+def generar_pymol(nombrePdbInc, pdb_mutacion):
+    pymol.finish_launching()
+    __main__.pymol_argv = ['pymol','-qc'] # Pymol: quiet and no GUI
+    pymol.cmd.load(nombrePdbInc + '.pdb') #'./le/'+ nombrePdbInc + '.pdb' 
+    pymol.cmd.load(pdb_mutacion)
+
+    #pymol.cmd.cealign, nombrePdbInc, pdb_mutacion, object='alineacion'
+    #pymol.cmd.extra_fit, CA, nombrePdbInc, object='alineacion'
+    #pymol.align(nombrePdbInc, pdb_mutacion, object='name')
+
 
 def programa():
     sec_a_analizar = input("Ingrese el nombre del archivo FASTA que desea analizar: ")
@@ -313,13 +352,14 @@ def programa():
         proteina = pasar_a_proteina(sec_fasta)
 
         #UTILIZACION DE BLAST
-        #nombreProteina = blast_proteina_namePdb(proteina, sec_a_analizar)
-        #nombrePdbInc = nombreProteina[:-2]
-        buscaryGuardarPdb("3LEE")#harcodeado para no correr blast
-        #nombrePdbProteina = ("pdb"+nombrePdbInc+".ent").lower()
+        nombreProteina = blast_proteina_namePdb(proteina, sec_a_analizar)
+        nombrePdbInc = nombreProteina[:-2]
+        global partChain
+        partChain = nombreProteina[-1]
+        buscaryGuardarPdb(nombrePdbInc)
 
         mut_letra = input("Desea hacer una mutacion manual 'M' o una automatica 'A': ").upper()
-        posicion = int(input("Ingrese la posición donde quiere que comienze el análisis de la secuencia: ")) 
+        posicion = int(input("Ingrese la posición donde quiere que comienze el análisis hasta el final de la secuencia: ")) 
 
         if(posicion < len(sec_fasta)):
             prot_comienzo = sec_fasta[posicion-1:len(sec_fasta)]
@@ -328,47 +368,14 @@ def programa():
 
         mutacion = mutar_secuencia(prot_comienzo, mut_letra)
         mutacionProteina = pasar_a_proteina(mutacion)
-        guardarEnFastaSeqMutadaYOriginal(proteina,mutacionProteina)
+        proteina_y_mutacion = guardarEnFastaSeqMutadaYOriginal(proteina, mutacionProteina, nombrePdbInc)
         
-        #graficar mutada
-        #grafica proteina original
-        pymol.finish_launching()
-        __main__.pymol_argv = ['pymol','-qc'] # Pymol: quiet and no GUI
-        pymol.cmd.load('le/pdb3lee.ent')
-        #pymol.cmd.load("le/"+nombrePdbProteina)
-        
-        # CR457033
-        in_file = "mutacionProteina.fasta"
-        out_file = "mutacion.fasta" 
-        
-        clustalomega_cline = ClustalOmegaCommandline(infile=in_file, outfile=out_file, outfmt="fasta", verbose=False, auto=True, force=True)
-        clustalomega_cline()
-        e = environ()
-        target='mutacion'
-        a = alignment(e, file='%s.fasta'%target, alignment_format='FASTA')
-        a.write(file='%s.aln'%target, alignment_format='PIR')
-    
-        log.verbose()    # request verbose output
-        env = environ()  # create a new MODELLER environment to build this model in
- 
-        # directories for input atom files
-        env.io.atom_files_directory = './le/'
-        env.io.hetatm = True
- 
- 
-        a = automodel(env,
-             alnfile  = 'mutacion.pir', # alignment filename
-             knowns   = ('3LEE'),  #.pdp         # codes of the templates
-             sequence = 'Mutante') #mutacion              # code of the target
-        a.starting_model= 1                 # index of the first model
-        a.ending_model  = 1                 # index of the last model
-                                   # (determines how many models to calculate)
-       # a.make()         
-       # pymol.cmd.load('./le/3V03.pdb')  
-       # pymol.cmd.load('NM_134326.B99990001.pdb')
-       # print(a, "acaaaaaaaaa!!!!!!")
-        
-        #pymol.cmd.extra_fitname CA, 3V03, align, object=all_to_3V03_alignCA
+        buscar_clustal()
+        generar_pir(nombrePdbInc)
+
+        cant_modelos = int(input("Ingrese la cantidad de modelos a generar: ")) 
+        pdb_mutacion = generar_modelado(nombrePdbInc, cant_modelos)
+        generar_pymol(nombrePdbInc, pdb_mutacion)
 
         print("La proteina original: " + proteina)
         print("La proteina mutada:   " + pasar_a_proteina(mutacion))
@@ -378,52 +385,13 @@ def programa():
     except:
         return "Error"
 
+    # CR457033 # 3LEE
+    # 6n5k # 4YO2
+    # EU574314 5JRJ
+    # 6SZS stop en el medio
+
+    #cealign 3LEE, mutacion.B99990002, object=aln
+    #cealign 4YO2, mutacion.B99990002, object=aln
+    #cealign 5JRJ, mutacion.B99990002, object=aln
+
 programa()
-
-
-######### Funciones que pueden servir ##########
-
-
-def arn_codificante(peptido):
-    cadena_nueva = []
-    cadena_ARN = ""
-
-    for letra in peptido:
-        for k,v in diccionario_ARN.items():
-            if(letra == k):
-                cadena_nueva.append(v)
-    return cadena_ARN.join(cadena_nueva)   
-
-def polimerasa(secuencia):
-    if(secuencia.count('​TATAAA')==0):  
-        print("No posee la región de unión a la polimerasa")
-    else:
-        print("Posee la región de unión a la polimerasa")       
-
-def formato_fasta(fasta):
-    f = open (fasta,'r')
-    mensaje = f.read()
-    #f.close()
-    return mensaje
-
-def secuencias_iguales(sec):
-    reverse_dict = {}
-    for key, value in sec.items():
-        try:reverse_dict[value].append(key)
-        except:reverse_dict[value] = [key]
-    return [value for key, value in reverse_dict.items() if len(value) > 1]
-
-def mutacion_de_UUA_a_UAA(peptido):
-    cadena_ARN = dividir_3(peptido)
-    
-    for n,letras in enumerate(cadena_ARN):
-        if(letras == "UUA"):  
-            cadena_ARN[n] = 'UAA'
-    
-    return cadena_ARN    
-
-def porcentaje(secuencia, letra):
-    longitud = len(secuencia)
-    cant_l = secuencia.count(letra)
-
-    return (cant_l) / longitud     
