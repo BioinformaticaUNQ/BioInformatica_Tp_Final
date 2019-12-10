@@ -61,7 +61,7 @@ def stop(cadena_mutada):
     for i in lista:
         if((i=='UAA') or (i=='UAG') or (i=='UGA') or (i=='TAA') or (i=='TAG') or (i=='TGA')):
             longitud = lista.index(i)
-            return cadena_corta.join(lista[:longitud])
+            return cadena_corta.join(lista[:longitud+1])
     
     return cadena_mutada
 
@@ -120,6 +120,12 @@ def validar_fasta(secuencia):
     else:
         return True    
 
+def validacion_mutacion(mutacionProteina, proteina):
+    len_prot= len(proteina)
+    len_mut = len(mutacionProteina)
+    
+    return ((len_mut/len_prot)*100) > 40
+    
 def obtener_secuencia(fasta):
     try:
         sec_fasta = open(fasta)          
@@ -202,7 +208,7 @@ def mutar_secuencia(sec, mut_letra):
     try:
         if(mut_letra == 'M'):
             letra = input("Ingrese la letra del aminoácido en el que va a mutar: ").upper()
-            index = int(input("Ingrese la posición: "))
+            index = int(input("Ingrese la posición donde quiere que mute el aminoácido: "))
             if(index > len(sec)):
                 return print("Ingresó una posición fuera de rango, ingrese un número menor a: " + str(len(sec)))
             else:    
@@ -368,24 +374,30 @@ def programa():
 
         mutacion = mutar_secuencia(prot_comienzo, mut_letra)
         mutacionProteina = pasar_a_proteina(mutacion)
-        proteina_y_mutacion = guardarEnFastaSeqMutadaYOriginal(proteina, mutacionProteina, nombrePdbInc)
+    
+    
+        if validacion_mutacion(mutacionProteina, proteina):
+            proteina_y_mutacion = guardarEnFastaSeqMutadaYOriginal(proteina, mutacionProteina, nombrePdbInc)
         
-        buscar_clustal()
-        generar_pir(nombrePdbInc)
+            buscar_clustal()
+            generar_pir(nombrePdbInc)
 
-        cant_modelos = int(input("Ingrese la cantidad de modelos a generar: ")) 
-        pdb_mutacion = generar_modelado(nombrePdbInc, cant_modelos)
-        generar_pymol(nombrePdbInc, pdb_mutacion)
+            cant_modelos = int(input("Ingrese la cantidad de modelos a generar: ")) 
+            pdb_mutacion = generar_modelado(nombrePdbInc, cant_modelos)
+            generar_pymol(nombrePdbInc, pdb_mutacion)
 
-        print("La proteina original: " + proteina)
-        print("La proteina mutada:   " + pasar_a_proteina(mutacion))
+            print("La proteina original: " + proteina)
+            print("La proteina mutada:   " + pasar_a_proteina(mutacion))
+
+        else:
+            print("La secuencia mutada es demasiado pequeña para realizar un análisis")
 
     try:
         return mutacion
     except:
         return "Error"
 
-    # CR457033 # 3LEE
+    # CR457033 # 3LEE 
     # 6n5k # 4YO2
     # EU574314 5JRJ
     # 6SZS stop en el medio
@@ -393,5 +405,7 @@ def programa():
     #cealign 3LEE, mutacion.B99990002, object=aln
     #cealign 4YO2, mutacion.B99990002, object=aln
     #cealign 5JRJ, mutacion.B99990002, object=aln
+
+    # mutar Manual CR457033 aminoacido: T , posicion: 13
 
 programa()
