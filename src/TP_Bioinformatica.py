@@ -367,30 +367,31 @@ def programa():
         mut_letra = input("Desea hacer una mutacion manual 'M' o una automatica 'A': ").upper()
         posicion = int(input("Ingrese la posición donde quiere que comienze el análisis hasta el final de la secuencia: ")) 
 
-        if(posicion < len(sec_fasta)):
-            prot_comienzo = sec_fasta[posicion-1:len(sec_fasta)]
-        else:
-            return print("Ingresó una posición fuera de rango, ingrese un número menor a: " + str(len(sec_fasta))) 
+        if(validar_fasta(sec_fasta[posicion-1:])):
+            if(posicion < len(sec_fasta)):
+                prot_comienzo = sec_fasta[posicion-1:len(sec_fasta)]
+            else:
+                return print("Ingresó una posición fuera de rango, ingrese un número menor a: " + str(len(sec_fasta))) 
 
-        mutacion = mutar_secuencia(prot_comienzo, mut_letra)
-        mutacionProteina = pasar_a_proteina(mutacion)
+            mutacion = mutar_secuencia(prot_comienzo, mut_letra)
+            mutacionProteina = pasar_a_proteina(mutacion)
     
     
-        if validacion_mutacion(mutacionProteina, proteina):
-            proteina_y_mutacion = guardarEnFastaSeqMutadaYOriginal(proteina, mutacionProteina, nombrePdbInc)
+            if validacion_mutacion(mutacionProteina, proteina):
+                guardarEnFastaSeqMutadaYOriginal(proteina, mutacionProteina, nombrePdbInc)
         
-            buscar_clustal()
-            generar_pir(nombrePdbInc)
+                buscar_clustal()
+                generar_pir(nombrePdbInc)
 
-            cant_modelos = int(input("Ingrese la cantidad de modelos a generar: ")) 
-            pdb_mutacion = generar_modelado(nombrePdbInc, cant_modelos)
-            generar_pymol(nombrePdbInc, pdb_mutacion)
+                cant_modelos = int(input("Ingrese la cantidad de modelos a generar: ")) 
+                pdb_mutacion = generar_modelado(nombrePdbInc, cant_modelos)
+                generar_pymol(nombrePdbInc, pdb_mutacion)
 
-            print("La proteina original: " + proteina)
-            print("La proteina mutada:   " + pasar_a_proteina(mutacion))
+                print("La proteina original: " + proteina)
+                print("La proteina mutada:   " + pasar_a_proteina(mutacion))
 
-        else:
-            print("La secuencia mutada es demasiado pequeña para realizar un análisis")
+            else:
+                print("La secuencia mutada es demasiado pequeña para realizar un análisis")
 
     try:
         return mutacion
