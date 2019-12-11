@@ -120,6 +120,19 @@ def validar_fasta(secuencia):
     else:
         return True    
 
+def msjerror_secFasta_invalida(secuencia):
+    sec = que_es(secuencia)
+
+    if(hay_stop(secuencia)):
+        return ("El archivo fasta es incorrecto, hay un stop dentro de la secuencia")
+    elif(sec=="proteina"):
+        return ("El archivo fasta es una proteina, ingrese una secuencia de ADN o ARN")
+    elif(len(secuencia)%3 !=0):
+        return ("El tamaño de la secuencia no es el correcto")
+    else:
+        return ("Problema no identificado")
+
+
 def validacion_mutacion(mutacionProteina, proteina):
     len_prot= len(proteina)
     len_mut = len(mutacionProteina)
@@ -140,6 +153,13 @@ def obtener_secuencia(fasta):
         return cadena_final.join(lista)       
     except:
         return "El archivo no existe" # No sale este print cuando no existe el archivo ???????
+    
+def msjeError_archivoInexistente(fasta):
+        try:
+                sec_fasta = open(fasta)  
+        except:
+            return "No existe"
+
 
 # PREC: No puede ser una secuencia de una proteina
 def pasar_a_proteina(secuencia): 
@@ -221,6 +241,7 @@ def mutar_secuencia(sec, mut_letra):
             return print("La letra que eligió no es la correcta, debe elegir 'M' o 'A'")
     except:
         return print("Debe ingresar un número")
+
 
 def blast_proteina_namePdb(seq_proteina, sec_a_analizar): 
     res = "La proteina no existe en la base de datos PDB"
@@ -349,7 +370,7 @@ def generar_pymol(nombrePdbInc, pdb_mutacion):
     #pymol.cmd.extra_fit, CA, nombrePdbInc, object='alineacion'
     #pymol.align(nombrePdbInc, pdb_mutacion, object='name')
 
-
+"""
 def programa():
     sec_a_analizar = input("Ingrese el nombre del archivo FASTA que desea analizar: ")
     sec_fasta = obtener_secuencia(sec_a_analizar + ".fasta")  
@@ -410,3 +431,4 @@ def programa():
     # mutar Manual CR457033 aminoacido: T , posicion: 13
 
 programa()
+"""
