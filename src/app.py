@@ -63,16 +63,15 @@ verProteina.place(x=50,y=125)
 ### Accion boton cargar archivo (5).
 def onHandleCargar():   
     datos.nombreArchivoCargado = nombreDeFasta.get() ## (obengo texto del textInput)
-    sec_fasta = obtener_secuencia(datos.nombreArchivoCargado + ".fasta") 
-    mensaje_error = msjerror_secFasta_invalida(sec_fasta)
+    datos.secuencia = obtener_secuencia(datos.nombreArchivoCargado + ".fasta") 
+    mensaje_error = msjerror_secFasta_invalida(datos.secuencia)
 
     if(msjeError_archivoInexistente(datos.nombreArchivoCargado + ".fasta") != "No existe"):
-        if validar_fasta(sec_fasta):
+        if validar_fasta(datos.secuencia):
             verSecuencia.configure(state="normal")
             verProteina.configure(state="normal")
             datos.hayArchivoCargado = True
-            datos.secuencia = sec_fasta
-            datos.proteina = pasar_a_proteina(sec_fasta)                  
+            datos.proteina = pasar_a_proteina(datos.secuencia)                  
         else:
             alertaFastaIncorrecto = MessageBox.showinfo(message = mensaje_error,
              title="Error de Fasta")
@@ -174,18 +173,31 @@ def crearVentanaDeMutacion():
         ### Creacion labelText (13) para cant modelos.
         ingreseCantModelTxt = Label(ventanaDeMutacion, 
         text='Ingrese la cantidad de modelos a generar(mayor cantidad,mayor tiempo)')
-        ingreseCantModelTxt.place(x=5,y=370)
+        ingreseCantModelTxt.place(x=5,y=410)
 
         ### Creacion de input de cant de modelos (13).
         cantModelos = Entry(ventanaDeMutacion,width=10, state='disabled')
-        cantModelos.place(x=400,y=370)
+        cantModelos.place(x=400,y=410)
+
+        ## Creacion de accion boton ver datos adicionales (13.5)
+        def onHandlerVerDatos():
+            MessageBox.showinfo(title='Datos obtenidos',
+            message =
+             "Nombre de archivo cargado" + datos.nombreArchivoCargado + "\n" +
+             "Inicio de mutacion: " + str(datos.inicioDeMutacion) + "\n" + 
+             "Tipo de mutacion: " + datos.tipoMutacion + "\n" +
+             "Letra de aminoacido a mutar: " + datos.letraDeAmino + "\n"+ 
+             "Posicion de aminoacido a mutar: " + str(datos.posicionDeMutAmino) + "\n" +
+             "Nombre de pdb-proteina:" +  datos.nombrePdb)
+
+
+        ### Creacion de boton ver datos adicionales(13.5)
+        verDatosAdicionales = Button(ventanaDeMutacion, 
+        text="Ver datos obtenidos", width=30, state='disabled', command= onHandlerVerDatos)
+        verDatosAdicionales.place(x=120,y=370)
 
         ### Creacion de accion modelar (14)
         def onHandlerModlear():
-            datos.nombreProteina = blast_proteina_namePdb(datos.proteina, datos.nombreArchivoCargado)
-            datos.nombrePdb = datos.nombreProteina[:-2]
-            global partChain
-            partChain = datos.nombreProteina[-1]
             buscaryGuardarPdb(datos.nombrePdb)
 
             if validacion_mutacion(datos.proteinaMutada, datos.proteina):
@@ -206,15 +218,9 @@ def crearVentanaDeMutacion():
         ### Creacion de boton modelar(14)
         modelar = Button(ventanaDeMutacion, 
         text="Modelar", width=30, state='disabled', command= onHandlerModlear)
-        modelar.place(x=120,y=410)
+        modelar.place(x=120,y=450)
 
 
-        ### Accion adicional para habilitar boton cargar.
-        def enableOrDisabled():
-            if(not str(posicionDeMut.get())):
-                return 'disabled'
-            else:
-                return 'enabled'
         
         ### Accion de boton cargar(10).
         def onHandlerCargar():
@@ -228,6 +234,11 @@ def crearVentanaDeMutacion():
                         verSecMutada.configure(state='normal')
                         cantModelos.configure(state='normal')
                         modelar.configure(state='normal')
+                        verDatosAdicionales.configure(state='normal')
+                        datos.nombreProteina = blast_proteina_namePdb(datos.proteina, datos.nombreArchivoCargado)
+                        datos.nombrePdb = datos.nombreProteina[:-2]
+                        global partChain
+                        partChain = datos.nombreProteina[-1]
                         if(datos.tipoMutacion == 'A'):
                             datos.secuenciaMutada = mutar_automatica(datos.secuenciaRecortada)
                             MessageBox.showinfo(message="Mutacion extiosa",title="Mutacion")
