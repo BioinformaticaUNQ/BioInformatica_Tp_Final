@@ -9,15 +9,15 @@ class Datos:
     secuencia = ''              ## Secuencia original ingresada a partir de archivo fasta.
     proteina = ''               ## Proteina obtenida de la secuencia original.
     tipoMutacion = ''           ## Tipo de mutacion elegida.
-    inicioDeMutacion = 1        ## Inicio donde quiere comenzar la mutacion.
+    inicioDeMutacion = 0        ## Inicio donde quiere comenzar la mutacion.
     letraDeAmino = ''           ## En caso de mut manual, letra del aminoacido elejido.
-    posicionDeMutAmino = 1      ## En caso de muta manual, posicion del aminoacido a mutar.
+    posicionDeMutAmino = 0      ## En caso de muta manual, posicion del aminoacido a mutar.
     secuenciaRecortada = ''     ## Secuencia recortada definida por el inicio de la mutacion.
     secuenciaMutada = ''        ## Secuencia resultante de la mutacion.
     proteinaMutada = ''         ## Proteina resultante de la mutacion.
     nombreProteina = ''         ## Nombre proteina original.
     nombrePdb = ''              ## Nombre del pdb de proteina original.      
-
+    poscionDeMutAutomaticaAmino  = 0 
 
 datos = Datos()
 
@@ -187,7 +187,7 @@ def crearVentanaDeMutacion():
              "Inicio de mutacion: " + str(datos.inicioDeMutacion) + "\n" + 
              "Tipo de mutacion: " + datos.tipoMutacion + "\n" +
              "Letra de aminoacido a mutar: " + datos.letraDeAmino + "\n"+ 
-             "Posicion de aminoacido a mutar: " + str(datos.posicionDeMutAmino) + "\n" +
+             "Posicion de aminoacido a mutar: " + str(datos.posicionDeMutAmino +1) + "\n" +
              "Nombre de pdb-proteina:" +  datos.nombrePdb)
 
 
@@ -237,14 +237,20 @@ def crearVentanaDeMutacion():
                         verDatosAdicionales.configure(state='normal')
                         datos.nombreProteina = blast_proteina_namePdb(datos.proteina, datos.nombreArchivoCargado)
                         datos.nombrePdb = datos.nombreProteina[:-2]
-                        global partChain
-                        partChain = datos.nombreProteina[-1]
-                        if(datos.tipoMutacion == 'A'):
-                            datos.secuenciaMutada = mutar_automatica(datos.secuenciaRecortada)
-                            MessageBox.showinfo(message="Mutacion extiosa",title="Mutacion")
+                        setPartChain(datos.nombreProteina[-1])
+                        if(datos.nombreProteina != "La proteina no existe en la base de datos PDB"):
+                            if(datos.tipoMutacion == 'A'):
+                                datos.posicionDeMutAmino =  posicionMutada
+                                datos.secuenciaMutada = mutar_automatica(datos.secuenciaRecortada)
+                                MessageBox.showinfo(message="Mutacion extiosa",title="Mutacion")
+                            else:
+                                datos.posicionDeMutAmino =  int(posDeAmino.get())-1
+                                datos.letraDeAmino = letraDeMut.get().upper()
+                                datos.secuenciaMutada = mutar_manual(datos.secuenciaRecortada,datos.posicionDeMutAmino,datos.letraDeAmino)
+                                MessageBox.showinfo(message="Mutacion extiosa",title="Mutacion")
                         else:
-                            datos.secuenciaMutada = mutar_manual(datos.secuencia,datos.posicionDeMutAmino,datos.letraDeAmino)
-                            MessageBox.showinfo(message="Mutacion extiosa",title="Mutacion")
+                            MessageBox.showinfo(message="La proteina no existe en la base de datos PDB", title= "Error")
+                                
                     else:
                         verProtMutada.configure(state='disabled')
                         verSecMutada.configure(state='disabled')

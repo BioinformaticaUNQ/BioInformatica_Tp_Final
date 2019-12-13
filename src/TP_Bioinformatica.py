@@ -40,6 +40,10 @@ diccionario_ADN = {
 
 partChain = None
 
+def setPartChain (newPartChain):
+    global partChain
+    partChain = newPartChain
+
 def pasar_a_lista(cadena): 
     lista = []
     for char in cadena:
@@ -197,6 +201,12 @@ def mutar_manual(peptido, index, letra):
     print("Secuencia final:    " + cadena_final)
     
     return cadena_final
+posicionMutada = 10
+
+def setposicionMutada(posicion):
+    global posicionMutada
+    posicionMutada = posicion
+
 
 def mutar_automatica(sec_fasta): 
     cadena_ADN = pasar_a_lista(sec_fasta)
@@ -207,11 +217,13 @@ def mutar_automatica(sec_fasta):
     if(quees == "ADN"): 
         randLetra = random.choice("ACGT") 
         cadena_ADN.insert(randPos,randLetra)
+        setposicionMutada(randPos+1)
         print("Mutó la letra: " + randLetra + " en la posición: " + str(randPos+1))
         
     elif(quees == "ARN"):
         randLetra = random.choice("ACGU") 
         cadena_ADN.insert(randPos,randLetra)
+        setposicionMutada(randPos+1)
         print("Mutó la letra: " + randLetra + " en la posición: " + str(randPos+1))
     
     del cadena_ADN[randPos+1]
@@ -245,12 +257,12 @@ def mutar_secuencia(sec, mut_letra):
 
 def blast_proteina_namePdb(seq_proteina, sec_a_analizar): 
     res = "La proteina no existe en la base de datos PDB"
-    resultBlast = NCBIWWW.qblast(program= "blastp", database= "pdb", sequence= seq_proteina)
+   # resultBlast = NCBIWWW.qblast(program= "blastp", database= "pdb", sequence= seq_proteina)
     blast = sec_a_analizar + ".xml"
 
-    save_clk = open(blast, "w")
-    save_clk.write(resultBlast.read())    
-    save_clk.close()
+    #save_clk = open(blast, "w")
+    #save_clk.write(resultBlast.read())    
+    #save_clk.close()
     
     blast_records = NCBIXML.parse(open(blast))
     myScore = 0
@@ -318,7 +330,7 @@ def generar_pir(nombrePdbInc):
     aln = alignment(env)
     mdl = model(env, file="%s.pdb" % template, model_segment=('FIRST:A','LAST:A'))
     aln.append_model(mdl, align_codes=template, atom_files="%s.pdb" % template)
-    aln.append(file='%s.ali'%target, align_codes='all')
+    aln.append(file='%s.ali'%target, align_codes='mutacion')
     aln.align2d()
     aln.write(file='%s_%s.ali' % (target,template), alignment_format='PIR')
     #aln.write(file='%s_%s.pap' % (target,template), alignment_format='PAP', alignment_features ="INDICES HELIX BETA")
