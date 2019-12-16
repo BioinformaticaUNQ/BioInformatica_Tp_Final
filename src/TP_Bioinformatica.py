@@ -14,7 +14,6 @@ from Bio.Align.Applications import ClustalOmegaCommandline
 from Bio.Align.Applications import MSAProbsCommandline
 from Bio.PDB.Entity import Entity 
 from Bio.PDB import *
-#from tkinter import *
 
 diccionario_ARN = {
     "UUU":"F", "UUC":"F", "UUA":"L", "UUG":"L", "CUU":"L", "CUC":"L", "CUA":"L", "CUG":"L",
@@ -39,10 +38,18 @@ diccionario_ADN = {
 }
 
 partChain = None
+posicionMutada = 0
+letraMutada = ""
 
 def setPartChain (newPartChain):
     global partChain
     partChain = newPartChain
+
+def getPosicionMutada():
+    return posicionMutada     
+
+def getLetraMutada ():
+    return letraMutada 
 
 def pasar_a_lista(cadena): 
     lista = []
@@ -156,7 +163,7 @@ def obtener_secuencia(fasta):
         sec_fasta.close()
         return cadena_final.join(lista)       
     except:
-        return "El archivo no existe" # No sale este print cuando no existe el archivo ???????
+        return "El archivo no existe" 
     
 def msjeError_archivoInexistente(fasta):
         try:
@@ -201,14 +208,11 @@ def mutar_manual(peptido, index, letra):
     print("Secuencia final:    " + cadena_final)
     
     return cadena_final
-posicionMutada = 10
-
-def setposicionMutada(posicion):
-    global posicionMutada
-    posicionMutada = posicion
-
 
 def mutar_automatica(sec_fasta): 
+    global posicionMutada
+    global letraMutada
+
     cadena_ADN = pasar_a_lista(sec_fasta)
     cadena_mutada = ""
     quees = que_es(sec_fasta)
@@ -217,13 +221,15 @@ def mutar_automatica(sec_fasta):
     if(quees == "ADN"): 
         randLetra = random.choice("ACGT") 
         cadena_ADN.insert(randPos,randLetra)
-        setposicionMutada(randPos+1)
+        posicionMutada = randPos+1
+        letraMutada = randLetra
         print("Mutó la letra: " + randLetra + " en la posición: " + str(randPos+1))
         
     elif(quees == "ARN"):
         randLetra = random.choice("ACGU") 
         cadena_ADN.insert(randPos,randLetra)
-        setposicionMutada(randPos+1)
+        posicionMutada = randPos+1
+        letraMutada = randLetra
         print("Mutó la letra: " + randLetra + " en la posición: " + str(randPos+1))
     
     del cadena_ADN[randPos+1]

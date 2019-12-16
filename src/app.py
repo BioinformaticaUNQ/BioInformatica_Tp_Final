@@ -93,18 +93,18 @@ def crearVentanaDeMutacion():
     
         ventanaDeMutacion = Tk()
         ventanaIngresoFasta.withdraw()
-        ventanaDeMutacion.title("UNQ - Modeller - Mutacion")
+        ventanaDeMutacion.title("UNQ - Modeller - Mutación")
         ventanaDeMutacion.geometry('500x500')
 
         ### Creacion de textlabel (1).
         eligaTipoMutTxt = Label(ventanaDeMutacion,
-        text="Seleccione el tipo de mutacion que desea realizar:")
+        text="Seleccione el tipo de mutación que desea realizar:")
         eligaTipoMutTxt.place(x=10,y=5)
     
         ### Creacion de textLabel (2).  
         ingresePosicionTxt = Label(ventanaDeMutacion, 
-        text="Ingrese la posición donde quiere que comience el análisis hasta el \n final de la secuencia:") 
-        ingresePosicionTxt.place(x=10,y=90)   
+        text="Ingrese la posición del codón de inicio hasta el final de la secuencia: ") 
+        ingresePosicionTxt.place(x=10,y=105)   
         
         ### Creacion de input (3) para ingresar posicion de inicio de mut. 
         posicionDeMut = Entry(ventanaDeMutacion,width=10, state='disabled')
@@ -112,7 +112,7 @@ def crearVentanaDeMutacion():
 
         ### Creacion de textLabel (4). 
         casoMutManualTxt = Label(ventanaDeMutacion, 
-        text="En caso de haber elegido Mutacion manualcomplete los siguientes campos:") 
+        text="En caso de haber elegido Mutación manual complete los siguientes campos:") 
         casoMutManualTxt.place(x=10,y=150)  
 
         ### Creacion de textLabel (5).  
@@ -147,9 +147,9 @@ def crearVentanaDeMutacion():
             posDeAmino.configure(state='disabled')
 
         ### Creacion de botones de mutacion Manual, mutacion autmatica (9).
-        mutManual = Button(ventanaDeMutacion, text="Mutacion manual",width=30, command=onHandlerMutacionManual)
+        mutManual = Button(ventanaDeMutacion, text="Mutación manual",width=30, command=onHandlerMutacionManual)
         mutManual.place(x=15,y=45)
-        mutAutomatica = Button(ventanaDeMutacion, text="Mutacion automatica",width=30, command=onHandlerMutacionAutomatica)
+        mutAutomatica = Button(ventanaDeMutacion, text="Mutación automática",width=30, command=onHandlerMutacionAutomatica)
         mutAutomatica.place(x=250,y=45)
 
         ### Creacion de accion ver secuencia mutada (11)    
@@ -172,23 +172,23 @@ def crearVentanaDeMutacion():
 
         ### Creacion labelText (13) para cant modelos.
         ingreseCantModelTxt = Label(ventanaDeMutacion, 
-        text='Ingrese la cantidad de modelos a generar(mayor cantidad,mayor tiempo)')
+        text='Ingrese la cantidad de modelos a generar(mayor cantidad, mayor tiempo)')
         ingreseCantModelTxt.place(x=5,y=410)
 
         ### Creacion de input de cant de modelos (13).
         cantModelos = Entry(ventanaDeMutacion,width=10, state='disabled')
-        cantModelos.place(x=400,y=410)
+        cantModelos.place(x=405,y=410)
 
         ## Creacion de accion boton ver datos adicionales (13.5)
         def onHandlerVerDatos():
             MessageBox.showinfo(title='Datos obtenidos',
             message =
-             "Nombre de archivo cargado" + datos.nombreArchivoCargado + "\n" +
-             "Inicio de mutacion: " + str(datos.inicioDeMutacion) + "\n" + 
-             "Tipo de mutacion: " + datos.tipoMutacion + "\n" +
-             "Letra de aminoacido a mutar: " + datos.letraDeAmino + "\n"+ 
-             "Posicion de aminoacido a mutar: " + str(datos.posicionDeMutAmino +1) + "\n" +
-             "Nombre de pdb-proteina:" +  datos.nombrePdb)
+             "Nombre de archivo cargado: " + datos.nombreArchivoCargado + "\n" +
+             "Inicio de mutación: " + str(datos.inicioDeMutacion) + "\n" + 
+             "Tipo de mutación: " + datos.tipoMutacion + "\n" +
+             "Letra de aminoácido a mutar: " + datos.letraDeAmino + "\n"+ 
+             "Posición de aminoácido a mutar: " + str(datos.poscionDeMutAutomaticaAmino +1) + "\n" +
+             "Nombre de pdb-proteina: " +  datos.nombrePdb)
 
 
         ### Creacion de boton ver datos adicionales(13.5)
@@ -240,7 +240,8 @@ def crearVentanaDeMutacion():
                         setPartChain(datos.nombreProteina[-1])
                         if(datos.nombreProteina != "La proteina no existe en la base de datos PDB"):
                             if(datos.tipoMutacion == 'A'):
-                                datos.posicionDeMutAmino =  posicionMutada
+                                datos.poscionDeMutAutomaticaAmino =  getPosicionMutada()
+                                datos.letraDeAmino = getLetraMutada()
                                 datos.secuenciaMutada = mutar_automatica(datos.secuenciaRecortada)
                                 MessageBox.showinfo(message="Mutacion extiosa",title="Mutacion")
                             else:
@@ -263,7 +264,7 @@ def crearVentanaDeMutacion():
                 datos.proteinaMutada = pasar_a_proteina(datos.secuenciaMutada)
 
             else:
-                MessageBox.showinfo(message="Debe elegir un tipo de mutacion y completas los campos",title="Error")
+                MessageBox.showinfo(message="Debe elegir un tipo de mutación y completar los campos",title="Error")
         
         ### Creacion de boton cargar datos (10).
         cargarDatos = Button(ventanaDeMutacion, 
@@ -271,7 +272,7 @@ def crearVentanaDeMutacion():
         cargarDatos.place(x=120,y=250)
 
     else:
-         MessageBox.showinfo(message="No puede avanzar si cargar archivo fasta",title="Error")
+         MessageBox.showinfo(message="No puede avanzar sin cargar un archivo fasta",title="Error")
          
 ## Creacion de Boton continuar(6).
 continuar = Button(ventanaIngresoFasta, text="Continuar",width=17, state='normal', command = crearVentanaDeMutacion)
