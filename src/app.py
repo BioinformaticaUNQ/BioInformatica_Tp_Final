@@ -187,7 +187,7 @@ def crearVentanaDeMutacion():
              "Inicio de mutación: " + str(datos.inicioDeMutacion) + "\n" + 
              "Tipo de mutación: " + datos.tipoMutacion + "\n" +
              "Letra de aminoácido a mutar: " + datos.letraDeAmino + "\n"+ 
-             "Posición de aminoácido a mutar: " + str(datos.poscionDeMutAutomaticaAmino +1) + "\n" +
+             "Posición de aminoácido a mutar: " + str(datos.posicionDeMutAmino +1) + "\n" +
              "Nombre de pdb-proteina: " +  datos.nombrePdb)
 
 
@@ -240,7 +240,7 @@ def crearVentanaDeMutacion():
                         setPartChain(datos.nombreProteina[-1])
                         if(datos.nombreProteina != "La proteina no existe en la base de datos PDB"):
                             if(datos.tipoMutacion == 'A'):
-                                datos.poscionDeMutAutomaticaAmino =  getPosicionMutada()
+                                datos.posicionDeMutAmino =  getPosicionMutada()
                                 datos.letraDeAmino = getLetraMutada()
                                 datos.secuenciaMutada = mutar_automatica(datos.secuenciaRecortada)
                                 MessageBox.showinfo(message="Mutacion extiosa",title="Mutacion")
