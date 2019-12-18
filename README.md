@@ -57,18 +57,31 @@ Pero algunos otros paramtros utilizados en nuestra aplicación, ya vienen defini
 
 - **Búsqueda de Blast (NCBIWWW.qblast)**
     > url_base='https://blast.ncbi.nlm.nih.gov/Blast.cgi',
+    
     > auto_format=None,
+    
     > composition_based_statistics=None,
+    
     > db_genetic_code=None,
+    
     > endpoints=None,
+    
     > entrez_query='(none)',
+    
     > expect=10.0, filter=None,
+    
     > gapcosts=None,
+    
     > genetic_code=None,
+    
     > hitlist_size=50,
+    
     > i_thresh=None,
+   
     > layout=None,
+    
     > lcase_mask=None,
+    
     >  matrix_name=None,
     > nucl_penalty=None,
     > nucl_reward=None,
