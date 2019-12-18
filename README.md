@@ -38,10 +38,12 @@ Unq-Modeller es una aplicacion con interfaz gráfica, basada en librerias de pyt
    - [Enlace a descarga para Linux](https://salilab.org/modeller/9.23/modeller-9.23-1.x86_64.rpm)
 
 - Instalacion conda:
-    ```sh
+
+    ```
     $ conda config --add channels salilab
     $ conda install modeller
-    ```  
+    ``` 
+    
 #### BioPython
 - Instalacion conda:
     ~~~
