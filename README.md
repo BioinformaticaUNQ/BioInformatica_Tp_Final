@@ -28,7 +28,7 @@ Unq-Modeller es una aplicacion con interfaz gráfica, basada en librerias de pyt
    - [Enlace a descarga para Linux](https://pymol.org/installers/PyMOL-2.3.4_121-Linux-x86_64-py37.tar.bz2)
 
 - Instalacion conda:
-    ```sh
+    ```
     $ conda install -c schrodinger pymol
     ```  
     
