@@ -28,9 +28,7 @@ Unq-Modeller es una aplicacion con interfaz gráfica, basada en librerias de pyt
    - [Enlace a descarga para Linux](https://pymol.org/installers/PyMOL-2.3.4_121-Linux-x86_64-py37.tar.bz2)
 
 - Instalacion conda:
-    ```
-    $ conda install -c schrodinger pymol
-    ```  
+    > $ conda install -c schrodinger pymol
     
 #### Modeller 
 - Instalacion por link:
@@ -38,23 +36,18 @@ Unq-Modeller es una aplicacion con interfaz gráfica, basada en librerias de pyt
    - [Enlace a descarga para Linux](https://salilab.org/modeller/9.23/modeller-9.23-1.x86_64.rpm)
 
 - Instalacion conda:
+    >  $ conda config --add channels salilab
+    >  $ conda install modeller
 
-    ```
-    $ conda config --add channels salilab
-    $ conda install modeller
-    ``` 
-    
 #### BioPython
 - Instalacion conda:
-    ~~~
-    $ conda install -c anaconda biopython
-    ~~~ 
- 
+
+    >  $ conda install -c anaconda biopython
+
 ### lxml
 - Instalacion conda:
-    ```sh
-    $ conda install -c anaconda lxml
-    ```  
+    > $ conda install -c anaconda lxml
+
 
 # *Informacion Biologica:*
 
@@ -63,8 +56,7 @@ En UNQ - Modeller se podran elegir parametros con los que la aplicacion funciona
 Pero algunos otros paramtros utilizados en nuestra aplicación, ya vienen definidos por default, y el flujo de uso de la misma no permite elección, por este motivo a continuacion se detallarán sus parametros por default:
 
 - **Búsqueda de Blast (NCBIWWW.qblast)**
-    ```sh
-    url_base='https://blast.ncbi.nlm.nih.gov/Blast.cgi',
+    > url_base='https://blast.ncbi.nlm.nih.gov/Blast.cgi',
     auto_format=None,
     composition_based_statistics=None,
     db_genetic_code=None,
@@ -108,35 +100,30 @@ Pero algunos otros paramtros utilizados en nuestra aplicación, ya vienen defini
     megablast=None,
     template_type=None,
     template_length=None
-    ```  
+
 
 - **Busqueda y descarga de PDB (retrieve_pdb_file)**
-    ```sh
-    obsolete=False,
+    > obsolete=False,
     pdir=None,
     file_format=None,
     overwrite=False
-    ```  
 
 - **Busqueda de clustal (ClustalOmegaCommandline)**
-   ```sh
-   verbose=False,
+    > verbose=False,
    auto=True,
    force=True
-   ```
+
    
 - **Modelado**
-   ```sh
-   deviation=None,
+    > deviation=None,
    library_schedule=None,
    csrfile=None, inifile=None,
    assess_methods= asses.DOPE 
-   ```
+
 
 - **Visualizacion de proteinas**
-   ```sh
-    Se abriran en pymol no alineadas.
-   ```
+    > Se abriran en pymol no alineadas.
+
  
 # *Flujo de uso:*
 
