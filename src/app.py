@@ -198,6 +198,8 @@ def crearVentanaDeMutacion():
 
         ### Creacion de accion modelar (14)
         def onHandlerModlear():
+            MessageBox.showinfo(message="Aguarde mientras se recopila la informacion y se crea el modelado", title="Info")
+
             buscaryGuardarPdb(datos.nombrePdb)
 
             if validacion_mutacion(datos.proteinaMutada, datos.proteina):
@@ -208,7 +210,11 @@ def crearVentanaDeMutacion():
                 generar_pir(datos.nombrePdb)
 
                 cant_modelos = int(cantModelos.get())
+
                 pdb_mutacion = generar_modelado(datos.nombrePdb, cant_modelos)
+
+                MessageBox.showinfo(title='Modelado Existoso',
+                 message='El modelado se realizo con exito, se visualizara el pdb' + pdb_mutacion + 'el cual fue seleccionado a traves del mayor DOPE')
 
                 generar_pymol(datos.nombrePdb, pdb_mutacion)
 
@@ -229,6 +235,7 @@ def crearVentanaDeMutacion():
 
                 if(validar_fasta(datos.secuencia[datos.inicioDeMutacion-1:])):
                     if(datos.inicioDeMutacion < len(datos.secuencia)):
+                        MessageBox.showinfo(message="Aguarde mientras se cargan los datos", title="Info")
                         datos.secuenciaRecortada = datos.secuencia[datos.inicioDeMutacion-1:len(datos.secuencia)]
                         verProtMutada.configure(state='normal')
                         verSecMutada.configure(state='normal')

@@ -124,7 +124,6 @@ Pero algunos otros paramtros utilizados en nuestra aplicación, ya vienen defini
     
     > expect_low=None,
     
-    
     > expect_high=None,
     
     > format_entrez_query=None,
@@ -145,6 +144,7 @@ Pero algunos otros paramtros utilizados en nuestra aplicación, ya vienen defini
     
     > template_length=None
 
+    > **Observacion:** La busqueda del blast se realiza por porcentaje de identidad, se utilizará el de mayor porcentaje. En caso de haber dos o mas con el mismo, se recurre al E value, que deberia ser 0; y en el supuesto caso de que no lo sea, en ultima instacia se selecciona el de mayor score.
 
 - **Busqueda y descarga de PDB (retrieve_pdb_file)**
     > obsolete=False,
@@ -154,6 +154,8 @@ Pero algunos otros paramtros utilizados en nuestra aplicación, ya vienen defini
     > file_format=None,
     
     > overwrite=False
+
+    > **Observacion:** La busqueda del pdb se realiza en la base de datos de PDB bank.
 
 - **Busqueda de clustal (ClustalOmegaCommandline)**
     > verbose=False,
@@ -184,10 +186,10 @@ Pero algunos otros paramtros utilizados en nuestra aplicación, ya vienen defini
 
     > 2- Descargar archivo fasta de [Protein Data Bank](https://www.rcsb.org/).
     
-    > 3- Colocar *.fasta* en carpeta SRC del repo clonado.
+    > 3- Colocar *.fasta* en carpeta principal del repo clonado.
     
 - **Uso correcto:**
-    > 1- Colorcar nombre de archivo fasta.
+    > 1- Colorcar nombre de archivo fasta (sin la extension).
     
     > 2- Clickear boton cargar para manipular datos.
     
@@ -221,6 +223,41 @@ Pero algunos otros paramtros utilizados en nuestra aplicación, ya vienen defini
     > El tamaño de la secuencia no es el correcto: sucede en caso de ser demasiado pequeña la secuencia obtenida del fasta.
     
     > Debe elegir un tipo de mutacion y cargar los campos: sucede en caso de no haber elegido un tipo de mutacion o al dejar los campos de inputs sin valores.
+
+- **Archivos Output:**
+    > Archivo pdb de la estructura, el cual se llamará **pdb>>nombreProteina<<.ent** , y se guardará en una carpeta nueva creada dentro de la carpeta principal, con el nombre de las dos letras del medio del nombre de la proteina. Ejemplo: Si la proteina es 3lee, el archivo generado sera "pdb3lee.ent" , en la carpeta "le".
+
+    > Archivo fasta, donde estaran ambas proteinas, la original y la mutada, utilizado para luego realizar el alineaminto, la cual se llamara **prot_mut.fasta** (se sobrescriben).
+
+    > Archivo ali de aliniamiento de las dos proteinas, la original y la mutada; la cual se llamará **prot_mut_>>nombreProteina<<.ali**, y se guardará en la carpeta principal del proyecto.
+    
+    > Varios pdb de modelado, los cuales tendrán un nombre similar a **mutacion.>>sufijo<<.pdb**, de los cuales se elejirá el mejor para para modelar en pymol
+    
+    > Archivos con extension .ini, .rsr, .sch los cuales no tienen valor en nuestra app, pero se generan automaticamente con el modelado.
+    
+    
+# *Aclaraciones generales:*    
+
+- Para ejecutar la aplicacion de UNQ - modeleer, desde la consola o shell, ubicarse en la carpeta SRC del repositorio clonado, y ejectuar app.py, esto dará acceso a la interfaz gráfica.
+
+- En el código, se pueden comentar las siguientes lineas:
+
+    > resultBlast = NCBIWWW.qblast(program= "blastp", database= "pdb", sequence= seq_proteina) [Linea 268]
+    
+    >#save_clk = open(blast, "w") [Linea 271]
+    #save_clk.write(resultBlast.read()) [Linea 272] 
+    #save_clk.close() [Linea 273]
+    
+    Dentro de TP_Bioinformatica, esto servira para cuando reutilizemos búsqueda de Blast que ya tengamos previamente en nuestra carpeta principal.
+    
+- Archivos blast disponibles para pruebas al clonar el repositorio: 
+    > CR457033
+    
+    > 6n5k
+
+    > EU574314
+    
+    > 6SZS
     
 
 
