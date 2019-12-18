@@ -1,103 +1,177 @@
-# Introducción a la Bioinformática - UNQ
-# Trabajo Práctico Final: MutaViz
+# UNQ Modeller
 
-## Integrantes
+Unq-Modeller es una aplicacion con interfaz gráfica, basada en librerias de python donde el usuario podrá:
 
-+ Di Costanzo Juan Marcelo 
-+ Perez Cesar
-+ Rodrigo Garcia
+  - Obtener la secuencia limpia de un archivo **.fasta**.
+  - Ver la proteina obtenida de dicho archivo.
+  - Realizar un mutación a elección de la secuencia obtenida.
+  - Las mutaciones disponibles son:
+        - Mutacion Automaica: Se elije al azar una posicion y una letra a mutar, solo se escoje donde se desea iniciar el flujo de mutacion.
+        - Mutacion Manual: Se elije, letra de aminoacido a mutar, posicion donde se desea mutar dicha letra, y tambien donde se desea iniciar el flujo de mutación.
+  - Modelar las proteinas obtenidas.
 
-## Profesora
+# *Requisitos:*
 
-+ Ana Julia Velez Rueda
+- Es necesario tener en cuenta, que para obtener el funcionamiento optimo de nuestra aplicacion, debemos tener todas las librerias y software en nuestro equipo. 
+- Nuestra recomendacion principal, es utilizar Anaconda, es por ello que mostraremos los metodos de instalación, mediante comandos  conda.
+- No obstante, se pueden utilizar otos metódos de instalación(ej. Pip)
 
-#
-1. [**Objetivo**](#objetivo)
-2. [**Contexto**](#contexto)
-3. [**Requerimientos detallados**](#requerimientos-detallados)
-+ 3.1. [**Carga de secuencias**](#carga-de-secuencias)
-+ 3.2. [**Mutación**](#mutación)
-+ 3.2.1. [***Modo Manual***](#modo-manual)
-+ 3.2.2. [***Modo Automático***](#modo-automático) 
-+ 3.3. [**Visualización**](#visualización)
-+ 3.4. [**Tecnologías**](#tecnologías)
-4. [**Forma de entrega**](#forma-de-entrega)
-##
+#### Anaconda
+- Instalacion:
+   - [Enlace a descarga para Windows](https://repo.anaconda.com/archive/Anaconda3-2019.10-Windows-x86_64.exe) 
+   - [Enlace a descarga para Linux](https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh) 
+- Los enlaces son para python 3.7 que es el requerido para nuestra aplicacion.
 
-### Objetivo ###
+#### Pymol
+- Instalacion por link:
+   - [Enlace a descarga para Windows](https://pymol.org/installers/PyMOL-2.3.3_0-Windows-x86_64.exe) 
+   - [Enlace a descarga para Linux](https://pymol.org/installers/PyMOL-2.3.4_121-Linux-x86_64-py37.tar.bz2)
 
-El objetivo de este trabajo práctico es integrar los conceptos biológicos y bioinformáticos desarrollados durante la materia, junto con los conocimientos, prácticas y habilidades propias de la informática y la programación adquiridas en otras materias, a través de la construcción de un software simple pero innovador que sirva de asistencia al proceso del análisis bioinformático y/o herramienta educativa para la enseñanza de la Biología.
+- Instalacion conda:
+    ```sh
+    $ conda install -c schrodinger pymol
+    ```  
+    
+#### Modeller 
+- Instalacion por link:
+   - [Enlace a descarga para Windows](https://salilab.org/modeller/9.23/modeller9.23-64bit.exe) 
+   - [Enlace a descarga para Linux](https://salilab.org/modeller/9.23/modeller-9.23-1.x86_64.rpm)
 
-### Contexto
+- Instalacion conda:
+    ```sh
+    $ conda config --add channels salilab
+    $ conda install modeller
+    ```  
+#### BioPython
+- Instalacion conda:
+    ```sh
+    $ conda install -c anaconda biopython
+    ```  
+ 
+### lxml
+- Instalacion conda:
+    ```sh
+    $ conda install -c anaconda lxml
+    ```  
 
-Como aprendimos durante el desarrollo de la materia, los organismos pueden acumular cambios heredables (en su ADN) con el paso del tiempo. Estos cambios a nivel genético, se traducen en cambios a nivel de las proteínas para las cuales estos genes codifican. Como ya hemos visto en clase, también, las proteínas presentan estructura primaria, secundaria, terciaria y cuaternaria. Como hemos visto en clase la estructura de las proteínas se encuentra estrechamente relacionada a la función ​ (Todd et al. 2001)​ . Así mismo, teniendo en cuenta los conceptos relativos a la evolución, no les resultará ilógico pensar que: dado que la forma en que el plegamiento de una proteína se encuentra dirigida por su secuencia, y que está a su vez es codificada por la secuencia de un gen, entonces existirán restricciones evolutivas para los posibles cambios en la secuencia y estructura proteica ​ (Zea et al. 2018; Grishin 2001)​ . Es decir, que no todas las posibles mutaciones a nivel genético serán viables o producirán una proteína funcional, que le permita al organismo sobrevivir (Strokach et al. 2019; Bujnicki 2001)​ . Es, por tanto, importante comprender y predecir los cambios estructurales que una mutación genética introduce ​ (Bueno et al. 2018)​ .
-Estudiar los cambios estructurales que producen las distintas mutaciones es de particular importancia para la bioinformática, ya que nos permite predecir y manipular estos cambios con fines biotecnológicos ​ (Gerlt 1987)​ . La técnica de mutagénesis dirigida, es decir la inducción de ciertas mutaciones en ciertas posiciones de la proteína para potenciar su
-actividad o inducir nuevas funciones, es una herramienta de ingeniería genética muy frecuentemente utilizada. En este sentido la construcción de herramientas que nos permitan visualizar y predecir los cambios estructurales que una mutación induce, ayudaría a mejorar dichas aplicaciones.
-En este contexto nos proponemos desarrollar una aplicación que nos permita predecir el plegado proteico desde una secuencia de ácidos nucleicos y visualizar los cambios que está sufrirá al introducirse mutaciones. Si bien ya existen programas capaces de dar respuesta parciales a algunos de estos cuestionamientos, no existen herramientas interactivas que las
-integren, permitiendo al usuario o usuaria visualizar estos cambios de forma dinámica. Así mismo, la herramienta permitirá seleccionar el idioma (inglés/español), haciendo de esta una herramienta educativa de gran importancia, que podría ser aplicada al aprendizaje-enseñanza de la Biología, ya que no existen herramientas de estas características en español.
+# *Informacion Biologica:*
 
-### Requerimientos detallados
+En UNQ - Modeller se podran elegir parametros con los que la aplicacion funcionará, como el tipo de mutación, inicio, letra a mutar, posicion de letra a mutar, cantidad de modelos comparativos, etc.
 
-El objetivo es desarrollar un software que permita resolver tareas de análisis de proteínas. El software podrá ser desarrollado bajo cualquier arquitectura y empleando cualquier tecnología de ​ código libre​ , y deberá dar respuesta a los casos de uso expresados a continuación.
-+ Ingreso
-+ Mutación
-+ Visualización
+Pero algunos otros paramtros utilizados en nuestra aplicación, ya vienen definidos por default, y el flujo de uso de la misma no permite elección, por este motivo a continuacion se detallarán sus parametros por default:
 
-### Carga de secuencias
+- **Búsqueda de Blast (NCBIWWW.qblast)**
+    ```sh
+    url_base='https://blast.ncbi.nlm.nih.gov/Blast.cgi',
+    auto_format=None,
+    composition_based_statistics=None,
+    db_genetic_code=None,
+    endpoints=None,
+    entrez_query='(none)',
+    expect=10.0, filter=None,
+    gapcosts=None,
+    genetic_code=None,
+    hitlist_size=50,
+    i_thresh=None,
+    layout=None,
+    lcase_mask=None,
+    matrix_name=None,
+    nucl_penalty=None,
+    nucl_reward=None,
+    other_advanced=None,
+    perc_ident=None,
+    phi_pattern=None,
+    query_file=None,
+    query_believe_defline=None,
+    query_from=None,
+    query_to=None,
+    searchsp_eff=None,
+    service=None,
+    threshold=None,
+    ungapped_alignment=None,
+    word_size=None,
+    short_query=None,
+    alignments=500,
+    alignment_view=None,
+    descriptions=500,
+    entrez_links_new_window=None,
+    expect_low=None,
+    expect_high=None,
+    format_entrez_query=None,
+    format_object=None,
+    format_type='XML',
+    ncbi_gi=None,
+    results_file=None,
+    show_overview=None,
+    megablast=None,
+    template_type=None,
+    template_length=None
+    ```  
 
-El sistema debe permitir ingresar una secuencia en el formato FASTA, para su posterior procesamiento. Si la secuencia ingresada es inválida, el software deberá notificarlo apropiadamente, mostrando a el/la usuario/a un mensaje claro y útil.
+- **Busqueda y descarga de PDB (retrieve_pdb_file)**
+    ```sh
+    obsolete=False,
+    pdir=None,
+    file_format=None,
+    overwrite=False
+    ```  
 
-### Mutación
+- **Busqueda de clustal (ClustalOmegaCommandline)**
+   ```sh
+   verbose=False,
+   auto=True,
+   force=True
+   ```
+   
+- **Modelado**
+   ```sh
+   deviation=None,
+   library_schedule=None,
+   csrfile=None, inifile=None,
+   assess_methods= asses.DOPE 
+   ```
 
-El sistema debe poder simular mutaciones sobre la secuencia anteriormente ingresada, soportando dos modos de trabajo diferente: manual y automático. Una vez ingresada una secuencia correcta, el software deberá pedirle a el/la usuario/a que elija entre uno de los modos.
+- **Visualizacion de proteinas**
+   ```sh
+    Se abriran en pymol no alineadas.
+   ```
+ 
+# *Flujo de uso:*
 
-#### Modo Manual
+- **Preparación:**
+    > 1- Clonar repositorio.
 
-El modo manual permite a los/las usuarios/as mutar manualmente la secuencia: se mostrará la secuencia por pantalla, y se podrán modificar individualmente cada una de las bases, como así también agregar nuevas o quitar existentes. Dado que no todas las letras representan bases válidas, es fundamental que el software valide (durante o al terminar la edición, a criterio del equipo de desarrollo) que la cadena resultante sea válida.
+    > 2- Descargar archivo fasta de [Protein Data Bank](https://www.rcsb.org/).
+    
+    > 3- Colocar *.fasta* en carpeta SRC del repo clonado.
+    
+- **Uso correcto:**
+    > 1- Colorcar nombre de archivo fasta.
+    > 2- Clickear boton cargar para manipular datos.
+    > 3- En caso de ser una secuencia valida y querer visuazlizar la secuencia cargada, o la proteina obtenida, seleccionar los botones respectivos.
+    > 4- Clickear en continuar.
+    > 5- Elegir tipo de mutacion requerida seleccionando el respectivo boton.
+    > 6- Cargar los datos necesarios en los input segun eleccion de mutacion.
+    > 7- Cargar datos para manipulacion.
+    > 8- En caso de ser una mutacion exitosa, y querer visualizar la secuencia o proteina resultante, clickear en los respectivos botones.
+    > 9- En caso de querer ver los datos manipulados hasta el momento, clickear el boton correspondiente.
+    > 10- Ingresar la cantidad de modelos que desea comparar para luego obtener el mejor de ellos, recuerde, cuanto mas modelos mas tiempo de ejecucion, pero mejor indice de resultado.
+    > 11- En el software de pymol que se ejectura, se podran colocar comandos de cealing,align o super.
 
-#### Modo Automático
+- **Errores:**
+    > Archivo inexistente: sucede en caso de haber cargado el nombre del archivo fasta vacio, o con un nombre incorrecto.
 
-El modo automático permite mutar la secuencia de forma no supervisada, siguiendo alguno de los siguientes modos:
-+ Azar: podrá suceder de forma equiprobable una modificación de una base. El software deberá permitir ingresar la cantidad de mutaciones que ocurrirán.
-+ Permite ajustar la probabilidad de de ocurrencia de alguno de los tres tipos de mutaciones, para que no sean necesariamente equiprobables. Siguiendo distintos modelos evolutivos, que ponderen los cambios de distinto modo (ver teoría de inferencias evolutivas):
-+ Jukes - Cantor: pondera de igual modo transiciones y transversiones (equiprobables).
-+ Kimura 2 parámetros: igual frecuencia de bases, pero distinta probabilidad entre transversiones y transiciones.
-Tanto el modelo evolutivo como la cantidad de mutaciones que se realizarán son seleccionables por el/la usuario/a.
-
-### Visualización
-
-Finalmente, el sistema deberá permitir visualizar proteínas (preferentemente alineadas o superpuestas), en dos momentos diferentes:
-+ tras la carga de la secuencia
-+ tras la mutación de la secuencia
-
-### Tecnologías
-
-El software podrá estar implementado utilizando cualquier tecnología. Sin embargo, se recomienda fuertemente utilizar alguna de las siguientes:
-+ Python
-+ JavaScript / TypeScript
-
-Para las tecnologías de visualización, a continuación se mencionan algunas opciones:
-
-+ https://github.com/McMenemy/viztein
-+ https://github.com/arose/ngl
-+ https://github.com/jowoojun/biovec
-+ https://github.com/intermine/bluegenes-protein-visualizer
-+ https://pymol.org/2/
-+ https://pypi.org/project/backmap/
-
-No todas de igual calidad y presentan características diferentes, además de que tampoco son las únicas opciones disponibles. Queda a criterio del equipo la elección de la biblioteca.
-El software no debe estar desarrollado bajo ninguna arquitectura particular, pudiendo usarse indistintamente cualquiera de las siguientes:
-
-+ Desktop
-+ Web MVC del lado del servidor
-+ Web MVC del lado del cliente
-
-### Forma de entrega
-
-El trabajo práctico se realizará en equipos de hasta 4 integrantes, y se entregará el día 13 de Diciembre. El mismo deberá además estar o a un repositorio público en Github (creado para la materia), el cual deberá contener un archivo README.md con los datos de los integrantes del equipo. Los trabajos serán presentados por los miembros del equipo en una
-exposición oral (con DEMO), la última clase de la cursada.
+    > No hay archivo cargado: sucede en caso de querer continuar sin haber cargado un archivo fasta.
+    
+    > El archivo fasta es incorrecto, hay un stop dentro de la secuencia : sucede en caso de que haya un stop dentro del fasta ingresado por lo cual no se valido el analisis.
+    
+    > El archivo fasta es una proteina, ingrese una secuencia de ADN o ARN: sucede en caso de haber cargado un fasta de una proteina.
+    
+    > El tamaño de la secuencia no es el correcto: sucede en caso de ser demasiado pequeña la secuencia obtenida del fasta.
+    
+    > Debe elegir un tipo de mutacion y cargar los campos: sucede en caso de no haber elegido un tipo de mutacion o al dejar los campos de inputs sin valores.
+    
 
 
-
-
-
+   
+  
