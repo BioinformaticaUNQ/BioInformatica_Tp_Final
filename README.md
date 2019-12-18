@@ -44,9 +44,9 @@ Unq-Modeller es una aplicacion con interfaz gráfica, basada en librerias de pyt
     ```  
 #### BioPython
 - Instalacion conda:
-    ```sh
+    ~~~
     $ conda install -c anaconda biopython
-    ```  
+    ~~~ 
  
 ### lxml
 - Instalacion conda:
