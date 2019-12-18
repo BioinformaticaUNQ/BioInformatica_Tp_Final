@@ -83,54 +83,93 @@ Pero algunos otros paramtros utilizados en nuestra aplicación, ya vienen defini
     > lcase_mask=None,
     
     >  matrix_name=None,
+    
     > nucl_penalty=None,
+    
     > nucl_reward=None,
+    
     > other_advanced=None,
+    
     > perc_ident=None,
+    
     > phi_pattern=None,
+    
     > query_file=None,
+    
     > query_believe_defline=None,
+    
     > query_from=None,
+    
     > query_to=None,
+    
     > searchsp_eff=None,
+    
     > service=None,
+    
     > threshold=None,
+    
     > ungapped_alignment=None,
+    
     > word_size=None,
+    
     > short_query=None,
+    
     > alignments=500,
+    
     > alignment_view=None,
+    
     > descriptions=500,
+    
     > entrez_links_new_window=None,
+    
     > expect_low=None,
+    
+    
     > expect_high=None,
+    
     > format_entrez_query=None,
+    
     > format_object=None,
+   
     > format_type='XML',
+    
     > ncbi_gi=None,
+    
     > results_file=None,
+    
     > show_overview=None,
+    
     > megablast=None,
+    
     > template_type=None,
+    
     > template_length=None
 
 
 - **Busqueda y descarga de PDB (retrieve_pdb_file)**
     > obsolete=False,
+    
     > pdir=None,
+    
     > file_format=None,
+    
     > overwrite=False
 
 - **Busqueda de clustal (ClustalOmegaCommandline)**
     > verbose=False,
+    
     > auto=True,
+    
     > force=True
 
    
 - **Modelado**
     > deviation=None,
+    
     > library_schedule=None,
+    
     > csrfile=None, inifile=None,
+    
     > assess_methods= asses.DOPE 
 
 
