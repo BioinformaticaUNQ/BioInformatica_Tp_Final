@@ -57,68 +57,68 @@ Pero algunos otros paramtros utilizados en nuestra aplicación, ya vienen defini
 
 - **Búsqueda de Blast (NCBIWWW.qblast)**
     > url_base='https://blast.ncbi.nlm.nih.gov/Blast.cgi',
-    auto_format=None,
-    composition_based_statistics=None,
-    db_genetic_code=None,
-    endpoints=None,
-    entrez_query='(none)',
-    expect=10.0, filter=None,
-    gapcosts=None,
-    genetic_code=None,
-    hitlist_size=50,
-    i_thresh=None,
-    layout=None,
-    lcase_mask=None,
-    matrix_name=None,
-    nucl_penalty=None,
-    nucl_reward=None,
-    other_advanced=None,
-    perc_ident=None,
-    phi_pattern=None,
-    query_file=None,
-    query_believe_defline=None,
-    query_from=None,
-    query_to=None,
-    searchsp_eff=None,
-    service=None,
-    threshold=None,
-    ungapped_alignment=None,
-    word_size=None,
-    short_query=None,
-    alignments=500,
-    alignment_view=None,
-    descriptions=500,
-    entrez_links_new_window=None,
-    expect_low=None,
-    expect_high=None,
-    format_entrez_query=None,
-    format_object=None,
-    format_type='XML',
-    ncbi_gi=None,
-    results_file=None,
-    show_overview=None,
-    megablast=None,
-    template_type=None,
-    template_length=None
+    > auto_format=None,
+    > composition_based_statistics=None,
+    > db_genetic_code=None,
+    > endpoints=None,
+    > entrez_query='(none)',
+    > expect=10.0, filter=None,
+    > gapcosts=None,
+    > genetic_code=None,
+    > hitlist_size=50,
+    > i_thresh=None,
+    > layout=None,
+    > lcase_mask=None,
+    >  matrix_name=None,
+    > nucl_penalty=None,
+    > nucl_reward=None,
+    > other_advanced=None,
+    > perc_ident=None,
+    > phi_pattern=None,
+    > query_file=None,
+    > query_believe_defline=None,
+    > query_from=None,
+    > query_to=None,
+    > searchsp_eff=None,
+    > service=None,
+    > threshold=None,
+    > ungapped_alignment=None,
+    > word_size=None,
+    > short_query=None,
+    > alignments=500,
+    > alignment_view=None,
+    > descriptions=500,
+    > entrez_links_new_window=None,
+    > expect_low=None,
+    > expect_high=None,
+    > format_entrez_query=None,
+    > format_object=None,
+    > format_type='XML',
+    > ncbi_gi=None,
+    > results_file=None,
+    > show_overview=None,
+    > megablast=None,
+    > template_type=None,
+    > template_length=None
 
 
 - **Busqueda y descarga de PDB (retrieve_pdb_file)**
     > obsolete=False,
-    pdir=None,
-    file_format=None,
-    overwrite=False
+    > pdir=None,
+    > file_format=None,
+    > overwrite=False
 
 - **Busqueda de clustal (ClustalOmegaCommandline)**
     > verbose=False,
-   auto=True,
-   force=True
+    > auto=True,
+    > force=True
 
    
 - **Modelado**
     > deviation=None,
-   library_schedule=None,
-   csrfile=None, inifile=None,
-   assess_methods= asses.DOPE 
+    > library_schedule=None,
+    > csrfile=None, inifile=None,
+    > assess_methods= asses.DOPE 
 
 
 - **Visualizacion de proteinas**
@@ -136,15 +136,25 @@ Pero algunos otros paramtros utilizados en nuestra aplicación, ya vienen defini
     
 - **Uso correcto:**
     > 1- Colorcar nombre de archivo fasta.
+    
     > 2- Clickear boton cargar para manipular datos.
+    
     > 3- En caso de ser una secuencia valida y querer visuazlizar la secuencia cargada, o la proteina obtenida, seleccionar los botones respectivos.
+    
     > 4- Clickear en continuar.
+    
     > 5- Elegir tipo de mutacion requerida seleccionando el respectivo boton.
+    
     > 6- Cargar los datos necesarios en los input segun eleccion de mutacion.
+    
     > 7- Cargar datos para manipulacion.
+    
     > 8- En caso de ser una mutacion exitosa, y querer visualizar la secuencia o proteina resultante, clickear en los respectivos botones.
+    
     > 9- En caso de querer ver los datos manipulados hasta el momento, clickear el boton correspondiente.
+    
     > 10- Ingresar la cantidad de modelos que desea comparar para luego obtener el mejor de ellos, recuerde, cuanto mas modelos mas tiempo de ejecucion, pero mejor indice de resultado.
+    
     > 11- En el software de pymol que se ejectura, se podran colocar comandos de cealing,align o super.
 
 - **Errores:**
