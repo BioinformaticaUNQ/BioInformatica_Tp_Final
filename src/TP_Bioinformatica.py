@@ -41,6 +41,8 @@ partChain = None
 posicionMutada = 0
 letraMutada = ""
 
+
+
 def setPartChain (newPartChain):
     global partChain
     partChain = newPartChain
@@ -263,12 +265,12 @@ def mutar_secuencia(sec, mut_letra):
 
 def blast_proteina_namePdb(seq_proteina, sec_a_analizar): 
     res = "La proteina no existe en la base de datos PDB"
-   # resultBlast = NCBIWWW.qblast(program= "blastp", database= "pdb", sequence= seq_proteina)
+    resultBlast = NCBIWWW.qblast(program= "blastp", database= "pdb", sequence= seq_proteina)
     blast = sec_a_analizar + ".xml"
 
-    #save_clk = open(blast, "w")
-    #save_clk.write(resultBlast.read())    
-    #save_clk.close()
+    save_clk = open(blast, "w")
+    save_clk.write(resultBlast.read())    
+    save_clk.close()
     
     blast_records = NCBIXML.parse(open(blast))
     myScore = 0
