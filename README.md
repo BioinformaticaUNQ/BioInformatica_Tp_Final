@@ -1,3 +1,5 @@
+<img src= "https://image.flaticon.com/icons/png/512/1452/1452096.png" align="right" />
+
 # UNQ Modeller
 
 Unq-Modeller es una aplicacion con interfaz gráfica, basada en librerias de python donde el usuario podrá:
@@ -276,9 +278,9 @@ Pero algunos otros paramtros utilizados en nuestra aplicación, ya vienen defini
 
     > resultBlast = NCBIWWW.qblast(program= "blastp", database= "pdb", sequence= seq_proteina) [Linea 268]
     
-    >#save_clk = open(blast, "w") [Linea 271]
-    #save_clk.write(resultBlast.read()) [Linea 272] 
-    #save_clk.close() [Linea 273]
+    > #save_clk = open(blast, "w") [Linea 271]
+    > #save_clk.write(resultBlast.read()) [Linea 272] 
+    > #save_clk.close() [Linea 273]
     
     Dentro de TP_Bioinformatica, esto servira para cuando reutilizemos búsqueda de Blast que ya tengamos previamente en nuestra carpeta principal.
     
@@ -291,6 +293,17 @@ Pero algunos otros paramtros utilizados en nuestra aplicación, ya vienen defini
     
     > 6SZS
     
+# *Contribucion:*   
+
+- Rodrigo García
+
+- Cesar Perez
+
+- Marcelo DiCostanzo
+
+- Ana Velez Rueda
+
+
 
 
    
