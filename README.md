@@ -229,7 +229,7 @@ Pero algunos otros paramtros utilizados en nuestra aplicación, ya vienen defini
     
     > 10- Ingresar la cantidad de modelos que desea comparar para luego obtener el mejor de ellos, recuerde, cuanto mas modelos mas tiempo de ejecucion, pero mejor indice de resultadoy clickear en boton modelar.
 
-    > ![Completar modelos y ejecutar](ingres_modelos_botonMod.PNG)
+    > ![Completar modelos y ejecutar](img_feedback/ingres_modelos_botonMod.PNG)
     
     > 11- En el software de pymol que se ejectura, se podran colocar comandos de cealing,align o super.
 
@@ -249,13 +249,23 @@ Pero algunos otros paramtros utilizados en nuestra aplicación, ya vienen defini
 - **Archivos Output:**
     > Archivo pdb de la estructura, el cual se llamará **pdb>>nombreProteina<<.ent** , y se guardará en una carpeta nueva creada dentro de la carpeta principal, con el nombre de las dos letras del medio del nombre de la proteina. Ejemplo: Si la proteina es 3lee, el archivo generado sera "pdb3lee.ent" , en la carpeta "le".
 
+    > ![Carpeta y archivo pdb proteina original](img_feedback/output_carpeta_pdb.PNG)
+
     > Archivo fasta, donde estaran ambas proteinas, la original y la mutada, utilizado para luego realizar el alineaminto, la cual se llamara **prot_mut.fasta** (se sobrescriben).
 
+    > ![Fasta con proteinas orig y mut](img_feedback/output_prot_mut_fasta.PNG)
+
     > Archivo ali de aliniamiento de las dos proteinas, la original y la mutada; la cual se llamará **prot_mut_>>nombreProteina<<.ali**, y se guardará en la carpeta principal del proyecto.
+
+    > ![Ali con proteinas orig y mut](img_feedback/output_prot_mut_ali.PNG)
     
-    > Varios pdb de modelado, los cuales tendrán un nombre similar a **mutacion.>>sufijo<<.pdb**, de los cuales se elejirá el mejor para para modelar en pymol
+    > Varios pdb de modelado, los cuales tendrán un nombre similar a **mutacion.>>sufijo<<.pdb**, de los cuales se elejirá el mejor para para modelar en pymol.
+
+    > ![Modelos resultantes de mut](img_feedback/output_mut_modelado_pdb.PNG)
     
     > Archivos con extension .ini, .rsr, .sch los cuales no tienen valor en nuestra app, pero se generan automaticamente con el modelado.
+
+    > ![Residuos](img_feedback/output_basura.PNG)
     
     
 # *Aclaraciones generales:*    
