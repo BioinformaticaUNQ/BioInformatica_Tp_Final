@@ -278,9 +278,11 @@ Pero algunos otros paramtros utilizados en nuestra aplicación, ya vienen defini
 
     > resultBlast = NCBIWWW.qblast(program= "blastp", database= "pdb", sequence= seq_proteina) [Linea 268]
     
-    > #save_clk = open(blast, "w") [Linea 271]
-    > #save_clk.write(resultBlast.read()) [Linea 272] 
-    > #save_clk.close() [Linea 273]
+    > save_clk = open(blast, "w") [Linea 271]
+
+    > save_clk.write(resultBlast.read()) [Linea 272] 
+
+    > save_clk.close() [Linea 273]
     
     Dentro de TP_Bioinformatica, esto servira para cuando reutilizemos búsqueda de Blast que ya tengamos previamente en nuestra carpeta principal.
     
