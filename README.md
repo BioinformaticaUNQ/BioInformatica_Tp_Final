@@ -191,7 +191,7 @@ Pero algunos otros paramtros utilizados en nuestra aplicación, ya vienen defini
 - **Uso correcto:**
     > 1- Colorcar nombre de archivo fasta (sin la extension).
     
-    ![Colocar nombre de archivo fasta](img_feedback/ingreso_fasta.PNG)
+    > ![Colocar nombre de archivo fasta](img_feedback/ingreso_fasta.PNG)
     
     > 2- Clickear boton cargar para manipular datos.
     
