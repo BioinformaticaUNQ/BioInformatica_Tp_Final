@@ -274,6 +274,9 @@ Pero algunos otros paramtros utilizados en nuestra aplicación, ya vienen defini
 
 - Para ejecutar la aplicacion de UNQ - modeleer, desde la consola o shell, ubicarse en la carpeta SRC del repositorio clonado, y ejectuar app.py, esto dará acceso a la interfaz gráfica.
 
+    > > ![script](img_feedback/script_ejecucion.PNG)
+
+
 - En el código, se pueden comentar las siguientes lineas:
 
     > resultBlast = NCBIWWW.qblast(program= "blastp", database= "pdb", sequence= seq_proteina) [Linea 268]
