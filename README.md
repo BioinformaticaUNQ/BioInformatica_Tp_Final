@@ -191,25 +191,45 @@ Pero algunos otros paramtros utilizados en nuestra aplicación, ya vienen defini
 - **Uso correcto:**
     > 1- Colorcar nombre de archivo fasta (sin la extension).
     
+    > 2- Clickear boton cargar para manipular datos.
+
     > ![Colocar nombre de archivo fasta](img_feedback/ingreso_fasta.PNG)
     
-    > 2- Clickear boton cargar para manipular datos.
-    
     > 3- En caso de ser una secuencia valida y querer visuazlizar la secuencia cargada, o la proteina obtenida, seleccionar los botones respectivos.
+
+    > ![Ver secuencia original](img_feedback/ver_sec_prot_original.PNG)
+
+    > ![secuencia original](img_feedback/sec_original.PNG)
+
+    > ![proteina original](img_feedback/prot_original.PNG)
     
     > 4- Clickear en continuar.
     
     > 5- Elegir tipo de mutacion requerida seleccionando el respectivo boton.
+
+    > ![Elegir tipo de mutacion](img_feedback/selec_tipo_mut.PNG)
     
     > 6- Cargar los datos necesarios en los input segun eleccion de mutacion.
+
+    > ![Completar datos manual](img_feedback/comp_datos_manual.PNG)
+
+    > ![Completar datos auto](img_feedback/comp_datos_auto.PNG)
     
     > 7- Cargar datos para manipulacion.
+
+    > ![Cargar datos](img_feedback/cargar_datos_exitoso.PNG)
     
     > 8- En caso de ser una mutacion exitosa, y querer visualizar la secuencia o proteina resultante, clickear en los respectivos botones.
+
+    > ![Ver sec prot mutada](img_feedback/ver_sec_prot_mutada.PNG)
     
     > 9- En caso de querer ver los datos manipulados hasta el momento, clickear el boton correspondiente.
+
+    > ![Ver datos hasta el momento](img_feedback/ver_datos.PNG)
     
-    > 10- Ingresar la cantidad de modelos que desea comparar para luego obtener el mejor de ellos, recuerde, cuanto mas modelos mas tiempo de ejecucion, pero mejor indice de resultado.
+    > 10- Ingresar la cantidad de modelos que desea comparar para luego obtener el mejor de ellos, recuerde, cuanto mas modelos mas tiempo de ejecucion, pero mejor indice de resultadoy clickear en boton modelar.
+
+    > ![Completar modelos y ejecutar](ingres_modelos_botonMod.PNG)
     
     > 11- En el software de pymol que se ejectura, se podran colocar comandos de cealing,align o super.
 
