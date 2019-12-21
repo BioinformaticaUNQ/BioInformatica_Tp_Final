@@ -51,7 +51,7 @@ Unq-Modeller es una aplicación con interfaz gráfica, basada en librerias de py
     > $ conda install -c anaconda lxml
 
 
-# *Información Biologica:*
+# *Información Biológica:*
 
 En UNQ - Modeller se podran elegir parametros con los que la aplicación funcionará, como el tipo de mutación, inicio, letra a mutar, posición de letra a mutar, cantidad de modelos comparativos, etc.
 
@@ -277,7 +277,7 @@ Pero algunos otros parámetros utilizados en nuestra aplicación, ya vienen defi
     
 # *Aclaraciones generales:*    
 
-- Para ejecutar la aplicación de UNQ - modeleer, desde la consola o shell, ubicarse en la carpeta SRC del repositorio clonado, y ejectuar:
+- Para ejecutar la aplicación de UNQ - modeller, desde la consola o shell, ubicarse en la carpeta SRC del repositorio clonado, y ejectuar:
 
     >  $ python3 app.py
 
