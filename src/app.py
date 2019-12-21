@@ -63,10 +63,10 @@ verProteina.place(x=50,y=125)
 ### Accion boton cargar archivo (5).
 def onHandleCargar():   
     datos.nombreArchivoCargado = nombreDeFasta.get() ## (obengo texto del textInput)
-    datos.secuencia = obtener_secuencia(datos.nombreArchivoCargado + ".fasta") 
+    datos.secuencia = obtener_secuencia('../'+datos.nombreArchivoCargado + ".fasta") 
     mensaje_error = msjerror_secFasta_invalida(datos.secuencia)
 
-    if(msjeError_archivoInexistente(datos.nombreArchivoCargado + ".fasta") != "No existe"):
+    if(msjeError_archivoInexistente('../'+datos.nombreArchivoCargado + ".fasta") != "No existe"):
         if validar_fasta(datos.secuencia):
             verSecuencia.configure(state="normal")
             verProteina.configure(state="normal")
@@ -198,7 +198,7 @@ def crearVentanaDeMutacion():
 
         ### Creacion de accion modelar (14)
         def onHandlerModlear():
-            MessageBox.showinfo(message="Aguarde mientras se recopila la informacion y se crea el modelado", title="Info")
+            MessageBox.showinfo(message="Aguarde mientras se recopila la información y se crea el modelado", title="Info")
 
             buscaryGuardarPdb(datos.nombrePdb)
 
@@ -214,7 +214,7 @@ def crearVentanaDeMutacion():
                 pdb_mutacion = generar_modelado(datos.nombrePdb, cant_modelos)
 
                 MessageBox.showinfo(title='Modelado Existoso',
-                 message='El modelado se realizo con exito, se visualizara el pdb' + pdb_mutacion + 'el cual fue seleccionado a traves del mayor DOPE')
+                 message='El modelado se realizó con éxito, se visualizará el pdb: ' + pdb_mutacion + ' el cual fue seleccionado a través del mayor DOPE')
 
                 generar_pymol(datos.nombrePdb, pdb_mutacion)
 
@@ -230,7 +230,7 @@ def crearVentanaDeMutacion():
         
         ### Accion de boton cargar(10).
         def onHandlerCargar():
-            if(str(posicionDeMut.get())):
+            if(int(posicionDeMut.get())):
                 datos.inicioDeMutacion = int(posicionDeMut.get())
 
                 if(validar_fasta(datos.secuencia[datos.inicioDeMutacion-1:])):
@@ -244,17 +244,17 @@ def crearVentanaDeMutacion():
                         verDatosAdicionales.configure(state='normal')
                         datos.nombreProteina = blast_proteina_namePdb(datos.proteina, datos.nombreArchivoCargado)
                         datos.nombrePdb = datos.nombreProteina[:-2]
-                        setPartChain(datos.nombreProteina[-1])
+                        
                         if(datos.nombreProteina != "La proteina no existe en la base de datos PDB"):
                             if(datos.tipoMutacion == 'A'):
-                                datos.posicionDeMutAmino =  getPosicionMutada()
-                                datos.letraDeAmino = getLetraMutada()
                                 datos.secuenciaMutada = mutar_automatica(datos.secuenciaRecortada)
+                                datos.posicionDeMutAmino = getPosicionMutada()-1
+                                datos.letraDeAmino = getLetraMutada()
                                 MessageBox.showinfo(message="Mutacion extiosa",title="Mutacion")
                             else:
+                                datos.secuenciaMutada = mutar_manual(datos.secuenciaRecortada,datos.posicionDeMutAmino,datos.letraDeAmino)
                                 datos.posicionDeMutAmino =  int(posDeAmino.get())-1
                                 datos.letraDeAmino = letraDeMut.get().upper()
-                                datos.secuenciaMutada = mutar_manual(datos.secuenciaRecortada,datos.posicionDeMutAmino,datos.letraDeAmino)
                                 MessageBox.showinfo(message="Mutacion extiosa",title="Mutacion")
                         else:
                             MessageBox.showinfo(message="La proteina no existe en la base de datos PDB", title= "Error")

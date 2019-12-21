@@ -41,16 +41,12 @@ partChain = None
 posicionMutada = 0
 letraMutada = ""
 
-
-
-def setPartChain (newPartChain):
-    global partChain
-    partChain = newPartChain
-
 def getPosicionMutada():
+    global posicionMutada
     return posicionMutada     
 
-def getLetraMutada ():
+def getLetraMutada():
+    global letraMutada
     return letraMutada 
 
 def pasar_a_lista(cadena): 
@@ -145,7 +141,6 @@ def msjerror_secFasta_invalida(secuencia):
     else:
         return ("Problema no identificado")
 
-
 def validacion_mutacion(mutacionProteina, proteina):
     len_prot= len(proteina)
     len_mut = len(mutacionProteina)
@@ -172,7 +167,6 @@ def msjeError_archivoInexistente(fasta):
                 sec_fasta = open(fasta)  
         except:
             return "No existe"
-
 
 # PREC: No puede ser una secuencia de una proteina
 def pasar_a_proteina(secuencia): 
@@ -223,15 +217,15 @@ def mutar_automatica(sec_fasta):
     if(quees == "ADN"): 
         randLetra = random.choice("ACGT") 
         cadena_ADN.insert(randPos,randLetra)
-        posicionMutada = randPos+1
-        letraMutada = randLetra
+        posicionMutada = int(randPos+1)
+        letraMutada = str(randLetra)
         print("Mutó la letra: " + randLetra + " en la posición: " + str(randPos+1))
         
     elif(quees == "ARN"):
         randLetra = random.choice("ACGU") 
         cadena_ADN.insert(randPos,randLetra)
-        posicionMutada = randPos+1
-        letraMutada = randLetra
+        posicionMutada = int(randPos+1)
+        letraMutada = str(randLetra)
         print("Mutó la letra: " + randLetra + " en la posición: " + str(randPos+1))
     
     del cadena_ADN[randPos+1]
@@ -264,6 +258,7 @@ def mutar_secuencia(sec, mut_letra):
 
 
 def blast_proteina_namePdb(seq_proteina, sec_a_analizar): 
+    global partChain
     res = "La proteina no existe en la base de datos PDB"
     resultBlast = NCBIWWW.qblast(program= "blastp", database= "pdb", sequence= seq_proteina)
     blast = sec_a_analizar + ".xml"
@@ -288,6 +283,8 @@ def blast_proteina_namePdb(seq_proteina, sec_a_analizar):
                     myPorcentaje = porcentaje
                     myScore = alignment.hsps[0].score
                     res = alignment.accession
+    partChain = res[-1]   
+
     return res
 
 class NotDisordered(Select):
